@@ -1,34 +1,35 @@
 :root {
   /* 色彩 */
-  --ink:            #333333;
-  --ink-2:          #444444;
-  --paper:          #ECECEC;
-  --paper-card:     #F5F5F5;
-  --line:           #CCCCCC;
-  --line-strong:    #BBBBBB;
+  --ink:            #262A33;
+  --ink-2:          #3B3F49;
+  --paper:          #F0F2F6;
+  --paper-card:     #F8F9FB;
+  --line:           #CFE3ED;
+  --line-strong:    #5FACD3;
 
-  --rail-blue:      #4A7EBB;
-  --rail-blue-dark: #3A6AA3;
-  --rail-blue-soft: rgba(74, 126, 187, 0.08);
-  --destination:    #9F4F8B;
-  --destination-dark: #874278;
-  --via-gray:       #555555;
-  --rose:           #9F4F8B;
-  --rose-dark:      #874278;
-  --rose-soft:      rgba(159, 79, 139, 0.08);
-  --submit-orange:  #F29400;
-  --submit-orange-dark: #D98300;
-  --link-green:     #3D8B37;
-  --signal-amber:   #D97706;
-  --signal-amber-ink: #92400E;
+  --rail-blue:      #39587F;
+  --rail-blue-dark: #253D5B;
+  --rail-blue-light:#7F9BBD;
+  --rail-blue-soft: rgba(57, 88, 127, 0.08);
+  --destination:    #2F656A;
+  --destination-dark: #1F484C;
+  --rose:           #2F656A;
+  --rose-dark:      #1F484C;
+  --rose-soft:      rgba(47, 101, 106, 0.08);
+  --submit-orange:  #F3CD97;
+  --submit-orange-dark: #E9B367;
+  --link-green:     #74AAA1;
+  --link-green-dark: #224942;
+  --signal-amber:   #866F27;
+  --signal-amber-ink: #5D4222;
 
-  --ink-soft:       #666666;
-  --ink-faint:      #999999;
+  --ink-soft:       #6B7080;
+  --ink-faint:      #9AA0AD;
 
-  --bus:            #2F9E44;
-  --metro:          #1D5FA8;
-  --train:          #8B5A2B;
-  --hsr:            #D6336C;
+  --bus:            #3E6F58;
+  --metro:          #39587F;
+  --train:          #6F533E;
+  --hsr:            #9A4248;
 
   /* 字體 */
   --font-display: 'Noto Sans TC', 'Inter', system-ui, sans-serif;
@@ -36,10 +37,20 @@
   --font-mono:    'JetBrains Mono', 'Noto Sans TC', monospace;
 
   /* 尺寸 */
-  --radius-lg: 6px;
-  --radius-md: 4px;
-  --radius-sm: 3px;
+  --radius-xl: 20px;
+  --radius-lg: 14px;
+  --radius-md: 10px;
+  --radius-sm: 7px;
   --radius-full: 999px;
+
+  /* 陰影分層 */
+  --shadow-xs: 0 1px 2px rgba(18, 27, 45, 0.05);
+  --shadow-sm: 0 2px 6px rgba(18, 27, 45, 0.06), 0 1px 2px rgba(18, 27, 45, 0.05);
+  --shadow-md: 0 8px 24px rgba(18, 27, 45, 0.10), 0 2px 6px rgba(18, 27, 45, 0.05);
+  --shadow-lg: 0 16px 40px rgba(18, 27, 45, 0.14);
+
+  /* 動效 */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * { box-sizing: border-box; }
@@ -62,18 +73,31 @@ button, input, select {
 :focus-visible {
   outline: 2px solid var(--rail-blue);
   outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ============ 固定頁首（Header + 導覽列一起 sticky，下滑頁面不移動）============ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 /* ============ Header ============ */
 .topbar {
-  background: var(--rail-blue);
+  background: linear-gradient(135deg, var(--rail-blue-light), var(--rail-blue) 55%, var(--rail-blue-dark));
   color: #fff;
-  padding: 14px 20px;
+  padding: 14px 0;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  z-index: 5;
 }
 
+/* 左右內距改放這裡（跟 .page 同一套算法），這樣品牌字跟搜尋卡片的左邊界才會真的對齊 */
 .topbar__inner {
   max-width: 720px;
   margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -83,14 +107,24 @@ button, input, select {
 .wordmark {
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: 18px;
+  font-size: 19px;
   letter-spacing: 0.01em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+/* 脫離 .topbar__inner 的置中欄位，貼著瀏覽器右邊（不受 720px 內容寬度限制），再往右一點 */
 .live-clock {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: baseline;
   gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .live-clock__label {
@@ -98,7 +132,7 @@ button, input, select {
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .live-clock__time {
@@ -110,130 +144,91 @@ button, input, select {
   letter-spacing: 0.03em;
 }
 
-/* ============ Utility nav ============ */
-.utility-nav {
-  background: #fff;
-  border-bottom: 1px solid var(--line);
-}
-
-.utility-nav__inner {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.utility-nav__search {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--paper);
-  border: 1px solid var(--line-strong);
-  border-radius: var(--radius-md);
-  padding: 8px 12px;
-}
-
-.utility-nav__search:focus-within {
-  border-color: var(--rail-blue);
-}
-
-.utility-nav__search-icon {
-  color: var(--ink-faint);
-  flex-shrink: 0;
-}
-
-.utility-nav__search-input {
-  flex: 1;
-  min-width: 0;
-  border: none;
-  background: transparent;
-  font-size: 13px;
-  color: var(--ink);
-}
-
-.utility-nav__search-input::placeholder {
-  color: var(--ink-faint);
-}
-
-.utility-nav__search-input:focus {
-  outline: none;
-}
-
-.utility-nav__tabs {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  flex-shrink: 0;
-}
-
-.utility-nav__tab {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  border: none;
-  background: none;
-  color: var(--ink-soft);
-  font-size: 10px;
-  font-weight: 700;
-  padding: 6px 10px;
-  border-radius: var(--radius-md);
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.15s ease, color 0.15s ease;
-}
-
-.utility-nav__tab:hover {
-  background: var(--rail-blue-soft);
-  color: var(--rail-blue-dark);
-}
-
-.utility-nav__tab--active {
-  background: var(--rail-blue);
-  color: #fff;
-}
-
-.utility-nav__tab--active:hover {
-  background: var(--rail-blue-dark);
-  color: #fff;
-}
-
-@media (max-width: 560px) {
-  .utility-nav__inner {
-    flex-wrap: wrap;
-    padding: 10px 16px;
-  }
-  .utility-nav__search {
-    flex-basis: 100%;
-    order: 2;
-  }
-  .utility-nav__tabs {
-    flex-basis: 100%;
-    order: 1;
-    justify-content: space-between;
-  }
-  .utility-nav__tab span {
-    font-size: 9px;
-  }
-}
-
 /* ============ Layout ============ */
+html, body {
+  overflow-x: hidden;
+}
+
 .page {
   max-width: 720px;
   margin: 0 auto;
-  padding: 20px 20px 48px;
+  padding: 6px 20px 48px;
+}
+
+/* ============ 首頁背景（搜尋頁：仿 NAVITIME 滿版照片橫幅 + 浮卡疊在下緣）============ */
+#searchView {
+  position: relative;
+  padding-top: 440px;
+}
+
+/* 破框滿版：橫幅寬度不受 .page 的 720px 限制，貼齊瀏覽器左右邊緣（.page 是置中的，
+   所以「left:50%+margin-left:-50vw」這招可以用） */
+/* 拿掉功能導覽列後空出來的高度，全部讓給輪播圖 */
+.hero-carousel {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  height: 440px;
+  overflow: hidden;
+}
+
+/* 四張圖（捷運／公車／高鐵／台鐵）輪流淡入淡出：每張 16 秒跑一輪，
+   四張各錯開 4 秒，同一時間只有一張是亮的，純 CSS animation，不用 JS／不用 <img> 切換 */
+.hero-carousel__slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: heroCarouselFade 16s infinite;
+}
+
+/* 捷運：橫幅拉高後位置往上移一點，露出更多月台結構，比較有「拉遠」的感覺 */
+.hero-carousel__slide--1 { background-position: center 34%; animation-delay: 0s; }
+.hero-carousel__slide--2 { background-position: center 30%; animation-delay: 4s; }
+/* 高鐵：原本太偏上面幾乎看不到車身，往下移到車身中段 */
+.hero-carousel__slide--3 { background-position: center 63%; animation-delay: 8s; }
+/* 台鐵：置中對準車頭 */
+.hero-carousel__slide--4 { background-position: center 50%; animation-delay: 12s; }
+
+@keyframes heroCarouselFade {
+  0%   { opacity: 0; }
+  3%   { opacity: 1; }
+  22%  { opacity: 1; }
+  26%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.hero-carousel__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(24, 32, 45, 0.04) 0%, rgba(24, 32, 45, 0.08) 45%, rgba(24, 32, 45, 0.8) 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-carousel__slide {
+    animation: none;
+    opacity: 0;
+  }
+  .hero-carousel__slide--1 {
+    opacity: 1;
+  }
 }
 
 /* ============ Search Card ============ */
+/* 卡片縮窄、置中放，跟品牌字／hero 標語同一條中線 */
 .search-card {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: -168px auto 0;
   background: var(--paper-card);
-  border-radius: var(--radius-lg);
-  padding: 16px;
+  border-radius: var(--radius-xl);
+  padding: 20px;
   border: 1px solid var(--line);
+  box-shadow: var(--shadow-lg);
 }
 
 .search-form__row {
@@ -263,7 +258,7 @@ button, input, select {
 
 .suggestions {
   position: absolute;
-  top: calc(100% + 4px);
+  top: calc(100% + 6px);
   left: 0;
   right: 0;
   z-index: 20;
@@ -271,10 +266,11 @@ button, input, select {
   padding: 4px;
   list-style: none;
   background: #fff;
-  border: 1px solid var(--line-strong);
+  border: 1px solid var(--line);
   border-radius: var(--radius-md);
   max-height: 220px;
   overflow-y: auto;
+  box-shadow: var(--shadow-md);
 }
 
 .suggestions[hidden] {
@@ -295,19 +291,6 @@ button, input, select {
   color: var(--rail-blue-dark);
 }
 
-/* 中間站列 */
-.search-form__row--via {
-  align-items: flex-start;
-}
-
-.field-wrap--via {
-  flex: 1;
-}
-
-.field--via .field__pill {
-  background: var(--via-gray);
-}
-
 .link-btn {
   flex-shrink: 0;
   border: none;
@@ -324,24 +307,6 @@ button, input, select {
   text-decoration: underline;
 }
 
-.via-remove-btn {
-  flex-shrink: 0;
-  width: 32px;
-  height: 32px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--line-strong);
-  background: #fff;
-  color: var(--ink-faint);
-  font-size: 16px;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.via-remove-btn:hover {
-  border-color: var(--rose);
-  color: var(--rose-dark);
-}
-
 /* 日期列 */
 .date-control {
   flex: 1;
@@ -352,10 +317,12 @@ button, input, select {
   border-radius: var(--radius-md);
   padding: 0 8px 0 10px;
   background: #fff;
+  transition: border-color 0.15s var(--ease), box-shadow 0.15s var(--ease);
 }
 
 .date-control:focus-within {
   border-color: var(--rail-blue);
+  box-shadow: 0 0 0 3px var(--rail-blue-soft);
 }
 
 .date-control__input {
@@ -372,6 +339,12 @@ button, input, select {
   outline: none;
 }
 
+/* 原生日期輸入框自帶的小日曆圖示跟旁邊自訂的「日曆」按鈕重複，隱藏它（不影響 showPicker() 功能） */
+.date-control__input::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
 .date-control__cal-btn {
   flex-shrink: 0;
   display: flex;
@@ -379,7 +352,7 @@ button, input, select {
   gap: 4px;
   border: none;
   background: none;
-  color: var(--link-green);
+  color: var(--link-green-dark);
   font-size: 13px;
   font-weight: 700;
   padding: 6px 4px;
@@ -416,11 +389,13 @@ button, input, select {
   background: #fff;
   width: 52px;
   text-align: center;
+  transition: border-color 0.15s var(--ease), box-shadow 0.15s var(--ease);
 }
 
 .time-select:focus {
   outline: none;
   border-color: var(--rail-blue);
+  box-shadow: 0 0 0 3px var(--rail-blue-soft);
 }
 
 .time-control__unit {
@@ -448,42 +423,6 @@ button, input, select {
   color: var(--rail-blue);
 }
 
-.time-mode {
-  display: flex;
-  gap: 4px;
-  margin-left: auto;
-  flex-wrap: wrap;
-}
-
-.time-mode__btn {
-  border: 1px solid var(--line-strong);
-  background: #fff;
-  color: var(--ink-soft);
-  font-size: 12px;
-  font-weight: 700;
-  padding: 7px 10px;
-  border-radius: var(--radius-md);
-  cursor: pointer;
-  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-}
-
-.time-mode__btn:hover {
-  border-color: var(--rail-blue);
-  color: var(--rail-blue-dark);
-}
-
-.time-mode__btn--active {
-  background: var(--rail-blue);
-  border-color: var(--rail-blue);
-  color: #fff;
-}
-
-.time-mode__btn--active:hover {
-  background: var(--rail-blue-dark);
-  border-color: var(--rail-blue-dark);
-  color: #fff;
-}
-
 .field {
   flex: 1;
   min-width: 0;
@@ -493,14 +432,17 @@ button, input, select {
   border-radius: var(--radius-md);
   overflow: hidden;
   background: #fff;
+  transition: border-color 0.15s var(--ease), box-shadow 0.15s var(--ease);
 }
 
 .field:focus-within {
   border-color: var(--rail-blue);
+  box-shadow: 0 0 0 3px var(--rail-blue-soft);
 }
 
 .field--destination:focus-within {
   border-color: var(--destination);
+  box-shadow: 0 0 0 3px var(--rose-soft);
 }
 
 .field__pill {
@@ -542,9 +484,10 @@ button, input, select {
 
 .swap-btn {
   flex-shrink: 0;
-  width: 32px;
-  height: 32px;
-  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid transparent;
   background: none;
   color: var(--ink-faint);
   display: flex;
@@ -552,35 +495,47 @@ button, input, select {
   justify-content: center;
   cursor: pointer;
   padding: 0;
-  transition: color 0.15s ease, transform 0.2s ease;
+  transition: color 0.15s var(--ease), transform 0.25s var(--ease), background 0.15s var(--ease), border-color 0.15s var(--ease);
 }
 
 .swap-btn:hover {
   color: var(--rail-blue);
+  background: var(--rail-blue-soft);
+  border-color: var(--line);
   transform: rotate(180deg);
 }
 
 .search-form__submit {
   width: 100%;
-  margin-top: 14px;
-  padding: 12px;
+  margin-top: 16px;
+  padding: 13px;
   border: none;
   border-radius: var(--radius-md);
-  background: var(--submit-orange);
-  color: #fff;
+  background: linear-gradient(135deg, #F3DBBA, var(--submit-orange));
+  color: var(--ink);
   font-size: 16px;
   font-weight: 700;
+  letter-spacing: 0.01em;
   cursor: pointer;
-  transition: background 0.15s ease, opacity 0.15s ease;
+  box-shadow: 0 4px 14px rgba(195, 128, 34, 0.3);
+  transition: background 0.15s var(--ease), box-shadow 0.15s var(--ease), transform 0.15s var(--ease), opacity 0.15s var(--ease);
 }
 
 .search-form__submit:hover {
-  background: var(--submit-orange-dark);
+  background: linear-gradient(135deg, #F3DBBA, var(--submit-orange-dark));
+  box-shadow: 0 6px 18px rgba(195, 128, 34, 0.38);
+  transform: translateY(-1px);
+}
+
+.search-form__submit:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(195, 128, 34, 0.26);
 }
 
 .search-form__submit:disabled {
   opacity: 0.6;
   cursor: default;
+  transform: none;
 }
 
 .search-form__error {
@@ -609,20 +564,14 @@ button, input, select {
   color: var(--ink);
 }
 
-.quick-examples__hint {
-  font-size: 12px;
-  color: var(--link-green);
-  font-weight: 500;
-}
-
 .quick-examples__box {
-  background: #E0E0E0;
+  background: var(--paper);
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  padding: 12px 14px;
+  padding: 6px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 2px;
 }
 
 .chip {
@@ -631,18 +580,18 @@ button, input, select {
   text-align: left;
   font-size: 13px;
   font-weight: 400;
-  padding: 0;
+  padding: 8px 10px;
   border: none;
-  border-radius: 0;
+  border-radius: var(--radius-sm);
   background: none;
   color: var(--ink-soft);
   cursor: pointer;
-  transition: color 0.15s ease;
+  transition: color 0.15s var(--ease), background 0.15s var(--ease);
 }
 
 .chip:hover {
-  color: var(--rail-blue);
-  text-decoration: underline;
+  color: var(--rail-blue-dark);
+  background: #fff;
 }
 
 /* ============ Mode legend ============ */
@@ -679,9 +628,10 @@ button, input, select {
 .results-view {
   margin-top: 20px;
   background: #fff;
-  border: 1px solid var(--line-strong);
-  border-radius: var(--radius-lg);
-  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  padding: 18px;
+  box-shadow: var(--shadow-md);
 }
 
 .results-view[hidden] {
@@ -733,16 +683,18 @@ button, input, select {
   flex-shrink: 0;
   border: 1px solid var(--link-green);
   background: #fff;
-  color: var(--link-green);
+  color: var(--link-green-dark);
   font-size: 13px;
   font-weight: 700;
   padding: 9px 14px;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-full);
   cursor: pointer;
+  transition: background 0.15s var(--ease), box-shadow 0.15s var(--ease);
 }
 
 .route-header__edit:hover {
-  background: rgba(61, 139, 55, 0.08);
+  background: rgba(116, 170, 161, 0.08);
+  box-shadow: var(--shadow-xs);
 }
 
 /* --- 查詢條件列 --- */
@@ -755,29 +707,6 @@ button, input, select {
   font-size: 13px;
   font-weight: 700;
   color: var(--ink-2);
-}
-
-.route-quick-actions {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-top: 12px;
-}
-
-.route-quick-actions__btn {
-  border: 1px solid var(--line-strong);
-  background: #fff;
-  color: var(--ink-2);
-  font-size: 12px;
-  font-weight: 700;
-  padding: 8px 12px;
-  border-radius: var(--radius-md);
-  cursor: pointer;
-}
-
-.route-quick-actions__btn:hover {
-  border-color: var(--rail-blue);
-  color: var(--rail-blue-dark);
 }
 
 /* --- 排序頁籤 --- */
@@ -799,38 +728,29 @@ button, input, select {
   padding: 8px 12px;
   border-radius: var(--radius-md) var(--radius-md) 0 0;
   cursor: pointer;
+  transition: color 0.15s var(--ease), background 0.15s var(--ease);
 }
 
 .route-tabs__btn:hover {
-  color: var(--link-green);
+  color: var(--link-green-dark);
   background: #fff;
 }
 
 .route-tabs__btn--active,
 .route-tabs__btn--active:hover {
-  background: var(--link-green);
-  border-color: var(--link-green);
+  background: var(--link-green-dark);
+  border-color: var(--link-green-dark);
   color: #fff;
-}
-
-.reordered-banner {
-  background: rgba(251, 191, 36, 0.15);
-  border: 1px solid var(--signal-amber);
-  color: var(--signal-amber-ink);
-  font-size: 13px;
-  font-weight: 700;
-  padding: 10px 14px;
-  border-radius: var(--radius-md);
-  margin-top: 12px;
 }
 
 /* --- 方案一覽表 --- */
 .route-summary {
   margin-top: 12px;
-  border: 1px solid var(--line-strong);
+  border: 1px solid var(--line);
   border-radius: var(--radius-md);
   overflow: hidden;
   background: #fff;
+  box-shadow: var(--shadow-sm);
 }
 
 .route-summary__row {
@@ -854,11 +774,11 @@ button, input, select {
 }
 
 .route-summary__row:hover {
-  background: rgba(61, 139, 55, 0.06);
+  background: rgba(116, 170, 161, 0.06);
 }
 
 .route-summary__row--active {
-  background: rgba(61, 139, 55, 0.12);
+  background: rgba(116, 170, 161, 0.12);
 }
 
 .route-summary__num {
@@ -866,7 +786,7 @@ button, input, select {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--link-green);
+  background: var(--link-green-dark);
   color: #fff;
   font-family: var(--font-mono);
   font-size: 15px;
@@ -876,14 +796,14 @@ button, input, select {
 }
 
 .route-summary__row--active .route-summary__num {
-  background: #2B6B27;
+  background: #324A2B;
 }
 
 .route-summary__times {
   font-family: var(--font-mono);
   font-size: 17px;
   font-weight: 700;
-  color: var(--link-green);
+  color: var(--link-green-dark);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
@@ -922,8 +842,8 @@ button, input, select {
 .route-summary__transfer {
   font-size: 12px;
   font-weight: 700;
-  color: var(--link-green);
-  background: rgba(61, 139, 55, 0.12);
+  color: var(--link-green-dark);
+  background: rgba(116, 170, 161, 0.12);
   border-radius: var(--radius-sm);
   padding: 3px 8px;
   text-align: center;
@@ -988,10 +908,12 @@ button, input, select {
 /* --- 路線詳情 --- */
 .plan-detail {
   margin-top: 10px;
-  border: 2px solid var(--link-green);
-  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--link-green);
+  border-radius: var(--radius-lg);
   background: #fff;
   overflow: hidden;
+  box-shadow: var(--shadow-md);
 }
 
 .plan-detail[hidden] {
@@ -1002,7 +924,7 @@ button, input, select {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  background: rgba(61, 139, 55, 0.1);
+  background: rgba(116, 170, 161, 0.1);
   padding: 12px 14px;
 }
 
@@ -1011,7 +933,7 @@ button, input, select {
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: var(--link-green);
+  background: var(--link-green-dark);
   color: #fff;
   font-family: var(--font-mono);
   font-weight: 700;
@@ -1036,7 +958,7 @@ button, input, select {
   font-family: var(--font-mono);
   font-size: 21px;
   font-weight: 700;
-  color: var(--link-green);
+  color: var(--link-green-dark);
   font-variant-numeric: tabular-nums;
 }
 
@@ -1093,31 +1015,6 @@ button, input, select {
 .plan-detail__fare-ic {
   font-size: 11px;
   color: var(--ink-soft);
-}
-
-.plan-actions {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  padding: 10px 14px;
-  border-bottom: 1px solid var(--line);
-}
-
-.plan-actions__btn {
-  border: 1px solid var(--line-strong);
-  background: #fff;
-  color: var(--ink-2);
-  font-size: 12px;
-  font-weight: 500;
-  padding: 6px 12px;
-  border-radius: var(--radius-md);
-  cursor: pointer;
-}
-
-.plan-actions__btn:hover {
-  border-color: var(--rail-blue);
-  color: var(--rail-blue-dark);
 }
 
 /* --- 時間軸：車站節點 ↔ 乘車／步行區間 --- */
@@ -1327,20 +1224,31 @@ button, input, select {
   color: var(--ink-faint);
   font-size: 14px;
   margin-top: 28px;
-  padding: 24px;
+  padding: 32px 24px;
   background: var(--paper-card);
   border: 1px solid var(--line);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
 }
 
 /* ============ Responsive ============ */
 @media (max-width: 560px) {
   .page {
-    padding: 16px 12px 40px;
+    padding: 6px 12px 40px;
+  }
+
+  #searchView {
+    padding-top: 380px;
+  }
+
+  .hero-carousel {
+    height: 380px;
   }
 
   .search-card {
-    padding: 12px;
+    margin-top: -140px;
+    padding: 14px;
+    border-radius: var(--radius-lg);
   }
 
   .search-form__row--stations {
@@ -1358,8 +1266,7 @@ button, input, select {
   }
 
   .search-form__row--date,
-  .search-form__row--time,
-  .search-form__row--via {
+  .search-form__row--time {
     flex-direction: column;
     align-items: stretch;
     gap: 6px;
@@ -1369,20 +1276,10 @@ button, input, select {
     width: auto;
   }
 
-  .time-mode {
-    margin-left: 0;
-    width: 100%;
-  }
-
-  .time-mode__btn {
-    flex: 1;
-    text-align: center;
-    padding: 8px 6px;
-  }
-
   /* 結果區：一覽表改成兩欄堆疊 */
   .results-view {
-    padding: 12px 10px;
+    padding: 14px 10px;
+    border-radius: var(--radius-lg);
   }
 
   .route-header__station {
@@ -1477,7 +1374,7 @@ button, input, select {
 
 .debug-panel__title {
   border: none;
-  background: var(--submit-orange);
+  background: #F29400;
   color: #1F2430;
   font-family: inherit;
   font-size: 10px;
