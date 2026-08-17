@@ -1,8 +1,7 @@
 """Google Routes 串接層。
 
 ★ 擁有者：P1。其他人請勿修改本檔（README §5）。
-★ 目前狀態：骨架 + 假回傳，讓 main.py 從第 1 小時就能跑起來。
-   P1 完成後把 _FAKE_PLANS 那段刪掉，換成真實實作。
+★ 目前狀態：已串接 Google Routes API，並將原始回傳正規化為凍結契約。
 
 契約（已凍結，見 README §4）：
     get_routes(origin, destination) -> list[plan]
@@ -11,7 +10,30 @@
     失敗時回傳 []，不要拋例外。
 """
 
+import copy
 import os
+import time
+from pathlib import Path
+
+import httpx
+
+def _load_dotenv() -> None:
+    """手動讀 .env（同層目錄），不引入 python-dotenv。
+
+    只在環境變數尚未設定時才填入，執行時手動 export 的值優先。
+    """
+    env_path = Path(__file__).parent / ".env"
+    if not env_path.exists():
+        return
+    for line in env_path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        os.environ.setdefault(key.strip(), value.strip())
+
+
+_load_dotenv()
 
 ENDPOINT = "https://routes.googleapis.com/directions/v2:computeRoutes"
 API_KEY = os.getenv("GOOGLE_MAPS_API_KEY", "")
@@ -42,13 +64,25 @@ VEHICLE_TYPE_MAP = {
 }
 DEFAULT_MODE = "BUS"
 
+ROUTE_CACHE_TTL = 20
+_route_cache: dict[tuple[str, str], tuple[float, list[dict]]] = {}
+
 
 def _secs(value) -> int:
     """把 Google 的 "900s" / "900.5s" / None 轉成 int 秒數。
 
-    TODO(P1, 步驟 1.2)：驗收條件 _secs("900s") == 900、_secs(None) == 0
+    無法解析或小於零的值視為 0，避免外部資料異常破壞 API 契約。
     """
-    raise NotImplementedError
+    if value is None:
+        return 0
+
+    try:
+        raw = str(value).strip()
+        if raw.endswith("s"):
+            raw = raw[:-1]
+        return max(int(float(raw)), 0)
+    except (TypeError, ValueError, OverflowError):
+        return 0
 
 
 def parse_route(route: dict) -> dict:
@@ -62,62 +96,64 @@ def parse_route(route: dict) -> dict:
         站數     transitDetails.stopCount
         transferCount = RIDE 步驟數 - 1（最小值 0）
 
-    TODO(P1, 步驟 1.3)
+    缺少的外部欄位使用 0 或空字串，確保凍結契約中的欄位一律存在。
     """
-    raise NotImplementedError
+    steps: list[dict] = []
+    ride_count = 0
 
+    for leg in route.get("legs") or []:
+        for step in leg.get("steps") or []:
+            transit = step.get("transitDetails") or {}
+            if step.get("travelMode") == "TRANSIT" or transit:
+                line = transit.get("transitLine") or {}
+                vehicle = line.get("vehicle") or {}
+                stop_details = transit.get("stopDetails") or {}
+                departure_stop = stop_details.get("departureStop") or {}
+                arrival_stop = stop_details.get("arrivalStop") or {}
 
-# --------------------------------------------------------------------------
-# 假回傳：P1 實作完成後整段刪除
-# --------------------------------------------------------------------------
-_FAKE_PLANS: list[dict] = [
-    {
-        "totalSeconds": 1980,
-        "transferCount": 1,
-        "polyline": "yzxwCstn`Vg@_AcBqCsAyBoAoB",
-        "steps": [
-            {"type": "WALK", "seconds": 180, "meters": 210},
-            {
-                "type": "RIDE",
-                "mode": "BUS",
-                "routeName": "307",
-                "fromStop": "台北車站",
-                "toStop": "西門",
-                "seconds": 600,
-                "stopCount": 5,
-            },
-            {"type": "WALK", "seconds": 120, "meters": 140},
-            {
-                "type": "RIDE",
-                "mode": "METRO",
-                "routeName": "淡水信義線",
-                "fromStop": "西門",
-                "toStop": "淡水",
-                "seconds": 960,
-                "stopCount": 14,
-            },
-            {"type": "WALK", "seconds": 120, "meters": 150},
-        ],
-    },
-    {
-        "totalSeconds": 1800,
-        "transferCount": 0,
-        "polyline": "uzxwCqtn`VsBiDwAyBkAiB",
-        "steps": [
-            {"type": "WALK", "seconds": 300, "meters": 380},
-            {
-                "type": "RIDE",
-                "mode": "BUS",
-                "routeName": "紅 15",
-                "fromStop": "捷運劍潭站",
-                "toStop": "淡水捷運站",
-                "seconds": 1320,
-                "stopCount": 18,
-            },
-            {"type": "WALK", "seconds": 180, "meters": 200},
-        ],
-    },
-]
+                try:
+                    stop_count = max(int(transit.get("stopCount") or 0), 0)
+                except (TypeError, ValueError, OverflowError):
+                    stop_count = 0
+
+                steps.append(
+                    {
+                        "type": "RIDE",
+                        "mode": VEHICLE_TYPE_MAP.get(
+                            vehicle.get("type"), DEFAULT_MODE
+                        ),
+                        "routeName": str(
+                            line.get("nameShort") or line.get("name") or ""
+                        ),
+                        "fromStop": str(departure_stop.get("name") or ""),
+                        "toStop": str(arrival_stop.get("name") or ""),
+                        "seconds": _secs(step.get("staticDuration")),
+                        "stopCount": stop_count,
+                    }
+                )
+                ride_count += 1
+                continue
+
+            try:
+                meters = max(int(step.get("distanceMeters") or 0), 0)
+            except (TypeError, ValueError, OverflowError):
+                meters = 0
+
+            steps.append(
+                {
+                    "type": "WALK",
+                    "seconds": _secs(step.get("staticDuration")),
+                    "meters": meters,
+                }
+            )
+
+    polyline = route.get("polyline") or {}
+    return {
+        "totalSeconds": _secs(route.get("duration")),
+        "transferCount": max(ride_count - 1, 0),
+        "steps": steps,
+        "polyline": str(polyline.get("encodedPolyline") or ""),
+    }
 
 
 async def get_routes(origin: str, destination: str) -> list[dict]:
@@ -129,19 +165,44 @@ async def get_routes(origin: str, destination: str) -> list[dict]:
 
     失敗時回傳空 list []，不要拋例外。
 
-    TODO(P1, 步驟 1.4 / 1.7 / 1.8)：
-        POST ENDPOINT
-        headers = {"X-Goog-Api-Key": API_KEY,
-                   "X-Goog-FieldMask": FIELD_MASK,
-                   "Content-Type": "application/json"}
-        body    = {"origin": {"address": origin},
-                   "destination": {"address": destination},
-                   "travelMode": "TRANSIT",
-                   "computeAlternativeRoutes": True,
-                   "languageCode": "zh-TW",
-                   "regionCode": "TW"}
-        回傳 [parse_route(r) for r in data.get("routes", [])]
-        整段包 try/except，任何失敗 return []
-        再加 20 秒行程內快取（key = origin + destination）
+    同一組起訖點快取 20 秒；快取值以深拷貝回傳，避免組裝層補欄位後
+    污染下一次 get_routes() 的四欄輸出。
     """
-    return _FAKE_PLANS
+    if not API_KEY:
+        return []
+
+    cache_key = (origin, destination)
+    now = time.monotonic()
+    cached = _route_cache.get(cache_key)
+    if cached is not None and now - cached[0] < ROUTE_CACHE_TTL:
+        return copy.deepcopy(cached[1])
+
+    headers = {
+        "X-Goog-Api-Key": API_KEY,
+        "X-Goog-FieldMask": FIELD_MASK,
+        "Content-Type": "application/json",
+    }
+    body = {
+        "origin": {"address": origin},
+        "destination": {"address": destination},
+        "travelMode": "TRANSIT",
+        "computeAlternativeRoutes": True,
+        "languageCode": "zh-TW",
+        "regionCode": "TW",
+    }
+
+    try:
+        async with httpx.AsyncClient(timeout=20.0) as client:
+            response = await client.post(ENDPOINT, headers=headers, json=body)
+            response.raise_for_status()
+            data = response.json()
+
+        routes = data.get("routes", [])
+        if not isinstance(routes, list):
+            return []
+
+        plans = [parse_route(route) for route in routes if isinstance(route, dict)]
+        _route_cache[cache_key] = (time.monotonic(), copy.deepcopy(plans))
+        return plans
+    except Exception:
+        return []
