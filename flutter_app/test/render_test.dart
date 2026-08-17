@@ -7,6 +7,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:transit_app/api/models.dart';
+import 'package:transit_app/logic/timeline.dart';
 import 'package:transit_app/ui/plan_detail.dart';
 import 'package:transit_app/ui/results_view.dart';
 
@@ -193,5 +194,102 @@ void main() {
       )));
       expect(tester.takeException(), isNull);
     });
+  });
+
+  group('時間軸一致性', _timelineConsistency);
+}
+
+// ── 時間軸與一覽表必須對得起來（本次修的 bug）──────────────────────────
+void _timelineConsistency() {
+  final departAt = DateTime(2026, 8, 18, 9, 0);
+
+  /// 這是最重要的不變式：時刻表最後一站的抵達時刻，
+  /// 必須等於一覽表顯示的抵達時刻（departAt + realSeconds）。
+  void expectConsistent(Plan p, String label) {
+    final rows = buildTimeline(p, departAt, '終點');
+    final stations = rows.where((r) => r.kind == RowKind.station).toList();
+    if (stations.isEmpty) return;
+    expect(
+      stations.last.arriveAt,
+      departAt.add(Duration(seconds: p.realSeconds)),
+      reason: '$label：時刻表抵達時刻與一覽表對不起來',
+    );
+  }
+
+  test('無轉乘', () {
+    expectConsistent(
+      plan(steps: [walk, ride('METRO', '淡水信義線', 'A', 'B'), walk],
+          transfers: 0, real: 180 + 900 + 180),
+      '無轉乘',
+    );
+  });
+
+  test('一次轉乘，Google 內含轉乘等待', () {
+    // 各步驟加總 2160，realSeconds 多 300 秒 = Google 內含的轉乘等待
+    expectConsistent(
+      plan(steps: [
+        walk,
+        ride('BUS', '307', 'A', 'B'),
+        ride('METRO', '板南線', 'B', 'C'),
+        walk,
+      ], real: 180 + 900 + 900 + 180 + 300),
+      '一次轉乘',
+    );
+  });
+
+  test('兩次轉乘，差額要平均分配且總和不變', () {
+    expectConsistent(
+      plan(steps: [
+        ride('BUS', '307', 'A', 'B'),
+        ride('METRO', '板南線', 'B', 'C'),
+        ride('BUS', '藍22', 'C', 'D'),
+      ], transfers: 2, real: 900 * 3 + 301), // 301 除以 2 除不盡，測餘數處理
+      '兩次轉乘',
+    );
+  });
+
+  test('第一段有即時候車時也要一致', () {
+    expectConsistent(
+      plan(steps: [
+        walk,
+        ride('BUS', '307', 'A', 'B', wait: 120),
+        ride('METRO', '板南線', 'B', 'C', wait: 1800),
+        walk,
+      ], real: 180 + 900 + 900 + 180 + 120 + 300),
+      '含即時候車',
+    );
+  });
+
+  test('★ 轉乘段的 TDX 即時候車不得推進時間軸', () {
+    // 轉乘段 waitSeconds=1800（來自 TDX「從現在算」），不得被加進去
+    final p = plan(steps: [
+      ride('BUS', '307', 'A', 'B', wait: 120),
+      ride('METRO', '板南線', 'B', 'C', wait: 1800),
+    ], real: 900 + 900 + 120);
+    final rows = buildTimeline(p, departAt, 'C');
+    final last = rows.lastWhere((r) => r.kind == RowKind.station);
+    expect(last.arriveAt, departAt.add(const Duration(seconds: 900 + 900 + 120)),
+        reason: '轉乘段的 1800 秒不該出現在時間軸上');
+  });
+
+  test('第一段的候車仍然要算進去', () {
+    final p = plan(steps: [ride('BUS', '307', 'A', 'B', wait: 300)],
+        transfers: 0, real: 900 + 300);
+    final rows = buildTimeline(p, departAt, 'B');
+    final first = rows.firstWhere((r) => r.kind == RowKind.station);
+    expect(first.departAt, departAt.add(const Duration(seconds: 300)));
+    expect(first.waitIsActionable, isTrue);
+  });
+
+  test('轉乘段標記為不可行動（文案要不一樣）', () {
+    final p = plan(steps: [
+      ride('BUS', '307', 'A', 'B', wait: 120),
+      ride('METRO', '板南線', 'B', 'C', wait: 1800),
+    ]);
+    final stations = buildTimeline(p, departAt, 'C')
+        .where((r) => r.kind == RowKind.station && r.waitSeconds != 0)
+        .toList();
+    expect(stations.first.waitIsActionable, isTrue);
+    expect(stations.last.waitIsActionable, isFalse);
   });
 }

@@ -182,7 +182,13 @@ class PlanDetail extends StatelessWidget {
       notes.add('站內轉乘：步行 ${(w.seconds / 60).round()} 分'
           '${w.meters != 0 ? ' · ${formatMeters(w.meters)}' : ''}');
     }
-    if (s.waitSeconds != 0) notes.add('候車 ${(s.waitSeconds / 60).round()} 分');
+    if (s.waitSeconds != 0) {
+      // 第一段才是「你要等多久」；轉乘段只能說「該站現在下一班多久後到」，
+      // 因為那個數字是從查詢當下算起的，不是從你抵達轉乘站的時刻算起。
+      notes.add(s.waitIsActionable
+          ? '候車 ${(s.waitSeconds / 60).round()} 分'
+          : '該站目前下一班約 ${(s.waitSeconds / 60).round()} 分後');
+    }
 
     return _shell(
       time: Column(

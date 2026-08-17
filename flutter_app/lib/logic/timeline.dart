@@ -17,6 +17,13 @@ class TimelineRow {
   final String mode;
   final TransitStep? walk; // 站內轉乘的步行
   final int waitSeconds;
+
+  /// 這個候車時間是不是「你現在真的要等的」。
+  ///
+  /// 只有第一段搭乘是 true。轉乘段的 waitSeconds 來自 TDX 的 EstimateTime，
+  /// 那是「從查詢當下算起」的數字——你要三十分鐘後才會抵達轉乘站，
+  /// 那班車早就開走了，拿它推算未來時刻在數學上不成立。
+  final bool waitIsActionable;
   final bool isStart;
   final bool isEnd;
 
@@ -31,6 +38,7 @@ class TimelineRow {
     this.mode = '',
     this.walk,
     this.waitSeconds = 0,
+    this.waitIsActionable = false,
     this.isStart = false,
     this.isEnd = false,
     this.step,
@@ -44,6 +52,7 @@ class TimelineRow {
         mode: mode,
         walk: walk,
         waitSeconds: waitSeconds,
+        waitIsActionable: waitIsActionable,
         isStart: isStart ?? this.isStart,
         isEnd: isEnd ?? this.isEnd,
         step: step,
@@ -66,6 +75,22 @@ List<TimelineRow> buildTimeline(Plan plan, DateTime departAt, String destination
   var cursor = departAt;
   final rows = <TimelineRow>[];
   _Pending? pending;
+  var seenRide = false; // 用來判斷這是不是第一段搭乘
+
+  // ★ Google 的 totalSeconds 比各步驟 staticDuration 的加總還大，
+  //   差額就是它內含的「轉乘等待」——任何單一步驟裡都沒有這段時間
+  //   （實測：加總 1919s、totalSeconds 2154s，差 235s；
+  //    Google 自己的時刻也顯示上段 23:34:30 抵達、下段 23:39:35 發車）。
+  //   把這個差額補在轉乘點上，時刻表的總和才會等於一覽表的 realSeconds。
+  final rides = plan.rides;
+  final transferCount = rides.length > 1 ? rides.length - 1 : 0;
+  final stepTotal = plan.steps.fold<int>(0, (a, s) => a + s.seconds);
+  final firstWait = rides.isEmpty ? 0 : (rides.first.waitSeconds ?? 0);
+  final slack = plan.realSeconds - stepTotal - firstWait;
+  final perTransfer = (transferCount > 0 && slack > 0) ? slack ~/ transferCount : 0;
+  // 除不盡的餘數補在最後一個轉乘點，總和才會完全相等
+  final remainder = (transferCount > 0 && slack > 0) ? slack % transferCount : 0;
+  var transferSeen = 0;
 
   for (final step in plan.steps) {
     if (step.type == 'WALK') {
@@ -83,8 +108,21 @@ List<TimelineRow> buildTimeline(Plan plan, DateTime departAt, String destination
     if (!step.isRide) continue;
 
     final waitSeconds = step.waitSeconds ?? 0;
-    final departTime = cursor.add(Duration(seconds: waitSeconds));
+    // ★ 只有第一段的候車會推進時間軸。
+    //   轉乘段的候車是「從現在算起」的即時值，加進去會產生不存在的班次時刻，
+    //   而且會讓時刻表的抵達時間比一覽表多出十幾二十分鐘（實測 +16 ~ +28 分）。
+    final actionable = !seenRide;
+    int advance;
+    if (actionable) {
+      advance = waitSeconds; // 第一段：用 TDX 的即時候車，那個是真的
+    } else {
+      // 轉乘段：用 Google 內含的轉乘等待，不用 TDX 的即時值
+      transferSeen++;
+      advance = perTransfer + (transferSeen == transferCount ? remainder : 0);
+    }
+    final departTime = cursor.add(Duration(seconds: advance));
     final arriveTime = departTime.add(Duration(seconds: step.seconds));
+    seenRide = true;
 
     if (pending != null && pending.stop == step.fromStop) {
       // 同一站轉乘 → 合併成「到達 / 出發」一個節點
@@ -96,6 +134,7 @@ List<TimelineRow> buildTimeline(Plan plan, DateTime departAt, String destination
         mode: step.mode,
         walk: pending.walk,
         waitSeconds: waitSeconds,
+        waitIsActionable: actionable,
       ));
     } else {
       if (pending != null) {
@@ -115,6 +154,7 @@ List<TimelineRow> buildTimeline(Plan plan, DateTime departAt, String destination
         departAt: departTime,
         mode: step.mode,
         waitSeconds: waitSeconds,
+        waitIsActionable: actionable,
       ));
     }
 

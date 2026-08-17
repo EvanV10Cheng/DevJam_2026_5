@@ -748,6 +748,20 @@ function buildTimeline(plan, departAt, destinationName) {
   let cursor = new Date(departAt);
   const rows = [];
   let pending = null; // 上一段車的到站資訊：{ stop, arriveAt, mode, walk }
+  let seenRide = false; // 判斷是不是第一段搭乘
+
+  // ★ Google 的 totalSeconds 比各步驟 staticDuration 加總還大，差額就是它
+  //   內含的「轉乘等待」——任何單一步驟裡都沒有這段時間（實測加總 1919s、
+  //   totalSeconds 2154s，差 235s）。補在轉乘點上，時刻表總和才會等於
+  //   一覽表的 realSeconds。
+  const _rides = plan.steps.filter((s) => s.type === 'RIDE');
+  const _transferCount = _rides.length > 1 ? _rides.length - 1 : 0;
+  const _stepTotal = plan.steps.reduce((a, s) => a + (s.seconds || 0), 0);
+  const _firstWait = _rides.length ? (_rides[0].waitSeconds || 0) : 0;
+  const _slack = (plan.realSeconds || 0) - _stepTotal - _firstWait;
+  const _perTransfer = (_transferCount > 0 && _slack > 0) ? Math.floor(_slack / _transferCount) : 0;
+  const _remainder = (_transferCount > 0 && _slack > 0) ? _slack % _transferCount : 0;
+  let _transferSeen = 0;
 
   const pushStation = (station) => rows.push({ kind: 'station', ...station });
 
@@ -765,11 +779,24 @@ function buildTimeline(plan, departAt, destinationName) {
 
     if (step.type !== 'RIDE') return;
 
-    // step.waitSeconds 是選用欄位（候車）；它必須已經算在 plan.realSeconds 裡，
-    // 否則時間軸的到站時間會跟上方一覽表的抵達時間對不起來。
+    // ★ 只有第一段的候車會推進時間軸。
+    //   後端的 realSeconds 只含第一段候車（轉乘等待 Google 的行程規劃已含在內，
+    //   再加一次會重複計算）。而且轉乘段的 waitSeconds 來自 TDX 的 EstimateTime，
+    //   那是「從查詢當下算起」——你三十分鐘後才到轉乘站，那班車早開走了，
+    //   拿它推算未來時刻會產生不存在的班次。
+    //   把它加進時間軸曾讓抵達時間比一覽表多出 16~28 分鐘。
     const waitSeconds = step.waitSeconds || 0;
-    const departTime = new Date(cursor.getTime() + waitSeconds * 1000);
+    const actionable = !seenRide;
+    let advance;
+    if (actionable) {
+      advance = waitSeconds; // 第一段：TDX 的即時候車，那個是真的
+    } else {
+      _transferSeen += 1;
+      advance = _perTransfer + (_transferSeen === _transferCount ? _remainder : 0);
+    }
+    const departTime = new Date(cursor.getTime() + advance * 1000);
     const arriveTime = new Date(departTime.getTime() + step.seconds * 1000);
+    seenRide = true;
 
     if (pending && pending.stop === step.fromStop) {
       // 同一站轉乘 → 合併成「到達 / 出發」一個節點
@@ -780,13 +807,15 @@ function buildTimeline(plan, departAt, destinationName) {
         mode: step.mode,
         walk: pending.walk,
         waitSeconds,
+        waitIsActionable: actionable,
       });
     } else {
       if (pending) {
         pushStation({ name: pending.stop, arriveAt: pending.arriveAt, mode: pending.mode });
         if (pending.walk) rows.push({ kind: 'walk', step: pending.walk });
       }
-      pushStation({ name: step.fromStop, departAt: departTime, mode: step.mode, waitSeconds });
+      pushStation({ name: step.fromStop, departAt: departTime, mode: step.mode, waitSeconds,
+                    waitIsActionable: actionable });
     }
 
     pending = null;
@@ -832,7 +861,10 @@ function renderStationRow(s) {
     notes.push(`站內轉乘：步行 ${Math.round(s.walk.seconds / 60)} 分${s.walk.meters ? ` · ${formatMeters(s.walk.meters)}` : ''}`);
   }
   if (s.waitSeconds) {
-    notes.push(`候車 ${Math.round(s.waitSeconds / 60)} 分`);
+    // 第一段才是「你要等多久」；轉乘段只能說「該站現在下一班多久後到」
+    notes.push(s.waitIsActionable
+      ? `候車 ${Math.round(s.waitSeconds / 60)} 分`
+      : `該站目前下一班約 ${Math.round(s.waitSeconds / 60)} 分後`);
   }
 
   return `
