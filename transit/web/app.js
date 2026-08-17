@@ -184,6 +184,7 @@ const submitBtn = document.getElementById('submitBtn');
 const submitBtnText = document.getElementById('submitBtnText');
 const searchError = document.getElementById('searchError');
 const searchCard = document.getElementById('searchCard');
+const searchView = document.getElementById('searchView');
 const resultsView = document.getElementById('resultsView');
 const resultOrigin = document.getElementById('resultOrigin');
 const resultDestination = document.getElementById('resultDestination');
@@ -389,6 +390,7 @@ function toDateInputValue(d) {
   return `${yyyy}-${mm}-${dd}`;
 }
 dateInput.value = toDateInputValue(new Date());
+dateInput.min = toDateInputValue(new Date()); // 日曆today以前的日期不能選
 
 calendarBtn.addEventListener('click', () => {
   // showPicker() 是較新的瀏覽器 API；不支援時退回 focus() 讓使用者自己點開
@@ -446,25 +448,30 @@ timeModeBtns.forEach((btn) => {
   });
 });
 
-// ---------- 9. 表單送出：以「超連結」方式刷新頁面 ----------
-// 表單是原生 GET，沒填 action 時瀏覽器會直接導向「目前網址 + 查詢參數」，
-// 等同於點一個帶查詢字串的超連結：整頁重新整理一次。
-// 驗證失敗才 preventDefault 擋下；驗證通過就放行，讓瀏覽器真的刷新頁面，
-// 重新整理後由下面「從網址參數還原查詢」的流程自動查詢並捲到結果區。
+// ---------- 9. 表單送出：原地查詢，不跳頁、不整頁刷新 ----------
+// 一律 preventDefault 擋掉原生 GET 導頁；驗證通過後改用 history.pushState
+// 把查詢參數寫進網址（維持可分享連結、重新整理仍可還原），再直接呼叫
+// runSearch() 原地更新結果，畫面不跳轉、不捲動。
 searchForm.addEventListener('submit', (event) => {
+  event.preventDefault();
   hideError();
 
   const origin = originInput.value.trim();
   const destination = destinationInput.value.trim();
 
   if (!origin || !destination) {
-    event.preventDefault();
     dlog('error', '欄位驗證未通過：出發或到達為空');
     showError('請輸入出發與到達地點');
     return;
   }
 
-  dlog('search', '表單送出（超連結式整頁刷新）', {
+  if (dateInput.value && dateInput.value < dateInput.min) {
+    dlog('error', '欄位驗證未通過：日期早於今天', dateInput.value);
+    showError('查詢日期不能早於今天');
+    return;
+  }
+
+  dlog('search', '表單送出（原地查詢，不跳頁）', {
     origin,
     destination,
     via: collectViaStops(),
@@ -472,7 +479,12 @@ searchForm.addEventListener('submit', (event) => {
     time: `${hourSelect.value}:${minuteSelect.value}`,
     mode: searchTimeMode,
   });
-  // 不 preventDefault → 瀏覽器原生 GET 導頁，頁面即將重新整理
+
+  const params = new URLSearchParams(new FormData(searchForm));
+  const newUrl = `${location.pathname}?${params.toString()}`;
+  history.pushState({ origin, destination }, '', newUrl);
+
+  runSearch(origin, destination);
 });
 
 function showError(message) {
@@ -490,23 +502,22 @@ function setLoading(isLoading) {
   submitBtnText.textContent = isLoading ? '查詢中…' : '查詢轉乘方案';
 }
 
-// ---------- 10. 結果區：顯示／隱藏（同一頁往下展開，不換頁）----------
+// ---------- 10. 結果區：顯示／隱藏（原地換成結果畫面，不跳頁、不捲動）----------
 function showResultsView() {
   emptyState.hidden = true;
+  searchView.hidden = true;
   resultsView.hidden = false;
-  requestAnimationFrame(() => {
-    resultsView.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
 }
 
 function hideResultsView() {
   resultsView.hidden = true;
 }
 
-// 「更改搜尋條件」：結果留在原地，只把畫面捲回搜尋卡片
+// 「更改搜尋條件」：原地換回搜尋畫面，不捲動
 backToSearchBtn.addEventListener('click', () => {
   dlog('ui', '回到搜尋條件');
-  searchCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  resultsView.hidden = true;
+  searchView.hidden = false;
   originInput.focus({ preventScroll: true });
 });
 
