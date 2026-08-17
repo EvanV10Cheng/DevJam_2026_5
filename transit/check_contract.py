@@ -41,7 +41,9 @@ RIDE = {
 }
 
 MODES = {"BUS", "METRO", "TRAIN", "HSR"}
-SOURCES = {"即時", "班表推估", "末班已過"}
+# 「無班次」與「查詢受限」是為了需求 1 新增的：要能分辨「這站真的沒車」
+# 與「被 TDX 限流」，舊版兩者都會顯示成「班表推估」。
+SOURCES = {"即時", "班表推估", "末班已過", "無班次", "查詢受限"}
 
 errors: list[str] = []
 warnings: list[str] = []
@@ -129,8 +131,11 @@ def main(src: str) -> int:
     # 以下是覆蓋度提醒，不算錯誤——但 mock.json 應該要全中
     for missing in MODES - seen_modes:
         warnings.append(f"沒有任何步驟用到 mode={missing}，P3 的圖示測不到")
-    for missing in SOURCES - seen_sources:
+    # 只提醒核心三種；「無班次」「查詢受限」是異常狀態，沒出現反而是好事
+    for missing in {"即時", "班表推估", "末班已過"} - seen_sources:
         warnings.append(f"沒有任何方案的 waitSource={missing}")
+    if "查詢受限" in seen_sources:
+        warnings.append("★ 出現「查詢受限」——TDX 正在限流，這批資料不可信")
     if len(seen_live) < 2:
         warnings.append("isLive 只出現一種值，P3 的即時徽章測不到出現/消失")
     if not data.get("reordered"):

@@ -1,0 +1,992 @@
+[
+ {
+  "LineNO": "BL",
+  "LineID": "BL",
+  "LineName": {
+   "Zh_tw": "板南線",
+   "En": "Bannan Line",
+   "Ja": "板南線",
+   "Ko": "반난선"
+  },
+  "StationID": "BL09",
+  "StationName": {
+   "Zh_tw": "江子翠",
+   "En": "Jiangzicui",
+   "Ja": "江子翠",
+   "Ko": "장쯔추이"
+  },
+  "TripHeadSign": "往南港展覽館",
+  "DestinationStaionID": "BL23",
+  "DestinationStationID": "BL23",
+  "DestinationStationName": {
+   "Zh_tw": "南港展覽館",
+   "En": "Taipei Nangang Exhibition Center",
+   "Ja": "南港展覧館",
+   "Ko": "난강 전람관"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:07+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "BL",
+  "LineID": "BL",
+  "LineName": {
+   "Zh_tw": "板南線",
+   "En": "Bannan Line",
+   "Ja": "板南線",
+   "Ko": "반난선"
+  },
+  "StationID": "BL10",
+  "StationName": {
+   "Zh_tw": "龍山寺",
+   "En": "Longshan Temple",
+   "Ja": "龍山寺",
+   "Ko": "용산사"
+  },
+  "TripHeadSign": "往亞東醫院",
+  "DestinationStaionID": "BL05",
+  "DestinationStationID": "BL05",
+  "DestinationStationName": {
+   "Zh_tw": "亞東醫院",
+   "En": "Far Eastern Hospital",
+   "Ja": "亜東病院",
+   "Ko": "야둥 병원"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:11:58+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "BL",
+  "LineID": "BL",
+  "LineName": {
+   "Zh_tw": "板南線",
+   "En": "Bannan Line",
+   "Ja": "板南線",
+   "Ko": "반난선"
+  },
+  "StationID": "BL10",
+  "StationName": {
+   "Zh_tw": "龍山寺",
+   "En": "Longshan Temple",
+   "Ja": "龍山寺",
+   "Ko": "용산사"
+  },
+  "TripHeadSign": "往南港展覽館",
+  "DestinationStaionID": "BL23",
+  "DestinationStationID": "BL23",
+  "DestinationStationName": {
+   "Zh_tw": "南港展覽館",
+   "En": "Taipei Nangang Exhibition Center",
+   "Ja": "南港展覧館",
+   "Ko": "난강 전람관"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:17+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "BL",
+  "LineID": "BL",
+  "LineName": {
+   "Zh_tw": "板南線",
+   "En": "Bannan Line",
+   "Ja": "板南線",
+   "Ko": "반난선"
+  },
+  "StationID": "BL13",
+  "StationName": {
+   "Zh_tw": "善導寺",
+   "En": "Shandao Temple",
+   "Ja": "善導寺",
+   "Ko": "산다오사"
+  },
+  "TripHeadSign": "往南港展覽館",
+  "DestinationStaionID": "BL23",
+  "DestinationStationID": "BL23",
+  "DestinationStationName": {
+   "Zh_tw": "南港展覽館",
+   "En": "Taipei Nangang Exhibition Center",
+   "Ja": "南港展覧館",
+   "Ko": "난강 전람관"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:11:58+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "BL",
+  "LineID": "BL",
+  "LineName": {
+   "Zh_tw": "板南線",
+   "En": "Bannan Line",
+   "Ja": "板南線",
+   "Ko": "반난선"
+  },
+  "StationID": "BL15",
+  "StationName": {
+   "Zh_tw": "忠孝復興",
+   "En": "Zhongxiao Fuxing",
+   "Ja": "忠孝復興",
+   "Ko": "중샤오 푸싱"
+  },
+  "TripHeadSign": "往南港展覽館",
+  "DestinationStaionID": "BL23",
+  "DestinationStationID": "BL23",
+  "DestinationStationName": {
+   "Zh_tw": "南港展覽館",
+   "En": "Taipei Nangang Exhibition Center",
+   "Ja": "南港展覧館",
+   "Ko": "난강 전람관"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:17+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "BL",
+  "LineID": "BL",
+  "LineName": {
+   "Zh_tw": "板南線",
+   "En": "Bannan Line",
+   "Ja": "板南線",
+   "Ko": "반난선"
+  },
+  "StationID": "BL17",
+  "StationName": {
+   "Zh_tw": "國父紀念館",
+   "En": "Sun Yat-Sen Memorial Hall",
+   "Ja": "国父紀念館",
+   "Ko": "국부 기념관"
+  },
+  "TripHeadSign": "往亞東醫院",
+  "DestinationStaionID": "BL05",
+  "DestinationStationID": "BL05",
+  "DestinationStationName": {
+   "Zh_tw": "亞東醫院",
+   "En": "Far Eastern Hospital",
+   "Ja": "亜東病院",
+   "Ko": "야둥 병원"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:11:58+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "BL",
+  "LineID": "BL",
+  "LineName": {
+   "Zh_tw": "板南線",
+   "En": "Bannan Line",
+   "Ja": "板南線",
+   "Ko": "반난선"
+  },
+  "StationID": "BL17",
+  "StationName": {
+   "Zh_tw": "國父紀念館",
+   "En": "Sun Yat-Sen Memorial Hall",
+   "Ja": "国父紀念館",
+   "Ko": "국부 기념관"
+  },
+  "TripHeadSign": "往南港展覽館",
+  "DestinationStaionID": "BL23",
+  "DestinationStationID": "BL23",
+  "DestinationStationName": {
+   "Zh_tw": "南港展覽館",
+   "En": "Taipei Nangang Exhibition Center",
+   "Ja": "南港展覧館",
+   "Ko": "난강 전람관"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:07+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "BL",
+  "LineID": "BL",
+  "LineName": {
+   "Zh_tw": "板南線",
+   "En": "Bannan Line",
+   "Ja": "板南線",
+   "Ko": "반난선"
+  },
+  "StationID": "BL19",
+  "StationName": {
+   "Zh_tw": "永春",
+   "En": "Yongchun",
+   "Ja": "永春",
+   "Ko": "융춘"
+  },
+  "TripHeadSign": "往南港展覽館",
+  "DestinationStaionID": "BL23",
+  "DestinationStationID": "BL23",
+  "DestinationStationName": {
+   "Zh_tw": "南港展覽館",
+   "En": "Taipei Nangang Exhibition Center",
+   "Ja": "南港展覧館",
+   "Ko": "난강 전람관"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:17+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "BL",
+  "LineID": "BL",
+  "LineName": {
+   "Zh_tw": "板南線",
+   "En": "Bannan Line",
+   "Ja": "板南線",
+   "Ko": "반난선"
+  },
+  "StationID": "BL22",
+  "StationName": {
+   "Zh_tw": "南港",
+   "En": "Nangang",
+   "Ja": "南港",
+   "Ko": "난강"
+  },
+  "TripHeadSign": "往頂埔",
+  "DestinationStaionID": "BL01",
+  "DestinationStationID": "BL01",
+  "DestinationStationName": {
+   "Zh_tw": "頂埔",
+   "En": "Dingpu",
+   "Ja": "頂埔",
+   "Ko": "딩푸"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:07+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "BR",
+  "LineID": "BR",
+  "LineName": {
+   "Zh_tw": "文湖線",
+   "En": "Wenhu Line",
+   "Ja": "文湖線",
+   "Ko": "원후선"
+  },
+  "StationID": "BR02",
+  "StationName": {
+   "Zh_tw": "木柵",
+   "En": "Muzha",
+   "Ja": "木柵",
+   "Ko": "무자"
+  },
+  "TripHeadSign": "往南港展覽館",
+  "DestinationStaionID": "BR24",
+  "DestinationStationID": "BR24",
+  "DestinationStationName": {
+   "Zh_tw": "南港展覽館",
+   "En": "Taipei Nangang Exhibition Center",
+   "Ja": "南港展覧館",
+   "Ko": "난강 전람관"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:13+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "BR",
+  "LineID": "BR",
+  "LineName": {
+   "Zh_tw": "文湖線",
+   "En": "Wenhu Line",
+   "Ja": "文湖線",
+   "Ko": "원후선"
+  },
+  "StationID": "BR04",
+  "StationName": {
+   "Zh_tw": "萬芳醫院",
+   "En": "Wanfang Hospital",
+   "Ja": "万芳病院",
+   "Ko": "완팡 병원"
+  },
+  "TripHeadSign": "往動物園",
+  "DestinationStaionID": "BR01",
+  "DestinationStationID": "BR01",
+  "DestinationStationName": {
+   "Zh_tw": "動物園",
+   "En": "Taipei Zoo",
+   "Ja": "動物園",
+   "Ko": "동물원"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:13+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "BR",
+  "LineID": "BR",
+  "LineName": {
+   "Zh_tw": "文湖線",
+   "En": "Wenhu Line",
+   "Ja": "文湖線",
+   "Ko": "원후선"
+  },
+  "StationID": "BR04",
+  "StationName": {
+   "Zh_tw": "萬芳醫院",
+   "En": "Wanfang Hospital",
+   "Ja": "万芳病院",
+   "Ko": "완팡 병원"
+  },
+  "TripHeadSign": "往南港展覽館",
+  "DestinationStaionID": "BR24",
+  "DestinationStationID": "BR24",
+  "DestinationStationName": {
+   "Zh_tw": "南港展覽館",
+   "En": "Taipei Nangang Exhibition Center",
+   "Ja": "南港展覧館",
+   "Ko": "난강 전람관"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:13+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "BR",
+  "LineID": "BR",
+  "LineName": {
+   "Zh_tw": "文湖線",
+   "En": "Wenhu Line",
+   "Ja": "文湖線",
+   "Ko": "원후선"
+  },
+  "StationID": "BR09",
+  "StationName": {
+   "Zh_tw": "大安",
+   "En": "Daan",
+   "Ja": "大安",
+   "Ko": "다안"
+  },
+  "TripHeadSign": "往南港展覽館",
+  "DestinationStaionID": "BR24",
+  "DestinationStationID": "BR24",
+  "DestinationStationName": {
+   "Zh_tw": "南港展覽館",
+   "En": "Taipei Nangang Exhibition Center",
+   "Ja": "南港展覧館",
+   "Ko": "난강 전람관"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:13+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "BR",
+  "LineID": "BR",
+  "LineName": {
+   "Zh_tw": "文湖線",
+   "En": "Wenhu Line",
+   "Ja": "文湖線",
+   "Ko": "원후선"
+  },
+  "StationID": "BR12",
+  "StationName": {
+   "Zh_tw": "中山國中",
+   "En": "Zhongshan Junior High School",
+   "Ja": "中山中学校",
+   "Ko": "중산 중학교"
+  },
+  "TripHeadSign": "往南港展覽館",
+  "DestinationStaionID": "BR24",
+  "DestinationStationID": "BR24",
+  "DestinationStationName": {
+   "Zh_tw": "南港展覽館",
+   "En": "Taipei Nangang Exhibition Center",
+   "Ja": "南港展覧館",
+   "Ko": "난강 전람관"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:13+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "BR",
+  "LineID": "BR",
+  "LineName": {
+   "Zh_tw": "文湖線",
+   "En": "Wenhu Line",
+   "Ja": "文湖線",
+   "Ko": "원후선"
+  },
+  "StationID": "BR13",
+  "StationName": {
+   "Zh_tw": "松山機場",
+   "En": "Songshan Airport",
+   "Ja": "松山空港",
+   "Ko": "송산공항"
+  },
+  "TripHeadSign": "往動物園",
+  "DestinationStaionID": "BR01",
+  "DestinationStationID": "BR01",
+  "DestinationStationName": {
+   "Zh_tw": "動物園",
+   "En": "Taipei Zoo",
+   "Ja": "動物園",
+   "Ko": "동물원"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:13+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "BR",
+  "LineID": "BR",
+  "LineName": {
+   "Zh_tw": "文湖線",
+   "En": "Wenhu Line",
+   "Ja": "文湖線",
+   "Ko": "원후선"
+  },
+  "StationID": "BR16",
+  "StationName": {
+   "Zh_tw": "西湖",
+   "En": "Xihu",
+   "Ja": "西湖",
+   "Ko": "시후"
+  },
+  "TripHeadSign": "往動物園",
+  "DestinationStaionID": "BR01",
+  "DestinationStationID": "BR01",
+  "DestinationStationName": {
+   "Zh_tw": "動物園",
+   "En": "Taipei Zoo",
+   "Ja": "動物園",
+   "Ko": "동물원"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:13+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "BR",
+  "LineID": "BR",
+  "LineName": {
+   "Zh_tw": "文湖線",
+   "En": "Wenhu Line",
+   "Ja": "文湖線",
+   "Ko": "원후선"
+  },
+  "StationID": "BR16",
+  "StationName": {
+   "Zh_tw": "西湖",
+   "En": "Xihu",
+   "Ja": "西湖",
+   "Ko": "시후"
+  },
+  "TripHeadSign": "往南港展覽館",
+  "DestinationStaionID": "BR24",
+  "DestinationStationID": "BR24",
+  "DestinationStationName": {
+   "Zh_tw": "南港展覽館",
+   "En": "Taipei Nangang Exhibition Center",
+   "Ja": "南港展覧館",
+   "Ko": "난강 전람관"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:13+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "BR",
+  "LineID": "BR",
+  "LineName": {
+   "Zh_tw": "文湖線",
+   "En": "Wenhu Line",
+   "Ja": "文湖線",
+   "Ko": "원후선"
+  },
+  "StationID": "BR21",
+  "StationName": {
+   "Zh_tw": "葫洲",
+   "En": "Huzhou",
+   "Ja": "葫洲",
+   "Ko": "후저우"
+  },
+  "TripHeadSign": "往動物園",
+  "DestinationStaionID": "BR01",
+  "DestinationStationID": "BR01",
+  "DestinationStationName": {
+   "Zh_tw": "動物園",
+   "En": "Taipei Zoo",
+   "Ja": "動物園",
+   "Ko": "동물원"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:13+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "BR",
+  "LineID": "BR",
+  "LineName": {
+   "Zh_tw": "文湖線",
+   "En": "Wenhu Line",
+   "Ja": "文湖線",
+   "Ko": "원후선"
+  },
+  "StationID": "BR23",
+  "StationName": {
+   "Zh_tw": "南港軟體園區",
+   "En": "Nangang Software Park",
+   "Ja": "南港ソフトウェアパーク",
+   "Ko": "난강 소프트웨어 단지"
+  },
+  "TripHeadSign": "往動物園",
+  "DestinationStaionID": "BR01",
+  "DestinationStationID": "BR01",
+  "DestinationStationName": {
+   "Zh_tw": "動物園",
+   "En": "Taipei Zoo",
+   "Ja": "動物園",
+   "Ko": "동물원"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:13+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "G",
+  "LineID": "G",
+  "LineName": {
+   "Zh_tw": "松山新店線",
+   "En": "Songshan-Xindian Line",
+   "Ja": "松山新店線",
+   "Ko": "숭산신뎬선"
+  },
+  "StationID": "G05",
+  "StationName": {
+   "Zh_tw": "景美",
+   "En": "Jingmei",
+   "Ja": "景美",
+   "Ko": "징메이"
+  },
+  "TripHeadSign": "往松山",
+  "DestinationStaionID": "G19",
+  "DestinationStationID": "G19",
+  "DestinationStationName": {
+   "Zh_tw": "松山",
+   "En": "Songshan",
+   "Ja": "松山",
+   "Ko": "송산"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:13+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "G",
+  "LineID": "G",
+  "LineName": {
+   "Zh_tw": "松山新店線",
+   "En": "Songshan-Xindian Line",
+   "Ja": "松山新店線",
+   "Ko": "숭산신뎬선"
+  },
+  "StationID": "G06",
+  "StationName": {
+   "Zh_tw": "萬隆",
+   "En": "Wanlong",
+   "Ja": "万隆",
+   "Ko": "완룽"
+  },
+  "TripHeadSign": "往新店",
+  "DestinationStaionID": "G01",
+  "DestinationStationID": "G01",
+  "DestinationStationName": {
+   "Zh_tw": "新店",
+   "En": "Xindian",
+   "Ja": "新店",
+   "Ko": "신뎬"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:23+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "G",
+  "LineID": "G",
+  "LineName": {
+   "Zh_tw": "松山新店線",
+   "En": "Songshan-Xindian Line",
+   "Ja": "松山新店線",
+   "Ko": "숭산신뎬선"
+  },
+  "StationID": "G09",
+  "StationName": {
+   "Zh_tw": "古亭",
+   "En": "Guting",
+   "Ja": "古亭",
+   "Ko": "구팅"
+  },
+  "TripHeadSign": "往新店",
+  "DestinationStaionID": "G01",
+  "DestinationStationID": "G01",
+  "DestinationStationName": {
+   "Zh_tw": "新店",
+   "En": "Xindian",
+   "Ja": "新店",
+   "Ko": "신뎬"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:03+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "G",
+  "LineID": "G",
+  "LineName": {
+   "Zh_tw": "松山新店線",
+   "En": "Songshan-Xindian Line",
+   "Ja": "松山新店線",
+   "Ko": "숭산신뎬선"
+  },
+  "StationID": "G12",
+  "StationName": {
+   "Zh_tw": "西門",
+   "En": "Ximen",
+   "Ja": "西門",
+   "Ko": "시먼"
+  },
+  "TripHeadSign": "往松山",
+  "DestinationStaionID": "G19",
+  "DestinationStationID": "G19",
+  "DestinationStationName": {
+   "Zh_tw": "松山",
+   "En": "Songshan",
+   "Ja": "松山",
+   "Ko": "송산"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:03+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "O",
+  "LineID": "O",
+  "LineName": {
+   "Zh_tw": "中和新蘆線",
+   "En": "Zhonghe-Xinlu Line",
+   "Ja": "中和新蘆線",
+   "Ko": "중허신루선"
+  },
+  "StationID": "O02",
+  "StationName": {
+   "Zh_tw": "景安",
+   "En": "Jingan",
+   "Ja": "景安",
+   "Ko": "징안"
+  },
+  "TripHeadSign": "往南勢角",
+  "DestinationStaionID": "O01",
+  "DestinationStationID": "O01",
+  "DestinationStationName": {
+   "Zh_tw": "南勢角",
+   "En": "Nanshijiao",
+   "Ja": "南勢角",
+   "Ko": "난스자오"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:15+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "O",
+  "LineID": "O",
+  "LineName": {
+   "Zh_tw": "中和新蘆線",
+   "En": "Zhonghe-Xinlu Line",
+   "Ja": "中和新蘆線",
+   "Ko": "중허신루선"
+  },
+  "StationID": "O04",
+  "StationName": {
+   "Zh_tw": "頂溪",
+   "En": "Dingxi",
+   "Ja": "頂渓",
+   "Ko": "딩시"
+  },
+  "TripHeadSign": "往南勢角",
+  "DestinationStaionID": "O01",
+  "DestinationStationID": "O01",
+  "DestinationStationName": {
+   "Zh_tw": "南勢角",
+   "En": "Nanshijiao",
+   "Ja": "南勢角",
+   "Ko": "난스자오"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:15+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "O",
+  "LineID": "O",
+  "LineName": {
+   "Zh_tw": "中和新蘆線",
+   "En": "Zhonghe-Xinlu Line",
+   "Ja": "中和新蘆線",
+   "Ko": "중허신루선"
+  },
+  "StationID": "O04",
+  "StationName": {
+   "Zh_tw": "頂溪",
+   "En": "Dingxi",
+   "Ja": "頂渓",
+   "Ko": "딩시"
+  },
+  "TripHeadSign": "往蘆洲",
+  "DestinationStaionID": "O54",
+  "DestinationStationID": "O54",
+  "DestinationStationName": {
+   "Zh_tw": "蘆洲",
+   "En": "Luzhou",
+   "Ja": "蘆洲",
+   "Ko": "루저우"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:20+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "O",
+  "LineID": "O",
+  "LineName": {
+   "Zh_tw": "中和新蘆線",
+   "En": "Zhonghe-Xinlu Line",
+   "Ja": "中和新蘆線",
+   "Ko": "중허신루선"
+  },
+  "StationID": "O08",
+  "StationName": {
+   "Zh_tw": "松江南京",
+   "En": "Songjiang Nanjing",
+   "Ja": "松江南京",
+   "Ko": "송장 난징"
+  },
+  "TripHeadSign": "往南勢角",
+  "DestinationStaionID": "O01",
+  "DestinationStationID": "O01",
+  "DestinationStationName": {
+   "Zh_tw": "南勢角",
+   "En": "Nanshijiao",
+   "Ja": "南勢角",
+   "Ko": "난스자오"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:15+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "O",
+  "LineID": "O",
+  "LineName": {
+   "Zh_tw": "中和新蘆線",
+   "En": "Zhonghe-Xinlu Line",
+   "Ja": "中和新蘆線",
+   "Ko": "중허신루선"
+  },
+  "StationID": "O16",
+  "StationName": {
+   "Zh_tw": "先嗇宮",
+   "En": "Xianse Temple",
+   "Ja": "先嗇宮",
+   "Ko": "셴써궁"
+  },
+  "TripHeadSign": "往迴龍",
+  "DestinationStaionID": "O21",
+  "DestinationStationID": "O21",
+  "DestinationStationName": {
+   "Zh_tw": "迴龍",
+   "En": "Huilong",
+   "Ja": "迴龍",
+   "Ko": "후이룽"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:15+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "R",
+  "LineID": "R",
+  "LineName": {
+   "Zh_tw": "淡水信義線",
+   "En": "Tamsui-Xinyi Line",
+   "Ja": "淡水信義線",
+   "Ko": "단수이신이선"
+  },
+  "StationID": "R11",
+  "StationName": {
+   "Zh_tw": "中山",
+   "En": "Zhongshan",
+   "Ja": "中山",
+   "Ko": "중산"
+  },
+  "TripHeadSign": "往大安",
+  "DestinationStaionID": "R05",
+  "DestinationStationID": "R05",
+  "DestinationStationName": {
+   "Zh_tw": "大安",
+   "En": "Daan",
+   "Ja": "大安",
+   "Ko": "다안"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:12+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "R",
+  "LineID": "R",
+  "LineName": {
+   "Zh_tw": "淡水信義線",
+   "En": "Tamsui-Xinyi Line",
+   "Ja": "淡水信義線",
+   "Ko": "단수이신이선"
+  },
+  "StationID": "R11",
+  "StationName": {
+   "Zh_tw": "中山",
+   "En": "Zhongshan",
+   "Ja": "中山",
+   "Ko": "중산"
+  },
+  "TripHeadSign": "往淡水",
+  "DestinationStaionID": "R28",
+  "DestinationStationID": "R28",
+  "DestinationStationName": {
+   "Zh_tw": "淡水",
+   "En": "Tamsui",
+   "Ja": "淡水",
+   "Ko": "단수이"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:22+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "R",
+  "LineID": "R",
+  "LineName": {
+   "Zh_tw": "淡水信義線",
+   "En": "Tamsui-Xinyi Line",
+   "Ja": "淡水信義線",
+   "Ko": "단수이신이선"
+  },
+  "StationID": "R17",
+  "StationName": {
+   "Zh_tw": "芝山",
+   "En": "Zhishan",
+   "Ja": "芝山",
+   "Ko": "즈산"
+  },
+  "TripHeadSign": "往象山",
+  "DestinationStaionID": "R02",
+  "DestinationStationID": "R02",
+  "DestinationStationName": {
+   "Zh_tw": "象山",
+   "En": "Xiangshan",
+   "Ja": "象山",
+   "Ko": "샹산"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:22+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "R",
+  "LineID": "R",
+  "LineName": {
+   "Zh_tw": "淡水信義線",
+   "En": "Tamsui-Xinyi Line",
+   "Ja": "淡水信義線",
+   "Ko": "단수이신이선"
+  },
+  "StationID": "R17",
+  "StationName": {
+   "Zh_tw": "芝山",
+   "En": "Zhishan",
+   "Ja": "芝山",
+   "Ko": "즈산"
+  },
+  "TripHeadSign": "往淡水",
+  "DestinationStaionID": "R28",
+  "DestinationStationID": "R28",
+  "DestinationStationName": {
+   "Zh_tw": "淡水",
+   "En": "Tamsui",
+   "Ja": "淡水",
+   "Ko": "단수이"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:02+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ },
+ {
+  "LineNO": "R",
+  "LineID": "R",
+  "LineName": {
+   "Zh_tw": "淡水信義線",
+   "En": "Tamsui-Xinyi Line",
+   "Ja": "淡水信義線",
+   "Ko": "단수이신이선"
+  },
+  "StationID": "R20",
+  "StationName": {
+   "Zh_tw": "唭哩岸",
+   "En": "Qilian",
+   "Ja": "唭哩岸",
+   "Ko": "치리안"
+  },
+  "TripHeadSign": "往大安",
+  "DestinationStaionID": "R05",
+  "DestinationStationID": "R05",
+  "DestinationStationName": {
+   "Zh_tw": "大安",
+   "En": "Daan",
+   "Ja": "大安",
+   "Ko": "다안"
+  },
+  "ServiceStatus": 0,
+  "EstimateTime": 0,
+  "SrcUpdateTime": "2026-08-17T20:12:22+08:00",
+  "UpdateTime": "2026-08-17T20:12:34+08:00"
+ }
+]

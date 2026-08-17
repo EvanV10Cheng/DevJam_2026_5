@@ -128,7 +128,16 @@ def _normalize_line_name(value) -> str:
 
 
 def _resolve_mode(vehicle_type, line_names: str) -> str:
-    """辨識交通種類；明確的台鐵／高鐵名稱優先於 Google 的籠統分類。"""
+    """辨識交通種類；明確的台鐵／高鐵名稱優先於 Google 的籠統分類。
+
+    ★ 但 vehicle.type 為 BUS 時不套用名稱判斷。Google 說是公車就是公車，
+      而台北有一堆叫「區間車」的公車（919區間車、236區間車…），
+      TRA_NAME_HINTS 含「區間」會把它們全部誤判成台鐵，
+      連帶讓 main.py 跳過公車的 TDX 查詢。
+    """
+    if vehicle_type == "BUS":
+        return "BUS"
+
     normalized_names = _normalize_line_name(line_names)
     if any(hint in normalized_names for hint in HSR_NAME_HINTS):
         return "HSR"
@@ -137,11 +146,57 @@ def _resolve_mode(vehicle_type, line_names: str) -> str:
     return VEHICLE_TYPE_MAP.get(vehicle_type, DEFAULT_MODE)
 
 
-def _localize_route_name(route_name: str, mode: str) -> str:
-    """把指定的台北捷運英文線名轉成中文，其餘名稱保持 Google 原值。"""
-    if mode != "METRO":
-        return route_name
-    return METRO_LINE_NAME_MAP.get(_normalize_line_name(route_name), route_name)
+def _has_cjk(value: str) -> bool:
+    return any("一" <= ch <= "鿿" for ch in value)
+
+
+def _localize_route_name(route_name: str, mode: str, full_name: str = "") -> str:
+    """把英文路線名換成中文。
+
+    Google 的 nameShort 對公車是編號（307、藍22，直接可用），
+    但對軌道運輸常常是英文（Tamsui-Xinyi Line、Local Train、
+    Tze-Chiang Limited Express），而 name 才是中文（淡水信義線、
+    區間車、自強號）。捷運走對照表，台鐵／高鐵直接改用 name。
+    """
+    if mode == "METRO":
+        return METRO_LINE_NAME_MAP.get(_normalize_line_name(route_name), route_name)
+    if mode in ("TRAIN", "HSR") and not _has_cjk(route_name) and _has_cjk(full_name):
+        return full_name
+    return route_name
+
+
+def _latlng(stop: dict) -> dict | None:
+    """從 Google 的 stopDetails.*.location.latLng 取座標。
+
+    這是站點比對的關鍵：TDX 的站名是「臺北」、Google 是「台北」，
+    字串永遠對不上；改用座標找最近站就完全繞開異體字問題。
+    """
+    ll = ((stop or {}).get("location") or {}).get("latLng") or {}
+    lat, lng = ll.get("latitude"), ll.get("longitude")
+    if lat is None or lng is None:
+        return None
+    return {"lat": float(lat), "lng": float(lng)}
+
+
+def _merge_walks(steps: list[dict]) -> list[dict]:
+    """把連續的 WALK 步驟合併成一段，時間與距離相加（需求 8）。
+
+    Google 會把一次步行拆成很多小段——實測「台北車站→淡水」單一方案就有
+    8 個 WALK 步驟（含 466m/18s 這種它自己的怪值）。對使用者來說那就是
+    「走一段路」，拆開顯示只是雜訊。
+
+    RIDE 之間的步行仍會各自獨立成一段，因為中間隔著搭乘段，不會被合併——
+    那才是真正的轉乘步行。
+    """
+    merged: list[dict] = []
+    for step in steps:
+        if step.get("type") == "WALK" and merged and merged[-1].get("type") == "WALK":
+            prev = merged[-1]
+            prev["seconds"] += step.get("seconds", 0)
+            prev["meters"] += step.get("meters", 0)
+            continue
+        merged.append(dict(step))
+    return merged
 
 
 def parse_route(route: dict) -> dict:
@@ -173,12 +228,17 @@ def parse_route(route: dict) -> dict:
                 name = str(line.get("name") or "")
                 route_name = name_short or name
                 mode = _resolve_mode(vehicle.get("type"), f"{name_short} {name}")
-                route_name = _localize_route_name(route_name, mode)
+                route_name = _localize_route_name(route_name, mode, name)
 
                 try:
                     stop_count = max(int(transit.get("stopCount") or 0), 0)
                 except (TypeError, ValueError, OverflowError):
                     stop_count = 0
+
+                try:
+                    ride_meters = max(int(step.get("distanceMeters") or 0), 0)
+                except (TypeError, ValueError, OverflowError):
+                    ride_meters = 0
 
                 steps.append(
                     {
@@ -189,6 +249,15 @@ def parse_route(route: dict) -> dict:
                         "toStop": str(arrival_stop.get("name") or ""),
                         "seconds": _secs(step.get("staticDuration")),
                         "stopCount": stop_count,
+                        # 前端已會讀 meters / departAt / arriveAt，順手填滿
+                        "meters": ride_meters,
+                        "departAt": str(stop_details.get("departureTime") or ""),
+                        "arriveAt": str(stop_details.get("arrivalTime") or ""),
+                        # 以下給 main.py 查 TDX 用：座標比對比站名字串比對可靠得多
+                        # （TDX 的「臺北」對 Google 的「台北」字串永遠對不上）
+                        "headsign": str(transit.get("headsign") or ""),
+                        "fromStopPos": _latlng(departure_stop),
+                        "toStopPos": _latlng(arrival_stop),
                     }
                 )
                 ride_count += 1
@@ -211,7 +280,7 @@ def parse_route(route: dict) -> dict:
     return {
         "totalSeconds": _secs(route.get("duration")),
         "transferCount": max(ride_count - 1, 0),
-        "steps": steps,
+        "steps": _merge_walks(steps),
         "polyline": str(polyline.get("encodedPolyline") or ""),
     }
 

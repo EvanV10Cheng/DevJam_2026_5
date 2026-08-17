@@ -1,0 +1,63 @@
+{
+ "UpdateTime": "2026-08-17T20:12:04+08:00",
+ "UpdateInterval": 30,
+ "SrcUpdateTime": "2026-08-17T20:12:00+08:00",
+ "SrcUpdateInterval": 60,
+ "AuthorityCode": "TRA",
+ "StationLiveBoards": [
+  {
+   "StationID": "1000",
+   "StationName": {
+    "Zh_tw": "臺北",
+    "En": "Taipei"
+   },
+   "TrainNo": "1254",
+   "Direction": 0,
+   "TrainTypeID": "1131",
+   "TrainTypeCode": "6",
+   "TrainTypeName": {
+    "Zh_tw": "區間",
+    "En": "Local Train"
+   },
+   "EndingStationID": "0900",
+   "EndingStationName": {
+    "Zh_tw": "基隆",
+    "En": "Keelung"
+   },
+   "TripLine": 0,
+   "Platform": "",
+   "ScheduleArrivalTime": "20:08:00",
+   "ScheduleDepartureTime": "20:09:00",
+   "DelayTime": 6,
+   "RunningStatus": 1,
+   "UpdateTime": "2026-08-17T20:10:49+08:00"
+  },
+  {
+   "StationID": "1000",
+   "StationName": {
+    "Zh_tw": "臺北",
+    "En": "Taipei"
+   },
+   "TrainNo": "283",
+   "Direction": 1,
+   "TrainTypeID": "110G",
+   "TrainTypeCode": "11",
+   "TrainTypeName": {
+    "Zh_tw": "自強(3000)",
+    "En": "Tze-Chiang 3000 Express "
+   },
+   "EndingStationID": "3470",
+   "EndingStationName": {
+    "Zh_tw": "斗六",
+    "En": "Douliu"
+   },
+   "TripLine": 1,
+   "Platform": "",
+   "ScheduleArrivalTime": "20:15:00",
+   "ScheduleDepartureTime": "20:20:00",
+   "DelayTime": 4,
+   "RunningStatus": 1,
+   "UpdateTime": "2026-08-17T20:10:37+08:00"
+  }
+ ]
+}

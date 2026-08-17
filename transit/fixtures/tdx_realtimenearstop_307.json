@@ -1,0 +1,2013 @@
+[
+ {
+  "PlateNumb": "EAA-150",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15266",
+  "StopID": "15266",
+  "StopName": {
+   "Zh_tw": "南京建國路口",
+   "En": "Nanjing & Jianguo Intersection"
+  },
+  "StopSequence": 53,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:31+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:49:37+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAA-151",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE194689",
+  "StopID": "194689",
+  "StopName": {
+   "Zh_tw": "臺北客運板橋前站(藝文)",
+   "En": "Taipei Bus Banqiao Station (Art)"
+  },
+  "StopSequence": 62,
+  "DutyStatus": 2,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:10:39+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:10:42+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAA-152",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15337",
+  "StopID": "15337",
+  "StopName": {
+   "Zh_tw": "員山公園",
+   "En": "Yuanshan Park"
+  },
+  "StopSequence": 43,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:11:30+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:53:14+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAA-153",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15201",
+  "StopID": "15201",
+  "StopName": {
+   "Zh_tw": "大庭新村",
+   "En": "Dating New Village"
+  },
+  "StopSequence": 7,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:31+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T20:07:44+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAA-155",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15301",
+  "StopID": "15301",
+  "StopName": {
+   "Zh_tw": "南松山(塔悠)",
+   "En": "Nansongshan (Tayou)"
+  },
+  "StopSequence": 6,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:24+08:00",
+  "TripStartTimeType": 1,
+  "TripStartTime": "2026-08-17T20:07:20+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAA-156",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15209",
+  "StopID": "15209",
+  "StopName": {
+   "Zh_tw": "電信訓練所",
+   "En": "Telecommunications Training Center"
+  },
+  "StopSequence": 17,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:22+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:40:03+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAA-157",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15334",
+  "StopID": "15334",
+  "StopName": {
+   "Zh_tw": "中和高中(員山路)",
+   "En": "Zhonghe High School(Yuanshan Rd.)"
+  },
+  "StopSequence": 40,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:11+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:08:07+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0072",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15224",
+  "StopID": "15224",
+  "StopName": {
+   "Zh_tw": "中和國稅局",
+   "En": "National Taxation Bureau Jhonghe Office"
+  },
+  "StopSequence": 31,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:27+08:00",
+  "TripStartTimeType": 1,
+  "TripStartTime": "2026-08-17T19:13:44+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0073",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15278",
+  "StopID": "15278",
+  "StopName": {
+   "Zh_tw": "南京公寓(捷運南京三民)",
+   "En": "Nanjing Apartment (MRT Nanjing Sanmin Sta.)"
+  },
+  "StopSequence": 59,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:27+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:24:37+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0075",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE19108",
+  "RouteID": "19108",
+  "RouteName": {
+   "Zh_tw": "307西藏三民",
+   "En": "307Xizang Sanmin"
+  },
+  "SubRouteUID": "TPE161407",
+  "SubRouteID": "161407",
+  "SubRouteName": {
+   "Zh_tw": "307西藏往板橋前站",
+   "En": "307Xizang Sanmin"
+  },
+  "Direction": 1,
+  "StopUID": "TPE213107",
+  "StopID": "213107",
+  "StopName": {
+   "Zh_tw": "積穗國中",
+   "En": "Jisui Junior High School"
+  },
+  "StopSequence": 41,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:11:29+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:59:42+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0076",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15240",
+  "StopID": "15240",
+  "StopName": {
+   "Zh_tw": "莒光派出所",
+   "En": "Juguang Police Substation"
+  },
+  "StopSequence": 40,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:23+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:23:57+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0077",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE201702",
+  "StopID": "201702",
+  "StopName": {
+   "Zh_tw": "捷運中和站",
+   "En": "MRT Zhonghe Sta."
+  },
+  "StopSequence": 33,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:11:06+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:19:11+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0079",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15207",
+  "StopID": "15207",
+  "StopName": {
+   "Zh_tw": "新北板橋公車站",
+   "En": "NTPC Banqiao Bus Station"
+  },
+  "StopSequence": 13,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:10:44+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:51:39+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0080",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE19108",
+  "RouteID": "19108",
+  "RouteName": {
+   "Zh_tw": "307西藏三民",
+   "En": "307Xizang Sanmin"
+  },
+  "SubRouteUID": "TPE161408",
+  "SubRouteID": "161408",
+  "SubRouteName": {
+   "Zh_tw": "307西藏往撫遠街",
+   "En": "307Xizang Sanmin"
+  },
+  "Direction": 0,
+  "StopUID": "TPE213025",
+  "StopID": "213025",
+  "StopName": {
+   "Zh_tw": "積穗國中",
+   "En": "Jisui Junior High School"
+  },
+  "StopSequence": 24,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 0,
+  "GPSTime": "2026-08-17T20:12:05+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:30:05+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0081",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15385",
+  "StopID": "15385",
+  "StopName": {
+   "Zh_tw": "新北板橋公車站",
+   "En": "NTPC Banqiao Bus Station"
+  },
+  "StopSequence": 52,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:11:03+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:42:46+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0082",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15268",
+  "StopID": "15268",
+  "StopName": {
+   "Zh_tw": "南京龍江路口",
+   "En": "Nanjing & Longjiang Intersection"
+  },
+  "StopSequence": 54,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:30+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:42:13+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0086",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15207",
+  "StopID": "15207",
+  "StopName": {
+   "Zh_tw": "新北板橋公車站",
+   "En": "NTPC Banqiao Bus Station"
+  },
+  "StopSequence": 13,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:10:56+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:55:13+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0087",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15288",
+  "StopID": "15288",
+  "StopName": {
+   "Zh_tw": "莊敬里",
+   "En": "Zhuangjing Village"
+  },
+  "StopSequence": 66,
+  "DutyStatus": 2,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:09:42+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T17:56:11+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0088",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15310",
+  "StopID": "15310",
+  "StopName": {
+   "Zh_tw": "捷運松江南京站",
+   "En": "MRT Songjiang Nanjing Sta."
+  },
+  "StopSequence": 15,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:37+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:51:36+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0089",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE199119",
+  "StopID": "199119",
+  "StopName": {
+   "Zh_tw": "積穗派出所",
+   "En": "Jisui Police Station"
+  },
+  "StopSequence": 22,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:22+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:35:40+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0090",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15315",
+  "StopID": "15315",
+  "StopName": {
+   "Zh_tw": "臺北車站(忠孝)",
+   "En": "Taipei Main Sta. (Zhongxiao)"
+  },
+  "StopSequence": 20,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 0,
+  "GPSTime": "2026-08-17T20:11:15+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:41:14+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0091",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15288",
+  "StopID": "15288",
+  "StopName": {
+   "Zh_tw": "莊敬里",
+   "En": "Zhuangjing Village"
+  },
+  "StopSequence": 66,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:08:32+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:06:08+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0092",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE19108",
+  "RouteID": "19108",
+  "RouteName": {
+   "Zh_tw": "307西藏三民",
+   "En": "307Xizang Sanmin"
+  },
+  "SubRouteUID": "TPE161407",
+  "SubRouteID": "161407",
+  "SubRouteName": {
+   "Zh_tw": "307西藏往板橋前站",
+   "En": "307Xizang Sanmin"
+  },
+  "Direction": 1,
+  "StopUID": "TPE213126",
+  "StopID": "213126",
+  "StopName": {
+   "Zh_tw": "名來新城(中正路)",
+   "En": "Minglai New Village(Zhongzheng Rd.)"
+  },
+  "StopSequence": 60,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 0,
+  "GPSTime": "2026-08-17T20:11:06+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:29:17+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0093",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15228",
+  "StopID": "15228",
+  "StopName": {
+   "Zh_tw": "華中橋",
+   "En": "Huazhong Bridge"
+  },
+  "StopSequence": 34,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 0,
+  "GPSTime": "2026-08-17T20:12:00+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:08:10+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0097",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15262",
+  "StopID": "15262",
+  "StopName": {
+   "Zh_tw": "南京吉林路口",
+   "En": "Nanjing & Jilin Intersection"
+  },
+  "StopSequence": 51,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:19+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:54:40+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0098",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15252",
+  "StopID": "15252",
+  "StopName": {
+   "Zh_tw": "行政院",
+   "En": "Executive Yuan"
+  },
+  "StopSequence": 46,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:29+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:03:39+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0099",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15326",
+  "StopID": "15326",
+  "StopName": {
+   "Zh_tw": "果菜市場",
+   "En": "Wholesale Fruit and Vegetable Market"
+  },
+  "StopSequence": 31,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 0,
+  "GPSTime": "2026-08-17T20:12:29+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:15:36+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0100",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE19108",
+  "RouteID": "19108",
+  "RouteName": {
+   "Zh_tw": "307西藏三民",
+   "En": "307Xizang Sanmin"
+  },
+  "SubRouteUID": "TPE161407",
+  "SubRouteID": "161407",
+  "SubRouteName": {
+   "Zh_tw": "307西藏往板橋前站",
+   "En": "307Xizang Sanmin"
+  },
+  "Direction": 1,
+  "StopUID": "TPE213073",
+  "StopID": "213073",
+  "StopName": {
+   "Zh_tw": "西松國小",
+   "En": "Xisong Elementary School"
+  },
+  "StopSequence": 7,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 0,
+  "GPSTime": "2026-08-17T20:12:28+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T20:00:38+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0228",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15321",
+  "StopID": "15321",
+  "StopName": {
+   "Zh_tw": "莒光派出所",
+   "En": "Juguang Police Substation"
+  },
+  "StopSequence": 26,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:03+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:30:36+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0229",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15336",
+  "StopID": "15336",
+  "StopName": {
+   "Zh_tw": "積穗國中",
+   "En": "Jisui Junior High School"
+  },
+  "StopSequence": 42,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:11:12+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:55:42+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0235",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15234",
+  "StopID": "15234",
+  "StopName": {
+   "Zh_tw": "德昌街口",
+   "En": "Dechang St. Entrance"
+  },
+  "StopSequence": 37,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:37+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:11:08+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0236",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE19108",
+  "RouteID": "19108",
+  "RouteName": {
+   "Zh_tw": "307西藏三民",
+   "En": "307Xizang Sanmin"
+  },
+  "SubRouteUID": "TPE161408",
+  "SubRouteID": "161408",
+  "SubRouteName": {
+   "Zh_tw": "307西藏往撫遠街",
+   "En": "307Xizang Sanmin"
+  },
+  "Direction": 0,
+  "StopUID": "TPE213044",
+  "StopID": "213044",
+  "StopName": {
+   "Zh_tw": "捷運西門站",
+   "En": "MRT Ximen Sta."
+  },
+  "StopSequence": 43,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:36+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:01:19+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-0237",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15338",
+  "StopID": "15338",
+  "StopName": {
+   "Zh_tw": "積穗",
+   "En": "Jisui"
+  },
+  "StopSequence": 44,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:11:40+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:50:34+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-1156",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15246",
+  "StopID": "15246",
+  "StopName": {
+   "Zh_tw": "捷運西門站",
+   "En": "MRT Ximen Sta."
+  },
+  "StopSequence": 43,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:33+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:57:57+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-1158",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15340",
+  "StopID": "15340",
+  "StopName": {
+   "Zh_tw": "環球購物中心",
+   "En": "Global Mall"
+  },
+  "StopSequence": 46,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 0,
+  "GPSTime": "2026-08-17T20:12:33+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:49:28+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-1159",
+  "OperatorID": "200",
+  "OperatorNo": "0913",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE153799",
+  "StopID": "153799",
+  "StopName": {
+   "Zh_tw": "新北市政府(新府路)",
+   "En": "New Taipei City Hall(Xinfu Rd.)"
+  },
+  "StopSequence": 14,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:10+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:46:14+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-1160",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15270",
+  "StopID": "15270",
+  "StopName": {
+   "Zh_tw": "捷運南京復興站",
+   "En": "MRT Nanjing Fuxing Station"
+  },
+  "StopSequence": 55,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 0,
+  "GPSTime": "2026-08-17T20:12:35+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:43:05+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-1161",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15216",
+  "StopID": "15216",
+  "StopName": {
+   "Zh_tw": "員山派出所",
+   "En": "Yuanshan Police Station"
+  },
+  "StopSequence": 25,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:04+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:29:23+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-1162",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15292",
+  "StopID": "15292",
+  "StopName": {
+   "Zh_tw": "新益里",
+   "En": "Xinyi Village"
+  },
+  "StopSequence": 65,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:33+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:14:44+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-1163",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15385",
+  "StopID": "15385",
+  "StopName": {
+   "Zh_tw": "新北板橋公車站",
+   "En": "NTPC Banqiao Bus Station"
+  },
+  "StopSequence": 52,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:11:09+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:35:50+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-1165",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE19108",
+  "RouteID": "19108",
+  "RouteName": {
+   "Zh_tw": "307西藏三民",
+   "En": "307Xizang Sanmin"
+  },
+  "SubRouteUID": "TPE161407",
+  "SubRouteID": "161407",
+  "SubRouteName": {
+   "Zh_tw": "307西藏往板橋前站",
+   "En": "307Xizang Sanmin"
+  },
+  "Direction": 1,
+  "StopUID": "TPE213092",
+  "StopID": "213092",
+  "StopName": {
+   "Zh_tw": "西藏路",
+   "En": "Xizang Rd."
+  },
+  "StopSequence": 26,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:11:45+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:29:18+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-1167",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE194688",
+  "StopID": "194688",
+  "StopName": {
+   "Zh_tw": "新月橋",
+   "En": "Xinyue Bridge"
+  },
+  "StopSequence": 2,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:18+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T20:10:18+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-1168",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15392",
+  "StopID": "15392",
+  "StopName": {
+   "Zh_tw": "板橋國中(435藝文特區)",
+   "En": "Banqiao Jr. High School (435 Art Center)"
+  },
+  "StopSequence": 60,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:18+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:24:22+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-1170",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15394",
+  "StopID": "15394",
+  "StopName": {
+   "Zh_tw": "名來新城(中正路)",
+   "En": "Minglai New Village(Zhongzheng Rd.)"
+  },
+  "StopSequence": 61,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 0,
+  "GPSTime": "2026-08-17T20:10:56+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:20:39+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-1171",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15288",
+  "StopID": "15288",
+  "StopName": {
+   "Zh_tw": "莊敬里",
+   "En": "Zhuangjing Village"
+  },
+  "StopSequence": 66,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:11:40+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:27:21+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-1289",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15384",
+  "StopID": "15384",
+  "StopName": {
+   "Zh_tw": "民族區運路口",
+   "En": "Minzu & Quyun  Intersection"
+  },
+  "StopSequence": 49,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 0,
+  "GPSTime": "2026-08-17T20:12:36+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:49:08+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-1296",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15286",
+  "StopID": "15286",
+  "StopName": {
+   "Zh_tw": "新東里",
+   "En": "Xindong Village"
+  },
+  "StopSequence": 63,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 0,
+  "GPSTime": "2026-08-17T20:12:13+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:09:55+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-1297",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE194689",
+  "StopID": "194689",
+  "StopName": {
+   "Zh_tw": "臺北客運板橋前站(藝文)",
+   "En": "Taipei Bus Banqiao Station (Art)"
+  },
+  "StopSequence": 62,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:04:00+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:15:47+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-1299",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15333",
+  "StopID": "15333",
+  "StopName": {
+   "Zh_tw": "連城路",
+   "En": "Liancheng Rd."
+  },
+  "StopSequence": 39,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:01+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:03:42+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-1300",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE19108",
+  "RouteID": "19108",
+  "RouteName": {
+   "Zh_tw": "307西藏三民",
+   "En": "307Xizang Sanmin"
+  },
+  "SubRouteUID": "TPE161408",
+  "SubRouteID": "161408",
+  "SubRouteName": {
+   "Zh_tw": "307西藏往撫遠街",
+   "En": "307Xizang Sanmin"
+  },
+  "Direction": 0,
+  "StopUID": "TPE213061",
+  "StopID": "213061",
+  "StopName": {
+   "Zh_tw": "三民健康路口(西松高中)",
+   "En": "Sanmin and Jiankang Intersection (Xisong High School)"
+  },
+  "StopSequence": 60,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:11+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:30:07+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-1367",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE19108",
+  "RouteID": "19108",
+  "RouteName": {
+   "Zh_tw": "307西藏三民",
+   "En": "307Xizang Sanmin"
+  },
+  "SubRouteUID": "TPE161408",
+  "SubRouteID": "161408",
+  "SubRouteName": {
+   "Zh_tw": "307西藏往撫遠街",
+   "En": "307Xizang Sanmin"
+  },
+  "Direction": 0,
+  "StopUID": "TPE213010",
+  "StopID": "213010",
+  "StopName": {
+   "Zh_tw": "板橋戶政事務所",
+   "En": "Banqiao Household Registration Office"
+  },
+  "StopSequence": 9,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 0,
+  "GPSTime": "2026-08-17T20:10:44+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T20:01:06+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-2266",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15321",
+  "StopID": "15321",
+  "StopName": {
+   "Zh_tw": "莒光派出所",
+   "En": "Juguang Police Substation"
+  },
+  "StopSequence": 26,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:34+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:26:15+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-2268",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15228",
+  "StopID": "15228",
+  "StopName": {
+   "Zh_tw": "華中橋",
+   "En": "Huazhong Bridge"
+  },
+  "StopSequence": 34,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 0,
+  "GPSTime": "2026-08-17T20:11:49+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:21:50+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-3132",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15321",
+  "StopID": "15321",
+  "StopName": {
+   "Zh_tw": "莒光派出所",
+   "En": "Juguang Police Substation"
+  },
+  "StopSequence": 26,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:12+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:27:39+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-3133",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15248",
+  "StopID": "15248",
+  "StopName": {
+   "Zh_tw": "中華路北站",
+   "En": "Zhonghua Rd. N. Stop"
+  },
+  "StopSequence": 44,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 0,
+  "GPSTime": "2026-08-17T20:09:15+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:52:14+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-3135",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15315",
+  "StopID": "15315",
+  "StopName": {
+   "Zh_tw": "臺北車站(忠孝)",
+   "En": "Taipei Main Sta. (Zhongxiao)"
+  },
+  "StopSequence": 20,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 0,
+  "GPSTime": "2026-08-17T20:11:09+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:45:36+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-3136",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15333",
+  "StopID": "15333",
+  "StopName": {
+   "Zh_tw": "連城路",
+   "En": "Liancheng Rd."
+  },
+  "StopSequence": 39,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:27+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T19:11:20+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-3138",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15301",
+  "StopID": "15301",
+  "StopName": {
+   "Zh_tw": "南松山(塔悠)",
+   "En": "Nansongshan (Tayou)"
+  },
+  "StopSequence": 6,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 0,
+  "GPSTime": "2026-08-17T20:12:35+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T20:06:54+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-3139",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15288",
+  "StopID": "15288",
+  "StopName": {
+   "Zh_tw": "莊敬里",
+   "En": "Zhuangjing Village"
+  },
+  "StopSequence": 66,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:11:43+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:20:14+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-3150",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157463",
+  "SubRouteID": "157463",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往撫遠街",
+   "En": "307"
+  },
+  "Direction": 0,
+  "StopUID": "TPE15274",
+  "StopID": "15274",
+  "StopName": {
+   "Zh_tw": "南京寧安街口",
+   "En": "Nanjing & Ningan Intersection"
+  },
+  "StopSequence": 57,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 0,
+  "GPSTime": "2026-08-17T20:12:09+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T18:34:42+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ },
+ {
+  "PlateNumb": "EAL-3151",
+  "OperatorID": "100",
+  "OperatorNo": "1407",
+  "RouteUID": "TPE16111",
+  "RouteID": "16111",
+  "RouteName": {
+   "Zh_tw": "307",
+   "En": "307"
+  },
+  "SubRouteUID": "TPE157462",
+  "SubRouteID": "157462",
+  "SubRouteName": {
+   "Zh_tw": "307莒光往板橋前站",
+   "En": "307"
+  },
+  "Direction": 1,
+  "StopUID": "TPE15298",
+  "StopID": "15298",
+  "StopName": {
+   "Zh_tw": "民生國中",
+   "En": "Minsheng Junior High School"
+  },
+  "StopSequence": 3,
+  "DutyStatus": 1,
+  "BusStatus": 0,
+  "A2EventType": 1,
+  "GPSTime": "2026-08-17T20:12:29+08:00",
+  "TripStartTimeType": 0,
+  "TripStartTime": "2026-08-17T20:11:03+08:00",
+  "SrcUpdateTime": "2026-08-17T20:12:40+08:00",
+  "UpdateTime": "2026-08-17T20:12:42+08:00"
+ }
+]
