@@ -19,9 +19,11 @@
 
 import asyncio
 import time
+from pathlib import Path
 
 from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 import google_client
 import tdx_client
@@ -42,6 +44,7 @@ app.add_middleware(
 @app.get("/healthz")
 def healthz():
     return {"ok": True}
+
 
 
 def _first_ride(plan: dict) -> dict | None:
@@ -230,3 +233,12 @@ async def plans(origin: str = Query(...), destination: str = Query(...)):
         # 所有客戶端一起放慢，不用重新部署前端。
         "nextPollSec": POLL_INTERVAL_SEC,
     }
+
+
+# 前端與 API 由同一個服務提供。★ 這樣部署後只有一個網址，
+# 而且前端用相對路徑打 API，CORS 完全用不到（跨來源問題直接消失）。
+# ★ 一定要放在檔案最後：掛在 / 的 StaticFiles 會吃掉所有路徑，
+#   寫在 /api/plans 前面的話 API 會被它蓋掉，變成回傳網頁而不是 JSON。
+_WEB_DIR = Path(__file__).parent / "web"
+if _WEB_DIR.is_dir():
+    app.mount("/", StaticFiles(directory=str(_WEB_DIR), html=True), name="web")

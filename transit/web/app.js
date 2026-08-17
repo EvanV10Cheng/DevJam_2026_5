@@ -6,7 +6,14 @@
 
 // 開發期資料來源切換：整合真實後端時改成 false
 const USE_MOCK = false;
-const API_BASE = 'http://localhost:8080';
+
+// 空字串 = 用相對路徑打同一個網域的 API。
+// 後端（main.py）會把這個 web/ 目錄一起提供出去，所以前端與 API 同源：
+//   本機   http://localhost:8080/  → /api/plans
+//   雲端   https://xxx.run.app/    → /api/plans
+// 同源就沒有 CORS 問題，部署後也不用改這裡。
+// 若要讓前端獨立託管（例如 Firebase Hosting），改成後端的完整網址即可。
+const API_BASE = '';
 
 // =========================================================
 // 0. Debug — 開啟方式：網址加 ?debug=1、或按 Ctrl+Shift+D
