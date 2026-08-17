@@ -545,14 +545,23 @@ function getPlanTimes(plan, departAt) {
 // 「推薦路線」的加權分數：時間、票價、轉乘次數三者等權重（各 1/3）。
 // 每個指標先在「這次查詢的所有方案」內做 min-max 正規化成 0~1 再加權加總，
 // 分數越低代表越推薦。正規化是相對於同一批方案比較，跟絕對秒數/金額無關。
-const RECOMMEND_WEIGHTS = { time: 1 / 3, fare: 1 / 3, transfer: 1 / 3 };
+// 三個指標等權重，各佔三分之一。凍結避免任何地方不小心動態調整權重。
+const RECOMMEND_WEIGHTS = Object.freeze({ time: 1 / 3, fare: 1 / 3, transfer: 1 / 3 });
+
+// 把後端的 fare 轉成有效數字。null / undefined / 空字串 / NaN / 負數都算未知。
+// 後端契約規定「查不到票價一律是 null」，這裡再擋一層，避免髒資料被當成 0 元。
+function toFare(value) {
+  if (value === null || value === undefined || value === '') return null;
+  const n = Number(value);
+  return Number.isFinite(n) && n >= 0 ? n : null;
+}
 
 function buildRecommendScorer(plans) {
   if (plans.length === 0) return () => 0;
 
   const times = plans.map((p) => p.realSeconds);
   const transfers = plans.map((p) => p.transferCount);
-  const fares = plans.map((p) => p.fare).filter((f) => f != null);
+  const fares = plans.map((p) => toFare(p.fare)).filter((f) => f !== null);
 
   const minTime = Math.min(...times);
   const maxTime = Math.max(...times);
@@ -561,13 +570,20 @@ function buildRecommendScorer(plans) {
   const minFare = fares.length ? Math.min(...fares) : 0;
   const maxFare = fares.length ? Math.max(...fares) : 0;
 
+  // 至少要有兩筆「不同」的票價才有比較的意義。
+  // 只有一筆時 normalize 會回 0，等於把那唯一一筆判成最便宜——
+  // 但它其實只是唯一「知道價錢」的那筆，不代表真的比較便宜。
+  const fareComparable = fares.length >= 2 && maxFare > minFare;
+
   const normalize = (value, min, max) => (max === min ? 0 : (value - min) / (max - min));
 
   return (plan) => {
     const timeScore = normalize(plan.realSeconds, minTime, maxTime);
     const transferScore = normalize(plan.transferCount, minTransfer, maxTransfer);
-    // 沒有票價資料的方案給中間值 0.5，不特別加分也不扣分
-    const fareScore = plan.fare == null ? 0.5 : normalize(plan.fare, minFare, maxFare);
+    const fare = toFare(plan.fare);
+    // 票價未知、或這批方案的票價無從比較時，一律給中性分數 0.5
+    const fareScore =
+      fare === null || !fareComparable ? 0.5 : normalize(fare, minFare, maxFare);
     return (
       RECOMMEND_WEIGHTS.time * timeScore +
       RECOMMEND_WEIGHTS.fare * fareScore +
@@ -586,8 +602,11 @@ function sortPlans(plans, sortKey) {
   } else if (sortKey === 'fewest') {
     copy.sort((a, b) => a.transferCount - b.transferCount || a.realSeconds - b.realSeconds);
   } else if (sortKey === 'cheapest') {
-    // 沒有票價資料的方案排在最後
-    const fare = (p) => (p.fare == null ? Number.MAX_SAFE_INTEGER : p.fare);
+    // 票價未知的方案一律排在所有已知票價之後，不能因為「沒有價錢」就排前面
+    const fare = (p) => {
+      const v = toFare(p.fare);
+      return v === null ? Number.MAX_SAFE_INTEGER : v;
+    };
     copy.sort((a, b) => fare(a) - fare(b) || a.realSeconds - b.realSeconds);
   } else if (sortKey === 'live') {
     copy.sort((a, b) => Number(b.isLive) - Number(a.isLive) || a.realSeconds - b.realSeconds);
@@ -875,7 +894,110 @@ function renderWalkRow(step) {
 }
 
 // ---------- 14. 查詢主流程 ----------
+// =========================================================
+// 自動更新：每 30 秒重新取得即時資料並重新排序
+// =========================================================
+
+const DEFAULT_POLL_MS = 30000;
+let pollTimer = null;
+let pollMs = DEFAULT_POLL_MS;
+let refreshing = false; // in-flight 旗標，避免慢回應堆疊
+
+// 方案的識別碼：搭哪幾班車、從哪站到哪站。
+// 重新排序後用它找回使用者原本選的那個方案——selectedPlanIndex 是
+// 「排序後陣列的索引」，重排後會指到完全不同的方案。
+function planSignature(plan) {
+  return (plan.steps || [])
+    .filter((s) => s.type === 'RIDE')
+    .map((s) => `${s.mode}|${s.routeName}|${s.fromStop}|${s.toStop}`)
+    .join('>>');
+}
+
+function buildUrl(origin, destination) {
+  return USE_MOCK
+    ? './mock.json'
+    : `${API_BASE}/api/plans?origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}`;
+}
+
+function stopPolling() {
+  if (pollTimer !== null) {
+    clearInterval(pollTimer);
+    pollTimer = null;
+    dlog('ui', '停止自動更新');
+  }
+}
+
+function startPolling() {
+  stopPolling();
+  if (!lastSearchOrigin || !lastSearchDestination) return;
+  pollTimer = setInterval(refreshPlans, pollMs);
+  dlog('ui', `啟動自動更新（每 ${Math.round(pollMs / 1000)} 秒）`);
+}
+
+// 與 runSearch 的差別：不顯示載入中、不重設排序與選取、失敗時保留舊畫面。
+async function refreshPlans() {
+  if (refreshing || !lastSearchOrigin || !lastSearchDestination) return;
+  refreshing = true;
+
+  // 先記下使用者目前選的是「哪一個方案」，重排後才找得回來
+  const sortedNow = lastSearchData ? sortPlans(lastSearchData.plans, currentSort) : [];
+  const keepSig = sortedNow[selectedPlanIndex]
+    ? planSignature(sortedNow[selectedPlanIndex])
+    : null;
+
+  try {
+    const res = await fetch(buildUrl(lastSearchOrigin, lastSearchDestination));
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    if (!data.plans || data.plans.length === 0) throw new Error('無方案');
+
+    if (Number.isFinite(data.nextPollSec) && data.nextPollSec > 0) {
+      const next = data.nextPollSec * 1000;
+      if (next !== pollMs) {
+        pollMs = next;
+        startPolling(); // 後端改了間隔就跟著調整
+      }
+    }
+
+    renderResultsPage(data, lastSearchOrigin, lastSearchDestination);
+
+    // 重排後把選取移回原本那個方案
+    if (keepSig) {
+      const resorted = sortPlans(data.plans, currentSort);
+      const idx = resorted.findIndex((p) => planSignature(p) === keepSig);
+      if (idx >= 0 && idx !== selectedPlanIndex) {
+        selectedPlanIndex = idx;
+        renderResultsPage(data, lastSearchOrigin, lastSearchDestination);
+      }
+    }
+
+    dlog('fetch', '自動更新完成', {
+      plans: data.plans.length,
+      live: data.plans.filter((p) => p.isLive).length,
+    });
+  } catch (err) {
+    // ★ 失敗時什麼都不動。網路抖一下就把使用者的查詢結果清成空白是很糟的體驗，
+    //   反正 30 秒後還會再試一次。
+    dlog('error', '自動更新失敗（保留現有資料）', String(err));
+  } finally {
+    refreshing = false;
+    updateDebugMeta();
+  }
+}
+
+// 分頁切走就暫停，切回來立刻更新一次再繼續——
+// 使用者看到的是新鮮資料，不是最多 30 秒前的。
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    stopPolling();
+  } else if (lastSearchOrigin && lastSearchDestination) {
+    refreshPlans();
+    startPolling();
+  }
+});
+
 async function runSearch(origin, destination) {
+  stopPolling(); // 新查詢開始前先停掉舊的輪詢，避免兩組結果互相蓋
   setLoading(true);
   emptyState.hidden = true;
   selectedPlanIndex = 0;
@@ -886,9 +1008,7 @@ async function runSearch(origin, destination) {
     b.setAttribute('aria-selected', String(on));
   });
 
-  const url = USE_MOCK
-    ? './mock.json'
-    : `${API_BASE}/api/plans?origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}`;
+  const url = buildUrl(origin, destination);
 
   dlog('fetch', `送出請求（${USE_MOCK ? 'MOCK' : 'API'}）`, url);
   const done = dtimer('fetch', '取得資料');
@@ -907,15 +1027,21 @@ async function runSearch(origin, destination) {
 
     if (!data.plans || data.plans.length === 0) {
       dlog('search', '查無路線');
+      stopPolling();
       hideResultsView();
       emptyState.hidden = false;
     } else {
+      if (Number.isFinite(data.nextPollSec) && data.nextPollSec > 0) {
+        pollMs = data.nextPollSec * 1000;
+      }
       renderResultsPage(data, origin, destination);
       showResultsView();
+      startPolling();
       dlog('search', '查詢完成', { origin, destination, plans: data.plans.length });
     }
   } catch (err) {
     dlog('error', '查詢失敗', String(err));
+    stopPolling();
     hideResultsView();
     showError('查詢失敗，請稍後再試');
     console.error(err);

@@ -28,6 +28,9 @@ PLAN = {
     "waitSource": (str,),
     "realSeconds": (int,),
     "isLive": (bool,),
+    # 票價。查不到一律是 null，不可用 0 代替——「免費」與「不知道」不一樣。
+    "fare": (int, float, type(None)),
+    "icFare": (int, float, type(None)),
 }
 WALK = {"type": (str,), "seconds": (int,), "meters": (int,)}
 RIDE = {

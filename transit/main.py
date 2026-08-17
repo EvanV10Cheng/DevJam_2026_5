@@ -26,6 +26,10 @@ from fastapi.middleware.cors import CORSMiddleware
 import google_client
 import tdx_client
 
+# 前端自動更新的間隔（秒）。TDX 的即時到站快取是 20 秒，所以 30 秒輪詢
+# 每次都拿得到新資料；Google 那層有 300 秒快取擋著，不會被輪詢燒穿配額。
+POLL_INTERVAL_SEC = 60
+
 app = FastAPI(title="大台北即時轉乘")
 app.add_middleware(
     CORSMiddleware,
@@ -96,6 +100,72 @@ def _dedupe_plans(candidates: list[dict]) -> list[dict]:
     return list(best.values())
 
 
+def _fare_key(step: dict) -> tuple:
+    """票價查詢的去重鍵。同一段車在多個方案裡只查一次。"""
+    return (
+        step.get("mode", ""),
+        step.get("routeName", ""),
+        step.get("fromStop", ""),
+        step.get("toStop", ""),
+    )
+
+
+async def _fill_fares(candidates: list[dict]) -> None:
+    """填入 plan["fare"] 與 plan["icFare"]。
+
+    優先順序：
+      1. Google 的 transitFare（整條路線的總價，最可靠）
+      2. 逐段查 TDX 官方票價再加總
+
+    ★ 任一段查不到票價，整個方案的 fare 就是 None。
+      不能把未知的那段當成免費——那會讓一條「其實更貴」的路線
+      在「票價較低」排序裡跑到第一名，比沒有票價還糟。
+    """
+    need = [p for p in candidates if p.get("fare") is None]
+    if not need:
+        return
+
+    # 去重後一次查完，沿用與 enrich_ride 相同的併發模式
+    by_key: dict[tuple, dict] = {}
+    for plan in need:
+        for step in plan.get("steps", []):
+            if step.get("type") == "RIDE":
+                by_key.setdefault(_fare_key(step), step)
+
+    if by_key:
+        keys = list(by_key)
+        results = await asyncio.gather(
+            *(
+                tdx_client.get_fare(
+                    by_key[k].get("mode", ""),
+                    by_key[k].get("routeName", ""),
+                    by_key[k].get("fromStop", ""),
+                    by_key[k].get("toStop", ""),
+                )
+                for k in keys
+            )
+        )
+        lookup = dict(zip(keys, results))
+    else:
+        lookup = {}
+
+    for plan in need:
+        total = 0.0
+        complete = False
+        for step in plan.get("steps", []):
+            if step.get("type") != "RIDE":
+                continue
+            fare, _ic = lookup.get(_fare_key(step), (None, None))
+            if fare is None:
+                total, complete = 0.0, False
+                break  # 有一段不知道價錢，整個方案就無法給總價
+            total += fare
+            complete = True
+        plan["fare"] = (int(total) if float(total).is_integer() else total) if complete else None
+        # TDX 與 Google 都沒有悠遊卡價，不自行推算
+        plan.setdefault("icFare", None)
+
+
 @app.get("/api/plans")
 async def plans(origin: str = Query(...), destination: str = Query(...)):
     # ① Google 找候選，並合併實質重複的方案
@@ -143,14 +213,20 @@ async def plans(origin: str = Query(...), destination: str = Query(...)):
             plan.get("totalSeconds", 0) + (first_wait or 0) + adjust_total
         )
 
-    # ④ 依實際總時間重新排序
+    # ④ 票價。Google 的 transitFare 優先；沒有才逐段查 TDX 官方票價並加總。
+    await _fill_fares(candidates)
+
+    # ⑤ 依實際總時間重新排序
     ranked = sorted(candidates, key=lambda p: p["realSeconds"])
     reordered = bool(candidates) and ranked[0] is not candidates[0]
 
-    # ⑤ 回傳。googleOrder 保留 Google 原始順序的 realSeconds，供前端對照
+    # ⑥ 回傳。googleOrder 保留 Google 原始順序的 realSeconds，供前端對照
     return {
         "queryTime": int(time.time()),
         "plans": ranked,
         "googleOrder": [p["realSeconds"] for p in candidates],
         "reordered": reordered,
+        # 輪詢間隔由後端決定，前端照做。配額吃緊時改這一個數字就能讓
+        # 所有客戶端一起放慢，不用重新部署前端。
+        "nextPollSec": POLL_INTERVAL_SEC,
     }
