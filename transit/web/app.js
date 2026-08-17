@@ -192,7 +192,6 @@ const backToSearchBtn = document.getElementById('backToSearchBtn');
 const routeQueryBar = document.getElementById('routeQueryBar');
 const routeSummaryTable = document.getElementById('routeSummaryTable');
 const planDetail = document.getElementById('planDetail');
-const reorderedBanner = document.getElementById('reorderedBanner');
 const routeTabBtns = document.querySelectorAll('.route-tabs__btn');
 const emptyState = document.getElementById('emptyState');
 const prevTrainsBtn = document.getElementById('prevTrainsBtn');
@@ -204,14 +203,11 @@ let lastSearchDestination = '';
 let selectedPlanIndex = 0;
 let currentSort = 'recommended';
 
-const viaRow = document.getElementById('viaRow');
-const addViaBtn = document.getElementById('addViaBtn');
 const dateInput = document.getElementById('dateInput');
 const calendarBtn = document.getElementById('calendarBtn');
 const hourSelect = document.getElementById('hourSelect');
 const minuteSelect = document.getElementById('minuteSelect');
 const nowTimeBtn = document.getElementById('nowTimeBtn');
-const timeModeBtns = document.querySelectorAll('.time-mode__btn');
 const timeModeInput = document.getElementById('timeModeInput');
 
 // ---------- 1. Header 即時時鐘（本系統核心概念的視覺化身）----------
@@ -315,73 +311,6 @@ function attachAutocomplete(input, listEl) {
 attachAutocomplete(originInput, document.getElementById('originSuggestions'));
 attachAutocomplete(destinationInput, document.getElementById('destinationSuggestions'));
 
-// ---------- 5. 中間站：新增／移除 ----------
-// 目前僅前端收集資料。後端 API 契約（第 3 節）尚未定義中間站欄位，
-// 這裡先讓使用者能操作介面，實際送出時暫不included，等契約擴充後再接上。
-function createViaFieldItem() {
-  const wrap = document.createElement('div');
-  wrap.className = 'field-wrap field-wrap--via';
-  wrap.dataset.viaItem = '';
-  wrap.innerHTML = `
-    <div class="field field--via">
-      <label class="field__pill field__pill--via">中間站</label>
-      <input type="text" class="field__input" name="via" placeholder="輸入車站或地標" data-via-input autocomplete="off">
-    </div>
-    <ul class="suggestions" hidden></ul>
-  `;
-
-  const removeBtn = document.createElement('button');
-  removeBtn.type = 'button';
-  removeBtn.className = 'via-remove-btn';
-  removeBtn.setAttribute('aria-label', '移除這個中間站');
-  removeBtn.textContent = '×';
-
-  const row = document.createElement('div');
-  row.className = 'search-form__row search-form__row--via';
-  row.appendChild(wrap);
-  row.appendChild(removeBtn);
-
-  removeBtn.addEventListener('click', () => {
-    row.remove();
-    dlog('ui', '移除中間站', { 剩餘: collectViaStops() });
-  });
-
-  const input = wrap.querySelector('[data-via-input]');
-  const suggestionsEl = wrap.querySelector('.suggestions');
-  attachAutocomplete(input, suggestionsEl);
-
-  return row;
-}
-
-addViaBtn.addEventListener('click', () => {
-  const newRow = createViaFieldItem();
-  // 新的中間站列插在「＋ 增加更多」按鈕所在列之前
-  viaRow.parentElement.insertBefore(newRow, viaRow);
-  dlog('ui', '新增中間站欄位');
-});
-
-// 第一個中間站輸入框也要有自動完成
-attachAutocomplete(
-  viaRow.querySelector('[data-via-input]'),
-  viaRow.querySelector('.suggestions')
-);
-
-function collectViaStops() {
-  return Array.from(document.querySelectorAll('[data-via-input]'))
-    .map((el) => el.value.trim())
-    .filter(Boolean);
-}
-
-// 從網址參數還原中間站：補足所需的輸入列數量，再依序填值
-function populateViaStops(stops) {
-  while (document.querySelectorAll('[data-via-input]').length < stops.length) {
-    const newRow = createViaFieldItem();
-    viaRow.parentElement.insertBefore(newRow, viaRow);
-  }
-  const inputs = document.querySelectorAll('[data-via-input]');
-  inputs.forEach((el, i) => { el.value = stops[i] || ''; });
-}
-
 // ---------- 6. 日期：預設今天 + 日曆按鈕 ----------
 function toDateInputValue(d) {
   const yyyy = d.getFullYear();
@@ -433,20 +362,14 @@ nowTimeBtn.addEventListener('click', () => {
   dlog('ui', '時間設為目前時間', `${hourSelect.value}:${minuteSelect.value}`);
 });
 
-// ---------- 8. 時間查詢模式（離開／到達／首班／末班）----------
-// 目前僅切換樣式並記錄選擇；後端 API 尚未支援依到達時間反推班次，先保留擴充點。
+// ---------- 8. 時間查詢模式 ----------
+// 介面上的離開／到達切換鈕已拿掉，固定用「離開」這個模式；
+// setTimeMode() 留著給「從網址參數還原查詢」用，讓舊的分享連結還能正確還原。
 let searchTimeMode = 'depart';
 function setTimeMode(mode) {
   searchTimeMode = mode;
-  timeModeBtns.forEach((b) => b.classList.toggle('time-mode__btn--active', b.dataset.mode === mode));
   if (timeModeInput) timeModeInput.value = mode;
 }
-timeModeBtns.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    setTimeMode(btn.dataset.mode);
-    dlog('ui', '切換時間查詢模式', searchTimeMode);
-  });
-});
 
 // ---------- 9. 表單送出：原地查詢，不跳頁、不整頁刷新 ----------
 // 一律 preventDefault 擋掉原生 GET 導頁；驗證通過後改用 history.pushState
@@ -474,7 +397,6 @@ searchForm.addEventListener('submit', (event) => {
   dlog('search', '表單送出（原地查詢，不跳頁）', {
     origin,
     destination,
-    via: collectViaStops(),
     date: dateInput.value,
     time: `${hourSelect.value}:${minuteSelect.value}`,
     mode: searchTimeMode,
@@ -699,7 +621,6 @@ function renderResultsPage(data, origin, destination) {
   resultOrigin.textContent = origin;
   resultDestination.textContent = destination;
   routeQueryBar.textContent = formatQueryBarLabel(departAt);
-  reorderedBanner.hidden = !data.reordered;
 
   if (selectedPlanIndex >= plans.length) selectedPlanIndex = 0;
 
@@ -789,13 +710,6 @@ function renderPlanDetail(plan, index, departAt) {
         <span class="plan-detail__fare-main">${formatFare(plan.fare)}</span>
         ${plan.icFare != null ? `<span class="plan-detail__fare-ic">悠遊卡 ${formatFare(plan.icFare)}</span>` : ''}
       </div>
-    </div>
-
-    <div class="plan-actions">
-      <button type="button" class="plan-actions__btn">列印</button>
-      <button type="button" class="plan-actions__btn">文字副本</button>
-      <button type="button" class="plan-actions__btn">Google 日曆</button>
-      <button type="button" class="plan-actions__btn">指示路線</button>
     </div>
 
     <div class="timeline">${timeline}</div>`;
@@ -1027,7 +941,6 @@ function restoreFromQueryString() {
   if (params.has('hour')) hourSelect.value = params.get('hour');
   if (params.has('minute')) minuteSelect.value = params.get('minute');
   setTimeMode(params.get('mode') || 'depart');
-  populateViaStops(params.getAll('via').map((s) => s.trim()).filter(Boolean));
 
   dlog('boot', '偵測到網址查詢參數，自動還原並查詢', { origin, destination });
   runSearch(origin, destination);
