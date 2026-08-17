@@ -1,0 +1,13 @@
+# Dockerfile 用 COPY . . 把整個目錄打進 image。
+# 沒有這個檔案的話：
+#   1. .env 會被打進 image ——與 README §8「金鑰用 Secret Manager，
+#      不要把 .env 打進 image」直接衝突，而且 image 推上去就是外洩
+#   2. .venv/ 會被複製進去 —— image 肥好幾百 MB，build 也慢
+.env
+.venv/
+__pycache__/
+*.pyc
+web/mock.json
+fixtures/
+.git/
+.gitignore

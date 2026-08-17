@@ -76,9 +76,12 @@ transit/
 ├── google_client.py    # P1     Google Routes 串接
 ├── tdx_client.py       # P2     TDX 即時到站
 ├── mock.json           # P4     假資料，解鎖 P3
+├── check_contract.py   # P4     契約檢查器，§9.4 逐欄位比對用
 ├── requirements.txt    # P4
 ├── Dockerfile          # P4
+├── .dockerignore       # P4     擋住 .env 與 .venv，不讓它們進 image
 ├── .env                # 全員（已在 .gitignore）
+├── .env.example        # P4     金鑰欄位範本，複製成 .env 後填值
 ├── .gitignore
 ├── fixtures/           # P1     Google 原始回傳存檔
 └── web/                # P3
@@ -93,6 +96,20 @@ transit/
 .env
 __pycache__/
 *.pyc
+.venv/
+web/mock.json
+```
+
+`.dockerignore` 內容。**沒有這個檔，`Dockerfile` 的 `COPY . .` 會把 `.env` 打進 image**，與 §8「金鑰用 Secret Manager，不要把 `.env` 打進 image」直接衝突，image 推上去就是金鑰外洩；順便擋掉 `.venv/`，否則 image 會肥好幾百 MB：
+```
+.env
+.venv/
+__pycache__/
+*.pyc
+web/mock.json
+fixtures/
+.git/
+.gitignore
 ```
 
 `requirements.txt` 內容：
@@ -112,6 +129,95 @@ git checkout -b p4/assemble    # P4
 ```
 
 **每個人只改自己那一個檔案，所以合併時衝突機率極低。**
+
+### 2.4 怎麼啟動這個專案（全員必讀）
+
+#### ★ 最容易浪費半小時的坑：`--env-file`
+
+**本機啟動後端一定要帶 `--env-file .env`。**
+
+```bash
+uvicorn main:app --port 8080 --env-file .env
+```
+
+`google_client.py` 與 `tdx_client.py` 在 **import 的當下**就用 `os.getenv()` 把金鑰讀成模組層級變數，而專案裡沒有任何程式會自動載入 `.env`。少了這個參數，兩邊的金鑰都是空字串，症狀是：
+
+| 你看到的錯誤 | 真正的原因 |
+|---|---|
+| Google Routes 回 **403** | `GOOGLE_MAPS_API_KEY` 是空字串 |
+| TDX 取 token 回 **401** | `TDX_CLIENT_ID` / `TDX_CLIENT_SECRET` 是空字串 |
+
+這兩個錯誤碼看起來都像「金鑰申請錯了」，會讓 P1 或 P2 跑回 Console 重新申請金鑰，白白燒掉半小時。**先確認 `--env-file` 有帶，再去懷疑金鑰本身。**
+
+`--env-file` 是 `uvicorn[standard]` 的內建功能，不需要額外裝套件（不違反 §0 規則 3）。
+
+不用 uvicorn 直接跑（例如寫測試腳本）時的等效寫法：
+
+```bash
+set -a; source .env; set +a       # 之後這個 shell 怎麼跑都讀得到
+```
+
+**Cloud Run 上不需要這個參數**，`--set-secrets` 會直接把 secret 注入成真的環境變數。
+
+#### 第一次設定（每人做一次）
+
+```bash
+cd transit
+cp .env.example .env              # 然後把 §2.1 拿到的金鑰填進去
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+```
+
+#### 日常啟動
+
+**後端（P1 / P2 / P4）**
+
+```bash
+cd transit
+.venv/bin/uvicorn main:app --port 8080 --env-file .env
+```
+
+驗證：
+
+```bash
+curl localhost:8080/healthz                       # 應回 {"ok":true}
+curl -G --data-urlencode "origin=台北車站" \
+        --data-urlencode "destination=淡水捷運站" \
+        localhost:8080/api/plans
+```
+
+> **中文參數一定要 URL-encode。** 直接寫 `curl "localhost:8080/api/plans?origin=台北車站"` 會讓 uvicorn 判定成 Invalid HTTP request，curl 收到空回應，看起來像後端壞了。用 `-G --data-urlencode` 就不會有這問題。§9.3 驗收時會踩到。
+
+**網頁（P3）**
+
+```bash
+cd transit/web
+ln -sf ../mock.json mock.json     # 只需做一次；已在 .gitignore
+python -m http.server 5500
+```
+
+開 <http://localhost:5500>。`USE_MOCK = true` 時完全不需要後端。
+
+> 用 symlink 而不是複製，是為了避免 `mock.json` 出現兩份各自漂移的版本。
+
+**Docker（P4，部署前驗證）**
+
+```bash
+cd transit
+docker build -t transit-api .
+docker run --rm -e PORT=8080 -p 8080:8080 transit-api
+```
+
+`PORT` 要用環境變數餵，因為 Cloud Run 就是這樣注入的——本機用寫死的 8080 測不出 `$PORT` 沒接好的問題。
+
+#### 檢查契約有沒有跑掉
+
+```bash
+python check_contract.py mock.json
+python check_contract.py "http://localhost:8080/api/plans?origin=台北車站&destination=淡水捷運站"
+```
+
+兩邊都要 0 個錯誤，而且欄位名稱與型別必須一致。這就是 §9.4 的驗收方式——用眼睛比對在第 7 小時的時間壓力下一定會漏掉。
 
 ---
 
@@ -498,7 +604,7 @@ const url = USE_MOCK ? './mock.json'
 
 ## 8. P4｜組裝、部署與交付
 
-**你擁有**：`main.py`、`mock.json`、`Dockerfile`、`requirements.txt`、簡報
+**你擁有**：`main.py`、`mock.json`、`Dockerfile`、`.dockerignore`、`requirements.txt`、`check_contract.py`、簡報
 **你禁止修改**：`google_client.py`、`tdx_client.py`、`web/`
 
 > 你不寫難的邏輯，但你負責讓東西能交出去。在 24 小時的專案裡，「有人專職負責交付」比多一個人寫程式重要得多。
