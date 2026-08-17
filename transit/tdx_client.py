@@ -171,6 +171,11 @@ async def get_eta(route_name: str, stop_name: str) -> tuple[int | None, str]:
         rows = await _fetch_eta(route_name)
 
         for row in rows:
+            # TDX 的 RouteName 路徑參數是前綴模糊比對，查「624」會連「624綠野香坡」
+            # 都回傳，這裡一定要精確比對路線名，否則會抓到別條路線的到站時間。
+            if row.get("RouteName", {}).get("Zh_tw", "") != route_name:
+                continue
+
             tdx_stop_name = row.get("StopName", {}).get("Zh_tw", "")
             if not _match_stop(stop_name, tdx_stop_name):
                 continue

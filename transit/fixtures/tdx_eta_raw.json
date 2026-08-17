@@ -1,0 +1,3811 @@
+[
+  {
+    "StopUID": "NWT202635",
+    "StopID": "202635",
+    "StopName": {
+      "Zh_tw": "福州街",
+      "En": "Fuzhou St."
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 794,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT202636",
+    "StopID": "202636",
+    "StopName": {
+      "Zh_tw": "和平西路一段",
+      "En": "Heping W. Rd. Sec. 1"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 958,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT202633",
+    "StopID": "202633",
+    "StopName": {
+      "Zh_tw": "福州街",
+      "En": "Fuzhou St."
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 167,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT202634",
+    "StopID": "202634",
+    "StopName": {
+      "Zh_tw": "和平西路一段",
+      "En": "Heping W. Rd. Sec. 1"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 354,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT222972",
+    "StopID": "222972",
+    "StopName": {
+      "Zh_tw": "伴山別墅(三)",
+      "En": "Banshan Villa(3)"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 3298,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT222973",
+    "StopID": "222973",
+    "StopName": {
+      "Zh_tw": "伴山別墅(二)",
+      "En": "Banshan Villa(2)"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 3334,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT222970",
+    "StopID": "222970",
+    "StopName": {
+      "Zh_tw": "伴山別墅(二)",
+      "En": "Banshan Villa(2)"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1415,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT222971",
+    "StopID": "222971",
+    "StopName": {
+      "Zh_tw": "伴山別墅(三)",
+      "En": "Banshan Villa(3)"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1453,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT222974",
+    "StopID": "222974",
+    "StopName": {
+      "Zh_tw": "伴山別墅(一)",
+      "En": "Banshan Villa(1)"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 3454,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT222969",
+    "StopID": "222969",
+    "StopName": {
+      "Zh_tw": "伴山別墅(一)",
+      "En": "Banshan Villa(1)"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1338,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT223609",
+    "StopID": "223609",
+    "StopName": {
+      "Zh_tw": "金銀大廈",
+      "En": "Jinyin Building"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 509,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT223610",
+    "StopID": "223610",
+    "StopName": {
+      "Zh_tw": "金銀大廈",
+      "En": "Jinyin Building"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 102,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT223611",
+    "StopID": "223611",
+    "StopName": {
+      "Zh_tw": "金銀大廈",
+      "En": "Jinyin Building"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 106,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT223612",
+    "StopID": "223612",
+    "StopName": {
+      "Zh_tw": "金銀大廈",
+      "En": "Jinyin Building"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 1001,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT199761",
+    "StopID": "199761",
+    "StopName": {
+      "Zh_tw": "新店站",
+      "En": "Xindian Station"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 386,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT199760",
+    "StopID": "199760",
+    "StopName": {
+      "Zh_tw": "綠中海一期",
+      "En": "Green Villa Stage 1"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 210,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT199759",
+    "StopID": "199759",
+    "StopName": {
+      "Zh_tw": "新店站",
+      "En": "Xindian Station"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT194191",
+    "StopID": "194191",
+    "StopName": {
+      "Zh_tw": "光華街口",
+      "En": "Guanghua St. Entrance"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 799,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT194190",
+    "StopID": "194190",
+    "StopName": {
+      "Zh_tw": "光華街口",
+      "En": "Guanghua St. Entrance"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 289,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT194192",
+    "StopID": "194192",
+    "StopName": {
+      "Zh_tw": "光華街口",
+      "En": "Guanghua St. Entrance"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 2098,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT194189",
+    "StopID": "194189",
+    "StopName": {
+      "Zh_tw": "光華街口",
+      "En": "Guanghua St. Entrance"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 268,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170109",
+    "StopID": "170109",
+    "StopName": {
+      "Zh_tw": "石頭厝",
+      "En": "Shitoucuo"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 2013,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170104",
+    "StopID": "170104",
+    "StopName": {
+      "Zh_tw": "新和國小",
+      "En": "Xinhe Elementary School"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 1692,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170103",
+    "StopID": "170103",
+    "StopName": {
+      "Zh_tw": "三介廟",
+      "En": "Sanjie Temple"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 1605,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170102",
+    "StopID": "170102",
+    "StopName": {
+      "Zh_tw": "景新街",
+      "En": "Jingxin St."
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 1541,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170101",
+    "StopID": "170101",
+    "StopName": {
+      "Zh_tw": "智光商職",
+      "En": "Chih-Kuang Senior Commercial & Industrial Vocational High School"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 1366,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170108",
+    "StopID": "170108",
+    "StopName": {
+      "Zh_tw": "安和路二段",
+      "En": "Anhe Rd. Sec. 2"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 1965,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170107",
+    "StopID": "170107",
+    "StopName": {
+      "Zh_tw": "陽光運動公園(新店花市)",
+      "En": "Yangguang Park (Xindian Flower Market)"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 1931,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170106",
+    "StopID": "170106",
+    "StopName": {
+      "Zh_tw": "永平里",
+      "En": "Yongping Village"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 1833,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170105",
+    "StopID": "170105",
+    "StopName": {
+      "Zh_tw": "輕軌新和國小站(水工大樓)",
+      "En": "LRT Xinhe Elementary School Sta.(Hydraulic building)"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 1764,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170100",
+    "StopID": "170100",
+    "StopName": {
+      "Zh_tw": "中興二村",
+      "En": "Zhongxing Village 2"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 1246,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170126",
+    "StopID": "170126",
+    "StopName": {
+      "Zh_tw": "伴吾別墅",
+      "En": "Banwu Bieshu"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 3102,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170125",
+    "StopID": "170125",
+    "StopName": {
+      "Zh_tw": "彩蝶別墅",
+      "En": "Caidie Bieshu"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 3056,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170124",
+    "StopID": "170124",
+    "StopName": {
+      "Zh_tw": "綠中海一期",
+      "En": "Green Villa Stage 1"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 3007,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170123",
+    "StopID": "170123",
+    "StopName": {
+      "Zh_tw": "安祥路口",
+      "En": "Anxiang Rd. Entrance"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 2822,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170128",
+    "StopID": "170128",
+    "StopName": {
+      "Zh_tw": "造鎮",
+      "En": "ZaoJhen"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 3198,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170127",
+    "StopID": "170127",
+    "StopName": {
+      "Zh_tw": "綠中海二期",
+      "En": "Green Villa Stage 2"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 3174,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170122",
+    "StopID": "170122",
+    "StopName": {
+      "Zh_tw": "大茅埔",
+      "En": "Damaopu"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 2750,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170121",
+    "StopID": "170121",
+    "StopName": {
+      "Zh_tw": "康樂新村",
+      "En": "Kangle New Village"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 2717,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170120",
+    "StopID": "170120",
+    "StopName": {
+      "Zh_tw": "仁康醫院",
+      "En": "Jen-Kang Hospital"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 2686,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170115",
+    "StopID": "170115",
+    "StopName": {
+      "Zh_tw": "公崙新村(豐榮醫院)",
+      "En": "Gonglun New Village(Feng Rong Hospital)"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 2386,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170114",
+    "StopID": "170114",
+    "StopName": {
+      "Zh_tw": "安康派出所",
+      "En": "Ankang Police Station"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 2341,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170113",
+    "StopID": "170113",
+    "StopName": {
+      "Zh_tw": "輕軌安康站",
+      "En": "LRT Ankang Sta."
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 2232,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170112",
+    "StopID": "170112",
+    "StopName": {
+      "Zh_tw": "及人中學",
+      "En": "Chi Jen High School"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 2173,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170119",
+    "StopID": "170119",
+    "StopName": {
+      "Zh_tw": "薏仁坑",
+      "En": "Yirenkeng"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 2631,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170118",
+    "StopID": "170118",
+    "StopName": {
+      "Zh_tw": "安康車子路口",
+      "En": "Chezi Rd."
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 2554,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170117",
+    "StopID": "170117",
+    "StopName": {
+      "Zh_tw": "台北菸廠",
+      "En": "Taipei Tobacco Factory"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 2512,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170116",
+    "StopID": "170116",
+    "StopName": {
+      "Zh_tw": "浪漫貴族",
+      "En": "Langmanguizu"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 2446,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170111",
+    "StopID": "170111",
+    "StopName": {
+      "Zh_tw": "十四份",
+      "En": "Shisifen"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 2128,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170110",
+    "StopID": "170110",
+    "StopName": {
+      "Zh_tw": "輕軌陽光運動公園站",
+      "En": "LRT Sunshine Sports Park Sta."
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 2073,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170092",
+    "StopID": "170092",
+    "StopName": {
+      "Zh_tw": "捷運頂溪站",
+      "En": "MRT Dingxi Sta."
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 621,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170091",
+    "StopID": "170091",
+    "StopName": {
+      "Zh_tw": "重慶南路三段(中正橋)",
+      "En": "Chongqing S. Road Sec. 3 (Zhongzheng Bridge)"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 441,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170090",
+    "StopID": "170090",
+    "StopName": {
+      "Zh_tw": "泉州街",
+      "En": "Quanzhou St. Intersection"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 324,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170085",
+    "StopID": "170085",
+    "StopName": {
+      "Zh_tw": "小南門",
+      "En": "Xiaonanmen"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 2296,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170084",
+    "StopID": "170084",
+    "StopName": {
+      "Zh_tw": "捷運西門站",
+      "En": "MRT Ximen Sta."
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 2221,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170083",
+    "StopID": "170083",
+    "StopName": {
+      "Zh_tw": "漢口中華路口",
+      "En": "Hankou & Zhonghua Intersection"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 2082,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170082",
+    "StopID": "170082",
+    "StopName": {
+      "Zh_tw": "漢口街",
+      "En": "Hankou St."
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 1988,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170089",
+    "StopID": "170089",
+    "StopName": {
+      "Zh_tw": "龍口市場",
+      "En": "Longkou Market"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 283,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170088",
+    "StopID": "170088",
+    "StopName": {
+      "Zh_tw": "植物園",
+      "En": "Botanical Garden"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 236,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170087",
+    "StopID": "170087",
+    "StopName": {
+      "Zh_tw": "和平中華路口",
+      "En": "Heping & Zhonghua Intersection"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 130,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170086",
+    "StopID": "170086",
+    "StopName": {
+      "Zh_tw": "聯合醫院和平院區",
+      "En": "TCUH Heping Branch"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 6,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170081",
+    "StopID": "170081",
+    "StopName": {
+      "Zh_tw": "峨眉街口(中醫院區)",
+      "En": "Emei St. Entrance"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1836,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170080",
+    "StopID": "170080",
+    "StopName": {
+      "Zh_tw": "西門國小(臺大醫院北護分院)",
+      "En": "Ximen Elementary School (Nat'l Taiwan U. Hospital Bei-hu Branch)"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1729,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170079",
+    "StopID": "170079",
+    "StopName": {
+      "Zh_tw": "祖師廟(康定)",
+      "En": "Zushi Temple (Kangding)"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1632,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170074",
+    "StopID": "170074",
+    "StopName": {
+      "Zh_tw": "龍口市場",
+      "En": "Longkou Market"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1074,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170073",
+    "StopID": "170073",
+    "StopName": {
+      "Zh_tw": "泉州街",
+      "En": "Quanzhou St. Intersection"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1027,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170071",
+    "StopID": "170071",
+    "StopName": {
+      "Zh_tw": "重慶南路三段(中正橋)",
+      "En": "Chongqing S. Road Sec. 3 (Zhongzheng Bridge)"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 658,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170078",
+    "StopID": "170078",
+    "StopName": {
+      "Zh_tw": "龍山寺(康定)",
+      "En": "Longshan Temple (Kangding)"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1503,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170077",
+    "StopID": "170077",
+    "StopName": {
+      "Zh_tw": "昆明街口",
+      "En": "Kunming St. Intersection"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1395,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170076",
+    "StopID": "170076",
+    "StopName": {
+      "Zh_tw": "和平中華路口",
+      "En": "Heping & Zhonghua Intersection"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1246,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170075",
+    "StopID": "170075",
+    "StopName": {
+      "Zh_tw": "植物園",
+      "En": "Botanical Garden"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1146,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170096",
+    "StopID": "170096",
+    "StopName": {
+      "Zh_tw": "福和里",
+      "En": "Fuhe Village"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 959,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170095",
+    "StopID": "170095",
+    "StopName": {
+      "Zh_tw": "大新街",
+      "En": "Daxin St."
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 889,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170094",
+    "StopID": "170094",
+    "StopName": {
+      "Zh_tw": "豫溪街口(中正路)",
+      "En": "Yuxi St. Entrance(Zhongzheng Rd.)"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 813,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170093",
+    "StopID": "170093",
+    "StopName": {
+      "Zh_tw": "中興街口",
+      "En": "Zhongxing St. Intersection"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 709,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170099",
+    "StopID": "170099",
+    "StopName": {
+      "Zh_tw": "中興新村",
+      "En": "Zhongxing New Village"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 1180,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170098",
+    "StopID": "170098",
+    "StopName": {
+      "Zh_tw": "得和路口",
+      "En": "Dehe Rd. Entrance"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 1109,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170097",
+    "StopID": "170097",
+    "StopName": {
+      "Zh_tw": "永和國小",
+      "En": "Yonghe Elementary School"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 1064,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170049",
+    "StopID": "170049",
+    "StopName": {
+      "Zh_tw": "輕軌安康站",
+      "En": "LRT Ankang Sta."
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 665,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170048",
+    "StopID": "170048",
+    "StopName": {
+      "Zh_tw": "安康派出所",
+      "En": "Ankang Police Station"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 546,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170047",
+    "StopID": "170047",
+    "StopName": {
+      "Zh_tw": "公崙新村(豐榮醫院)",
+      "En": "Gonglun New Village(Feng Rong Hospital)"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 469,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170046",
+    "StopID": "170046",
+    "StopName": {
+      "Zh_tw": "浪漫貴族",
+      "En": "Langmanguizu"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 405,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170041",
+    "StopID": "170041",
+    "StopName": {
+      "Zh_tw": "康樂新村",
+      "En": "Kangle New Village"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 142,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170040",
+    "StopID": "170040",
+    "StopName": {
+      "Zh_tw": "大茅埔",
+      "En": "Damaopu"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 69,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170045",
+    "StopID": "170045",
+    "StopName": {
+      "Zh_tw": "台北菸廠",
+      "En": "Taipei Tobacco Factory"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 356,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170044",
+    "StopID": "170044",
+    "StopName": {
+      "Zh_tw": "安康車子路口",
+      "En": "Ankang Chezi Rd. Intersection"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 307,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170043",
+    "StopID": "170043",
+    "StopName": {
+      "Zh_tw": "薏仁坑",
+      "En": "Yirenkeng"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 227,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170042",
+    "StopID": "170042",
+    "StopName": {
+      "Zh_tw": "仁康醫院",
+      "En": "Jen-Kang Hospital"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 180,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170038",
+    "StopID": "170038",
+    "StopName": {
+      "Zh_tw": "綠中海一期",
+      "En": "Green Villa Stage 1"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1709,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170037",
+    "StopID": "170037",
+    "StopName": {
+      "Zh_tw": "彩蝶別墅",
+      "En": "Caidie Bieshu"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1674,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170036",
+    "StopID": "170036",
+    "StopName": {
+      "Zh_tw": "伴吾別墅",
+      "En": "Banwu Bieshu"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1627,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170035",
+    "StopID": "170035",
+    "StopName": {
+      "Zh_tw": "綠中海二期",
+      "En": "Green Villa Stage 2"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1564,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170039",
+    "StopID": "170039",
+    "StopName": {
+      "Zh_tw": "安祥路口",
+      "En": "Anxiang Rd. Entrance"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 0,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170034",
+    "StopID": "170034",
+    "StopName": {
+      "Zh_tw": "造鎮",
+      "En": "ZaoJhen"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1527,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170070",
+    "StopID": "170070",
+    "StopName": {
+      "Zh_tw": "中正橋頭",
+      "En": "Zhongzheng Bridge Stop"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 542,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170069",
+    "StopID": "170069",
+    "StopName": {
+      "Zh_tw": "捷運頂溪站",
+      "En": "MRT Dingxi Station"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 419,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170068",
+    "StopID": "170068",
+    "StopName": {
+      "Zh_tw": "正興里",
+      "En": "Zhengxing Village"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 307,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170063",
+    "StopID": "170063",
+    "StopName": {
+      "Zh_tw": "中興新村",
+      "En": "Zhongxing New Village"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1669,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170062",
+    "StopID": "170062",
+    "StopName": {
+      "Zh_tw": "中興二村",
+      "En": "Zhongxing Village 2"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1594,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170061",
+    "StopID": "170061",
+    "StopName": {
+      "Zh_tw": "智光商職",
+      "En": "Chih-Kuang Senior Commercial & Industrial Vocational High School"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1525,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170060",
+    "StopID": "170060",
+    "StopName": {
+      "Zh_tw": "景新街",
+      "En": "Jingxin St."
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1396,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170067",
+    "StopID": "170067",
+    "StopName": {
+      "Zh_tw": "大新街",
+      "En": "Daxin St."
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 236,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170066",
+    "StopID": "170066",
+    "StopName": {
+      "Zh_tw": "福和里",
+      "En": "Fuhe Village"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 140,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170065",
+    "StopID": "170065",
+    "StopName": {
+      "Zh_tw": "永和國小",
+      "En": "Yonghe Elementary School"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1804,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170064",
+    "StopID": "170064",
+    "StopName": {
+      "Zh_tw": "得和路口",
+      "En": "Dehe Rd. Entrance"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1738,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170059",
+    "StopID": "170059",
+    "StopName": {
+      "Zh_tw": "三介廟",
+      "En": "Sanjie Temple"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1326,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170058",
+    "StopID": "170058",
+    "StopName": {
+      "Zh_tw": "新和國小",
+      "En": "Xinhe Elementary School"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1222,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170057",
+    "StopID": "170057",
+    "StopName": {
+      "Zh_tw": "輕軌新和國小站(水工大樓)",
+      "En": "LRT Xinhe Elementary School Sta.(Hydraulic building)"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1156,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170052",
+    "StopID": "170052",
+    "StopName": {
+      "Zh_tw": "輕軌陽光運動公園站",
+      "En": "LRT Sunshine Sports Park Sta."
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 842,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170051",
+    "StopID": "170051",
+    "StopName": {
+      "Zh_tw": "十四份",
+      "En": "Shisifen"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 761,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170050",
+    "StopID": "170050",
+    "StopName": {
+      "Zh_tw": "及人中學",
+      "En": "Chi Jen High School"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 716,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170056",
+    "StopID": "170056",
+    "StopName": {
+      "Zh_tw": "永平里",
+      "En": "Yongping Village"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1082,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170055",
+    "StopID": "170055",
+    "StopName": {
+      "Zh_tw": "陽光運動公園(新店花市)",
+      "En": "Yangguang Park (Xindian Flower Market)"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 962,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170054",
+    "StopID": "170054",
+    "StopName": {
+      "Zh_tw": "安和路二段",
+      "En": "Anhe Rd. Sec. 2"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 922,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT170053",
+    "StopID": "170053",
+    "StopName": {
+      "Zh_tw": "石頭厝",
+      "En": "Shitoucuo"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 882,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169911",
+    "StopID": "169911",
+    "StopName": {
+      "Zh_tw": "峨眉街口(中醫院區)",
+      "En": "Emei St. Entrance"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 0,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169910",
+    "StopID": "169910",
+    "StopName": {
+      "Zh_tw": "西門國小(臺大醫院北護分院)",
+      "En": "Ximen Elementary School (Nat'l Taiwan U. Hospital Bei-hu Branch)"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 692,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169913",
+    "StopID": "169913",
+    "StopName": {
+      "Zh_tw": "漢口中華路口",
+      "En": "Hankou & Zhonghua Intersection"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 276,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169912",
+    "StopID": "169912",
+    "StopName": {
+      "Zh_tw": "漢口街",
+      "En": "Hankou St."
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 152,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169915",
+    "StopID": "169915",
+    "StopName": {
+      "Zh_tw": "小南門",
+      "En": "Xiaonanmen"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 413,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169914",
+    "StopID": "169914",
+    "StopName": {
+      "Zh_tw": "捷運西門站",
+      "En": "MRT Ximen Station"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 354,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169917",
+    "StopID": "169917",
+    "StopName": {
+      "Zh_tw": "和平中華路口",
+      "En": "Heping & Zhonghua Intersection"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 0,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169916",
+    "StopID": "169916",
+    "StopName": {
+      "Zh_tw": "聯合醫院和平院區",
+      "En": "TCUH Heping Branch"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 533,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169919",
+    "StopID": "169919",
+    "StopName": {
+      "Zh_tw": "龍口市場",
+      "En": "Longkou Market"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 151,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169918",
+    "StopID": "169918",
+    "StopName": {
+      "Zh_tw": "植物園",
+      "En": "Botanical Garden"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 105,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169900",
+    "StopID": "169900",
+    "StopName": {
+      "Zh_tw": "中正橋頭",
+      "En": "Zhongzheng Bridge Stop"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 936,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169901",
+    "StopID": "169901",
+    "StopName": {
+      "Zh_tw": "重慶南路三段(中正橋)",
+      "En": "Chongqing S. Road Sec. 3 (Zhongzheng Bridge)"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 1026,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169904",
+    "StopID": "169904",
+    "StopName": {
+      "Zh_tw": "龍口市場",
+      "En": "Longkou Market"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 48,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169903",
+    "StopID": "169903",
+    "StopName": {
+      "Zh_tw": "泉州街",
+      "En": "Quanzhou St. Intersection"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 394,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169906",
+    "StopID": "169906",
+    "StopName": {
+      "Zh_tw": "和平中華路口",
+      "En": "Heping & Zhonghua Intersection"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 212,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169905",
+    "StopID": "169905",
+    "StopName": {
+      "Zh_tw": "植物園",
+      "En": "Botanical Garden"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 110,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169908",
+    "StopID": "169908",
+    "StopName": {
+      "Zh_tw": "龍山寺(康定)",
+      "En": "Longshan Temple (Kangding)"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 507,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169907",
+    "StopID": "169907",
+    "StopName": {
+      "Zh_tw": "昆明街口",
+      "En": "Kunming St. Intersection"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 363,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169909",
+    "StopID": "169909",
+    "StopName": {
+      "Zh_tw": "祖師廟(康定)",
+      "En": "Zushi Temple (Kangding)"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 593,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169931",
+    "StopID": "169931",
+    "StopName": {
+      "Zh_tw": "智光商職",
+      "En": "Chih-Kuang Senior Commercial & Industrial Vocational High School"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 498,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169930",
+    "StopID": "169930",
+    "StopName": {
+      "Zh_tw": "中興二村",
+      "En": "Zhongxing Village 2"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 370,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169933",
+    "StopID": "169933",
+    "StopName": {
+      "Zh_tw": "三介廟",
+      "En": "Sanjie Temple"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 759,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169932",
+    "StopID": "169932",
+    "StopName": {
+      "Zh_tw": "景新街",
+      "En": "Jingxin St."
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 675,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169935",
+    "StopID": "169935",
+    "StopName": {
+      "Zh_tw": "輕軌新和國小站(水工大樓)",
+      "En": "LRT Xinhe Elementary School Sta.(Hydraulic building)"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 934,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169934",
+    "StopID": "169934",
+    "StopName": {
+      "Zh_tw": "新和國小",
+      "En": "Xinhe Elementary School"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 851,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169937",
+    "StopID": "169937",
+    "StopName": {
+      "Zh_tw": "陽光運動公園(新店花市)",
+      "En": "Yangguang Park (Anhe Flower Market)"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 100,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169936",
+    "StopID": "169936",
+    "StopName": {
+      "Zh_tw": "永平里",
+      "En": "Yongping Village"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 1008,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169939",
+    "StopID": "169939",
+    "StopName": {
+      "Zh_tw": "石頭厝",
+      "En": "Shitoucuo"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 194,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169938",
+    "StopID": "169938",
+    "StopName": {
+      "Zh_tw": "安和路二段",
+      "En": "Anhe Rd. Sec. 2"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 147,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169920",
+    "StopID": "169920",
+    "StopName": {
+      "Zh_tw": "泉州街",
+      "En": "Quanzhou St. Intersection"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 193,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169922",
+    "StopID": "169922",
+    "StopName": {
+      "Zh_tw": "捷運頂溪站",
+      "En": "MRT Dingxi Sta."
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 413,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169921",
+    "StopID": "169921",
+    "StopName": {
+      "Zh_tw": "重慶南路三段(中正橋)",
+      "En": "Chongqing S. Road Sec. 3 (Zhongzheng Bridge)"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 292,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169924",
+    "StopID": "169924",
+    "StopName": {
+      "Zh_tw": "豫溪街口(中正路)",
+      "En": "Yuxi St. Entrance(Zhongzheng Rd.)"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 637,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169923",
+    "StopID": "169923",
+    "StopName": {
+      "Zh_tw": "中興街口",
+      "En": "Zhongxing St. Intersection"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 501,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169926",
+    "StopID": "169926",
+    "StopName": {
+      "Zh_tw": "福和里",
+      "En": "Fuhe Village"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 68,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169925",
+    "StopID": "169925",
+    "StopName": {
+      "Zh_tw": "大新街",
+      "En": "Daxin St."
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 699,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169928",
+    "StopID": "169928",
+    "StopName": {
+      "Zh_tw": "得和路口",
+      "En": "Dehe Rd. Entrance"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 205,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169927",
+    "StopID": "169927",
+    "StopName": {
+      "Zh_tw": "永和國小",
+      "En": "Yonghe Elementary School"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 150,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169929",
+    "StopID": "169929",
+    "StopName": {
+      "Zh_tw": "中興新村",
+      "En": "Zhongxing New Village"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 278,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169951",
+    "StopID": "169951",
+    "StopName": {
+      "Zh_tw": "康樂新村",
+      "En": "Kangle New Village"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 261,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169950",
+    "StopID": "169950",
+    "StopName": {
+      "Zh_tw": "仁康醫院",
+      "En": "Jen-Kang Hospital"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 226,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169953",
+    "StopID": "169953",
+    "StopName": {
+      "Zh_tw": "安祥路口",
+      "En": "Anxiang Rd. Entrance"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 367,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169952",
+    "StopID": "169952",
+    "StopName": {
+      "Zh_tw": "大茅埔",
+      "En": "Damaopu"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 292,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169940",
+    "StopID": "169940",
+    "StopName": {
+      "Zh_tw": "輕軌陽光運動公園站",
+      "En": "LRT Sunshine Sports Park Sta."
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 265,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169942",
+    "StopID": "169942",
+    "StopName": {
+      "Zh_tw": "及人中學",
+      "En": "Chi Jen High School"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 366,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169941",
+    "StopID": "169941",
+    "StopName": {
+      "Zh_tw": "十四份",
+      "En": "Shisifen"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 320,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169944",
+    "StopID": "169944",
+    "StopName": {
+      "Zh_tw": "安康派出所",
+      "En": "Ankang Police Station"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 0,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169943",
+    "StopID": "169943",
+    "StopName": {
+      "Zh_tw": "輕軌安康站",
+      "En": "LRT Ankang Sta."
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 427,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169946",
+    "StopID": "169946",
+    "StopName": {
+      "Zh_tw": "浪漫貴族",
+      "En": "Langmanguizu"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 0,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169945",
+    "StopID": "169945",
+    "StopName": {
+      "Zh_tw": "公崙新村(豐榮醫院)",
+      "En": "Gonglun New Village(Feng Rong Hospital)"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 45,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169948",
+    "StopID": "169948",
+    "StopName": {
+      "Zh_tw": "安康車子路口",
+      "En": "Chezi Rd."
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 128,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169947",
+    "StopID": "169947",
+    "StopName": {
+      "Zh_tw": "台北菸廠",
+      "En": "Taipei Tobacco Factory"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 86,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169949",
+    "StopID": "169949",
+    "StopName": {
+      "Zh_tw": "薏仁坑",
+      "En": "Yirenkeng"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 1,
+    "EstimateTime": 169,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169896",
+    "StopID": "169896",
+    "StopName": {
+      "Zh_tw": "福和里",
+      "En": "Fuhe Village"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 555,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169895",
+    "StopID": "169895",
+    "StopName": {
+      "Zh_tw": "永和國小",
+      "En": "Yonghe Elementary School"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 398,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169898",
+    "StopID": "169898",
+    "StopName": {
+      "Zh_tw": "正興里",
+      "En": "Zhengxing Village"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 719,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169897",
+    "StopID": "169897",
+    "StopName": {
+      "Zh_tw": "大新街",
+      "En": "Daxin St."
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 650,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169899",
+    "StopID": "169899",
+    "StopName": {
+      "Zh_tw": "捷運頂溪站",
+      "En": "MRT Dingxi Station"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 787,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169890",
+    "StopID": "169890",
+    "StopName": {
+      "Zh_tw": "景新街",
+      "En": "Jingxin St."
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 64,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169892",
+    "StopID": "169892",
+    "StopName": {
+      "Zh_tw": "中興二村",
+      "En": "Zhongxing Village 2"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 191,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169891",
+    "StopID": "169891",
+    "StopName": {
+      "Zh_tw": "智光商職",
+      "En": "Chih-Kuang Senior Commercial & Industrial Vocational High School"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 143,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169894",
+    "StopID": "169894",
+    "StopName": {
+      "Zh_tw": "得和路口",
+      "En": "Dehe Rd. Entrance"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 332,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169893",
+    "StopID": "169893",
+    "StopName": {
+      "Zh_tw": "中興新村",
+      "En": "Zhongxing New Village"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 265,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169885",
+    "StopID": "169885",
+    "StopName": {
+      "Zh_tw": "陽光運動公園(新店花市)",
+      "En": "Yangguang Park (Anhe Flower Market)"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 474,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169884",
+    "StopID": "169884",
+    "StopName": {
+      "Zh_tw": "安和路二段",
+      "En": "Anhe Rd. Sec. 2"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 409,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169887",
+    "StopID": "169887",
+    "StopName": {
+      "Zh_tw": "輕軌新和國小站(水工大樓)",
+      "En": "LRT Xinhe Elementary School Sta.(Hydraulic building)"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 714,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169886",
+    "StopID": "169886",
+    "StopName": {
+      "Zh_tw": "永平里",
+      "En": "Yongping Village"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 667,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169889",
+    "StopID": "169889",
+    "StopName": {
+      "Zh_tw": "三介廟",
+      "En": "Sanjie Temple"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 874,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169888",
+    "StopID": "169888",
+    "StopName": {
+      "Zh_tw": "新和國小",
+      "En": "Xinhe Elementary School"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 773,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169881",
+    "StopID": "169881",
+    "StopName": {
+      "Zh_tw": "十四份",
+      "En": "Shisifen"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 255,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169880",
+    "StopID": "169880",
+    "StopName": {
+      "Zh_tw": "及人中學",
+      "En": "Chi Jen High School"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 233,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169883",
+    "StopID": "169883",
+    "StopName": {
+      "Zh_tw": "石頭厝",
+      "En": "Shitoucuo"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 365,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169882",
+    "StopID": "169882",
+    "StopName": {
+      "Zh_tw": "輕軌陽光運動公園站",
+      "En": "LRT Sunshine Sports Park Sta."
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 330,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169874",
+    "StopID": "169874",
+    "StopName": {
+      "Zh_tw": "安康車子路口",
+      "En": "Ankang Chezi Rd. Intersection"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169873",
+    "StopID": "169873",
+    "StopName": {
+      "Zh_tw": "薏仁坑",
+      "En": "Yirenkeng"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169876",
+    "StopID": "169876",
+    "StopName": {
+      "Zh_tw": "浪漫貴族",
+      "En": "Langmanguizu"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169875",
+    "StopID": "169875",
+    "StopName": {
+      "Zh_tw": "台北菸廠",
+      "En": "Taipei Tobacco Factory"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169878",
+    "StopID": "169878",
+    "StopName": {
+      "Zh_tw": "安康派出所",
+      "En": "Ankang Police Station"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 76,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169877",
+    "StopID": "169877",
+    "StopName": {
+      "Zh_tw": "公崙新村(豐榮醫院)",
+      "En": "Gonglun New Village(Feng Rong Hospital)"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169879",
+    "StopID": "169879",
+    "StopName": {
+      "Zh_tw": "輕軌安康站",
+      "En": "LRT Ankang Sta."
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "EstimateTime": 188,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169870",
+    "StopID": "169870",
+    "StopName": {
+      "Zh_tw": "大茅埔",
+      "En": "Damaopu"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169872",
+    "StopID": "169872",
+    "StopName": {
+      "Zh_tw": "仁康醫院",
+      "En": "Jen-Kang Hospital"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169871",
+    "StopID": "169871",
+    "StopName": {
+      "Zh_tw": "康樂新村",
+      "En": "Kangle New Village"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT169869",
+    "StopID": "169869",
+    "StopName": {
+      "Zh_tw": "安祥路口",
+      "En": "Anxiang Rd. Entrance"
+    },
+    "RouteUID": "NWT17300",
+    "RouteID": "17300",
+    "RouteName": {
+      "Zh_tw": "624",
+      "En": "624"
+    },
+    "Direction": 0,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT186819",
+    "StopID": "186819",
+    "StopName": {
+      "Zh_tw": "綠野香坡",
+      "En": "Luyexiangpo"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 1,
+    "EstimateTime": 3234,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  },
+  {
+    "StopUID": "NWT186818",
+    "StopID": "186818",
+    "StopName": {
+      "Zh_tw": "綠野香坡",
+      "En": "Luyexiangpo"
+    },
+    "RouteUID": "NWT10149",
+    "RouteID": "10149",
+    "RouteName": {
+      "Zh_tw": "624綠野香坡",
+      "En": "624G"
+    },
+    "Direction": 0,
+    "EstimateTime": 1507,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
+    "UpdateTime": "2026-08-17T15:38:07+08:00"
+  }
+]
