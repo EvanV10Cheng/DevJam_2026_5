@@ -13,7 +13,7 @@ const USE_MOCK = false;
 //   雲端   https://xxx.run.app/    → /api/plans
 // 同源就沒有 CORS 問題，部署後也不用改這裡。
 // 若要讓前端獨立託管（例如 Firebase Hosting），改成後端的完整網址即可。
-const API_BASE = '';
+const API_BASE = 'https://transit-304458154890.asia-east1.run.app/';
 
 // =========================================================
 // 0. Debug — 開啟方式：網址加 ?debug=1、或按 Ctrl+Shift+D

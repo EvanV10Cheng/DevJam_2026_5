@@ -235,6 +235,14 @@ async def plans(origin: str = Query(...), destination: str = Query(...)):
     }
 
 
+# Flutter Web 版掛在 /app，與原本的網頁版並存。
+# ★ 順序很重要：必須在下面掛 "/" 之前註冊，否則會被 "/" 全部吃掉。
+# 兩版並存是刻意的保險——Demo 前一天不要只剩一條路可走。
+_FLUTTER_DIR = Path(__file__).parent / "web_flutter"
+if _FLUTTER_DIR.is_dir():
+    app.mount("/app", StaticFiles(directory=str(_FLUTTER_DIR), html=True), name="flutter")
+
+
 # 前端與 API 由同一個服務提供。★ 這樣部署後只有一個網址，
 # 而且前端用相對路徑打 API，CORS 完全用不到（跨來源問題直接消失）。
 # ★ 一定要放在檔案最後：掛在 / 的 StaticFiles 會吃掉所有路徑，
