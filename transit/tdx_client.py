@@ -20,6 +20,7 @@ import re
 import time
 import unicodedata
 from pathlib import Path
+from urllib.parse import urlencode
 
 import httpx
 
@@ -68,6 +69,12 @@ SRC_SCHEDULE = "班表推估"  # 查無路線／其他錯誤的預設降級
 TOKEN_TTL_MARGIN = 60  # 過期前 60 秒就重新申請
 RATE_LIMIT_COOLDOWN = 30  # 某組金鑰被 429 後冷卻幾秒
 ETA_CACHE_TTL = 20  # 即時到站快取 20 秒
+
+# 車輛位置的快取比到站時間長。它的用途是佐證「路上真的有這個方向的車」，
+# 不像 ETA 那樣需要秒級新鮮度。★ 這是 30 秒輪詢能不被限流的關鍵：
+# 實測它佔單次輪詢 18 個請求裡的 10 個，拉長快取後降到 3 個左右，
+# 整體從 0.6 req/s 降到 0.37 req/s，退到 TDX 的限流門檻底下。
+NEAR_STOP_CACHE_TTL = 90
 STATIC_CACHE_TTL = 86400  # 站點清單等靜態資料快取一天
 
 
@@ -123,7 +130,11 @@ def _pick_slot() -> dict | None:
         _rr += 1
         if slot["cooldown_until"] <= now:
             return slot
-    return min(_slots, key=lambda s: s["cooldown_until"])
+    # ★ 全部都在冷卻中就直接放棄，不要硬送。
+    #   舊版會回傳「最早解凍」的那把繼續打，結果是越被限流打得越兇：
+    #   實測 30 秒輪詢下，7 個搭乘段被放大成 36 個到站請求（每條路線 6 次
+    #   ＝ 2 個城市 × 3 把金鑰），把限流狀態一直維持住。
+    return None
 
 
 async def _get_token(slot: dict) -> str:
@@ -161,6 +172,25 @@ async def _get_token(slot: dict) -> str:
 _MAX_CONCURRENCY = 2
 _sem: asyncio.Semaphore | None = None
 
+# 請求之間的最小間隔。★ 光有並發上限不夠：TDX 看的是「瞬間突發率」而不是
+# 平均值。實測單次輪詢的 13 個請求會在 2 秒內打完 = 6.5 req/s，即使 30 秒
+# 平均只有 0.43 req/s 一樣被擋。把請求攤平在時間軸上才是有效的。
+_MIN_REQUEST_GAP = 0.35
+_last_request_at = 0.0
+_pace_lock: asyncio.Lock | None = None
+
+
+async def _pace() -> None:
+    """確保兩個請求之間至少隔 _MIN_REQUEST_GAP 秒。"""
+    global _last_request_at, _pace_lock
+    if _pace_lock is None:
+        _pace_lock = asyncio.Lock()
+    async with _pace_lock:
+        wait = _last_request_at + _MIN_REQUEST_GAP - time.monotonic()
+        if wait > 0:
+            await asyncio.sleep(wait)
+        _last_request_at = time.monotonic()
+
 
 def _semaphore() -> asyncio.Semaphore:
     # 延遲建立：Semaphore 要綁在實際執行的 event loop 上
@@ -179,23 +209,35 @@ async def _get(url: str, params: dict | None = None) -> tuple[list | dict | None
     if not _slots:
         return None, "error"
 
-    params = {"$format": "JSON", **(params or {})}
+    # ★ 不能用 httpx 的 params= 傳查詢字串：url 本身已經帶 query 時
+    #   （例如 OData 的 $filter），httpx 會整個取代掉而不是合併。
+    #   實測症狀是 $filter 被丟掉、回傳整份 14,641 筆資料，
+    #   然後取第一筆得到完全不相干的票價，而且沒有任何錯誤訊息。
+    merged = dict(params or {})
+    merged.setdefault("$format", "JSON")
+    sep = "&" if "?" in url else "?"
+    url = url + sep + urlencode(merged)
+    params = None
     saw_rate_limit = False
 
     # 每組金鑰各試一次；被 429 就換下一組
     for attempt in range(len(_slots)):
         slot = _pick_slot()
         if slot is None:
+            # 所有金鑰都在冷卻 —— 這是限流造成的，要如實回報，
+            # 不能報成一般錯誤，否則畫面會顯示「班表推估」而不是「查詢受限」
+            saw_rate_limit = True
             break
         try:
             token = await _get_token(slot)
             async with _semaphore():
+                await _pace()
                 if attempt:
                     # 已經被擋過一次，稍微退避再換金鑰重試
                     await asyncio.sleep(0.4 * attempt)
                 async with httpx.AsyncClient(timeout=15) as client:
                     resp = await client.get(
-                        url, headers={"authorization": f"Bearer {token}"}, params=params
+                        url, headers={"authorization": f"Bearer {token}"}
                     )
         except Exception:
             continue
@@ -654,7 +696,7 @@ async def _near_stop(route_name: str) -> tuple[list[dict], str]:
                 return [], "rate_limited"
         return [], "ok"
 
-    return await _cached(f"near:{route_name}", ETA_CACHE_TTL, fetch)
+    return await _cached(f"near:{route_name}", NEAR_STOP_CACHE_TTL, fetch)
 
 
 async def approaching_bus(
@@ -786,6 +828,164 @@ async def metro_eta(
 # --------------------------------------------------------------------------
 # 給 main.py 的統一入口：一段行程要向 TDX 問什麼，都在這裡決定
 # --------------------------------------------------------------------------
+
+
+# --------------------------------------------------------------------------
+# 官方票價（Google 沒有 transitFare 時的備援）
+# --------------------------------------------------------------------------
+
+FARE_CACHE_TTL = 3600  # 票價一小時才可能變，快取久一點
+
+# 台鐵票種代碼。TDX 的 TicketType 是中文字串（成自／成莒／成復／成普），
+# 不是數字，跟捷運與高鐵的結構不一樣。
+TRA_ADULT_TICKET = {
+    "自強": "成自", "普悠瑪": "成自", "太魯閣": "成自",
+    "tze-chiang": "成自", "emu3000": "成自",
+    "莒光": "成莒", "chu-kuang": "成莒",
+    "復興": "成復",
+    "區間": "成普", "普通": "成普", "local train": "成普",
+}
+
+
+def _normalize_station(name: str) -> str:
+    """站名正規化，用來跨資料源比對。
+
+    Google 說「捷運淡水站」，TDX 說「淡水」；Google 說「台北」，TDX 說「臺北」。
+    NFKC 不處理異體字，所以臺→台要自己換。
+    """
+    s = unicodedata.normalize("NFKC", str(name or "")).strip()
+    s = s.replace("臺", "台")
+    s = re.sub(r"[（(].*?[）)]", "", s)  # 去掉「台北車站(忠孝)」的括號
+    s = re.sub(r"^(捷運|台鐵|高鐵)", "", s)
+    s = re.sub(r"(車站|站)$", "", s)
+    return re.sub(r"\s+", "", s)
+
+
+async def _station_id_index(kind: str) -> dict:
+    """{正規化站名: StationID}。用既有的站點清單建，不額外打 API。"""
+
+    async def build():
+        rows = await (tra_stations() if kind == "TRA" else metro_stations())
+        idx = {}
+        for st in rows:
+            sid = st.get("StationID")
+            nm = _normalize_station((st.get("StationName") or {}).get("Zh_tw", ""))
+            if sid and nm:
+                idx.setdefault(nm, sid)
+        return idx, ("ok" if idx else "error")
+
+    idx, _ = await _cached(f"stnidx:{kind}", STATIC_CACHE_TTL, build)
+    return idx or {}
+
+
+def _pick_fare(fares: list, mode: str, route_name: str) -> int | float | None:
+    """從 Fares 陣列挑出一般成人票。挑不到回 None。"""
+    if not fares:
+        return None
+
+    if mode == "TRAIN":
+        # 車種決定票種。判不出車種就回 None —— 不能假設成區間車，
+        # 自強票價比區間貴一倍以上，猜錯比沒有更糟。
+        low = str(route_name or "").lower()
+        code = next((v for k, v in TRA_ADULT_TICKET.items() if k in low), None)
+        if code is None:
+            return None
+        for f in fares:
+            if f.get("TicketType") == code:
+                return f.get("Price")
+        return None
+
+    for f in fares:
+        if f.get("TicketType") != 1 or f.get("FareClass") != 1:
+            continue
+        if mode == "HSR" and f.get("CabinClass") != 1:
+            continue  # 高鐵要標準車廂，不是商務艙
+        return f.get("Price")
+    return None
+
+
+async def get_fare(
+    mode: str, route_name: str, from_stop: str, to_stop: str
+) -> tuple[int | float | None, int | float | None]:
+    """查官方票價，回傳 (票價, 悠遊卡價)。
+
+    ★ 任何錯誤都回 (None, None)，絕不拋例外——與 get_eta 相同的契約，
+      組裝層才不用寫 try/except，也不會讓整個 /api/plans 失敗。
+
+    公車一律回 (None, None)：TDX 沒有可靠的分段票價資料，
+    而台北公車是分段收費，猜不得。
+    """
+    try:
+        if mode not in ("METRO", "TRAIN", "HSR"):
+            return None, None
+
+        a, b = _normalize_station(from_stop), _normalize_station(to_stop)
+        if not a or not b or a == b:
+            return None, None
+
+        if mode == "METRO":
+            idx = await _station_id_index("METRO")
+            oid, did = idx.get(a), idx.get(b)
+            if not oid or not did:
+                return None, None
+            # 用 StationID 精確過濾，不用 contains——「台北」用 contains
+            # 會配到「台北小巨蛋」，而且 TDX 端是「臺北」根本配不到。
+            paths = [
+                f"{BASE}/v2/Rail/Metro/ODFare/{op}?"
+                f"$filter=OriginStationID eq '{oid}' and DestinationStationID eq '{did}'"
+                for op in ("TRTC", "NTMC")
+            ]
+        elif mode == "TRAIN":
+            idx = await _station_id_index("TRA")
+            oid, did = idx.get(a), idx.get(b)
+            if not oid or not did:
+                return None, None
+            paths = [
+                f"{BASE}/v2/Rail/TRA/ODFare?"
+                f"$filter=OriginStationID eq '{oid}' and DestinationStationID eq '{did}'"
+            ]
+        else:  # HSR
+            oid = did = None
+            paths = [f"{BASE}/v2/Rail/THSR/ODFare"]
+
+        async def fetch():
+            for url in paths:
+                data, status = await _get(url)
+                if status == "rate_limited":
+                    return None, "rate_limited"
+                if status == "ok" and isinstance(data, list) and data:
+                    return data, "ok"
+            return None, "ok"
+
+        key = f"fare:{mode}:{oid or a}:{did or b}"
+        rows, status = await _cached(key, FARE_CACHE_TTL, fetch)
+        if status != "ok" or not rows:
+            return None, None
+
+        if mode == "HSR":
+            # 高鐵資料小（132 筆），整份抓回來後用正規化站名精確比對
+            rows = [
+                r
+                for r in rows
+                if _normalize_station((r.get("OriginStationName") or {}).get("Zh_tw", "")) == a
+                and _normalize_station((r.get("DestinationStationName") or {}).get("Zh_tw", "")) == b
+            ]
+            if not rows:
+                return None, None
+
+        price = _pick_fare(rows[0].get("Fares") or [], mode, route_name)
+        if price is None:
+            return None, None
+        try:
+            price = float(price)
+        except (TypeError, ValueError):
+            return None, None
+        if price < 0:
+            return None, None
+        # TDX 只給單一票價，沒有分悠遊卡價，所以 icFare 維持 None
+        return (int(price) if price.is_integer() else price), None
+    except Exception:
+        return None, None
 
 
 async def enrich_ride(step: dict) -> dict:

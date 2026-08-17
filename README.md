@@ -250,6 +250,18 @@ python check_contract.py "http://localhost:8080/api/plans?origin=台北車站&de
 | `waitSource` | str | **P4** | `"即時"` / `"班表推估"` / `"末班已過"` |
 | `realSeconds` | int | **P4** | `totalSeconds + (waitSeconds or 0)`，**排序依據** |
 | `isLive` | bool | **P4** | `waitSource == "即時"` |
+| `fare` | int \| float \| null | **P1/P4** | 全票總價（TWD）。Google 的 `transitFare` 優先，沒有才由 TDX 官方票價逐段加總 |
+| `icFare` | int \| float \| null | **P1/P4** | 悠遊卡價。Google 與 TDX 都沒有這個資料，目前恆為 `null` |
+
+### ★ 票價的硬性規則
+
+**查不到票價一律是 `null`，絕不可用 `0` 代替。**
+
+「免費」與「不知道多少錢」是完全不同的兩件事。用 0 代表未知的話，
+前端的「票價較低」排序會把一條其實很貴的路線排到第一名，比沒有票價更糟。
+
+同理，**一個方案只要有任何一段搭乘查不到票價，整個 `fare` 就必須是 `null`**，
+不能把未知的那段當成免費再加總。
 
 ### step 物件
 

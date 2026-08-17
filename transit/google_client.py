@@ -49,8 +49,13 @@ FIELD_MASK = ",".join(
         "routes.legs.steps.staticDuration",
         "routes.legs.steps.distanceMeters",
         "routes.legs.steps.transitDetails",
+        # 整條路線的票價。Routes API 只在 TRANSIT 模式且該地區有票價資料時才回傳。
+        # https://developers.google.com/maps/documentation/routes/reference/rest/v2/RouteTravelAdvisory
+        "routes.travelAdvisory.transitFare",
     ]
 )
+
+FARE_CURRENCY = "TWD"
 
 # transitLine.vehicle.type -> 我們的 mode。實際值必須實測，缺的補進來（步驟 1.5 / 1.6）
 VEHICLE_TYPE_MAP = {
@@ -99,7 +104,14 @@ TRA_NAME_HINTS = (
     "local train",
 )
 
-ROUTE_CACHE_TTL = 20
+# ★ 這個數字直接決定 Google 配額燒多快，前端是 30 秒輪詢一次。
+#
+#   快取 20 秒  → 每次輪詢都 miss → 單一可見分頁每小時 120 次 → 1000 次配額撐 8 小時
+#   快取 300 秒 → 每 5 分鐘才問一次 → 每小時 12 次           → 撐 83 小時
+#
+# 路線「形狀」（搭哪幾班車、經過哪些站）不會每 30 秒變，會變的是即時資料，
+# 而那一層由 TDX 負責（ETA_CACHE_TTL 維持 20 秒）。所以拉長這裡不影響新鮮度。
+ROUTE_CACHE_TTL = 300
 _route_cache: dict[tuple[str, str], tuple[float, list[dict]]] = {}
 
 
@@ -163,6 +175,37 @@ def _localize_route_name(route_name: str, mode: str, full_name: str = "") -> str
     if mode in ("TRAIN", "HSR") and not _has_cjk(route_name) and _has_cjk(full_name):
         return full_name
     return route_name
+
+
+def _parse_money(money) -> int | float | None:
+    """解析 Google Money（currencyCode / units / nanos）成台幣金額。
+
+    https://developers.google.com/maps/documentation/routes/transit-route
+
+    units 是「整數部分」的字串，nanos 是十億分之一的小數部分。
+    只接受 TWD；幣別不符、缺欄位、非數字、負值一律回 None——
+    ★ 回 None 而不是 0，因為「查不到票價」和「免費」是完全不同的兩件事，
+      混在一起會讓前端把未知票價當成最便宜的方案。
+    """
+    if not isinstance(money, dict):
+        return None
+    if str(money.get("currencyCode") or "").upper() != FARE_CURRENCY:
+        return None
+
+    units, nanos = money.get("units"), money.get("nanos")
+    if units is None and nanos is None:
+        return None
+
+    try:
+        whole = int(units) if units is not None else 0
+        frac = int(nanos) if nanos is not None else 0
+    except (TypeError, ValueError):
+        return None
+
+    if whole < 0 or frac < 0:
+        return None  # 負票價不合理，當成無效資料
+
+    return whole if frac == 0 else whole + frac / 1_000_000_000
 
 
 def _latlng(stop: dict) -> dict | None:
@@ -277,9 +320,14 @@ def parse_route(route: dict) -> dict:
             )
 
     polyline = route.get("polyline") or {}
+    fare = _parse_money(((route.get("travelAdvisory") or {}).get("transitFare")))
     return {
         "totalSeconds": _secs(route.get("duration")),
         "transferCount": max(ride_count - 1, 0),
+        # ★ 兩個欄位一律存在（README §3）。Google 只給單一票價，沒有悠遊卡價，
+        #   所以 icFare 恆為 None —— 不自行猜價，猜錯比沒有更糟。
+        "fare": fare,
+        "icFare": None,
         "steps": _merge_walks(steps),
         "polyline": str(polyline.get("encodedPolyline") or ""),
     }
