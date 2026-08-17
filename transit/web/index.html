@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <!--
-  ★ 擁有者：P3（README §7）。
+  ★ 擁有者：P3（README §7）。本檔由 P4 建立骨架，畫面與樣式全部由 P3 實作。
+  ★ P4 到此為止，之後不再修改 web/ 底下任何檔案。
+
   啟動方式：在 web/ 目錄執行 python -m http.server 5500
   不使用任何框架或建置工具。
+
+  待實作（步驟 3.1–3.9）：
+    - 樣式全部沒寫，P3 自由發揮
+    - 唯一硬性要求：#reorder-banner 要夠明顯（黃底），那是簡報的視覺重點
 -->
 <html lang="zh-TW">
 <head>
@@ -10,63 +16,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>大台北即時轉乘</title>
   <style>
-    :root { --line: #e3e6ea; --sub: #667; }
-    * { box-sizing: border-box; }
-    body {
-      font-family: system-ui, "Noto Sans TC", sans-serif;
-      margin: 0 auto; padding: 16px; max-width: 640px; background: #f6f7f9;
-    }
-    h1 { font-size: 20px; margin: 4px 0 16px; }
-
-    /* 查詢區 */
-    #query-form { display: flex; gap: 8px; flex-wrap: wrap; }
-    #query-form input {
-      flex: 1 1 160px; padding: 10px; font-size: 15px;
-      border: 1px solid var(--line); border-radius: 8px;
-    }
-    #query-form button {
-      padding: 10px 20px; font-size: 15px; border: 0; border-radius: 8px;
-      background: #1a73e8; color: #fff; cursor: pointer;
-    }
-    #query-form button:disabled { background: #9bb8e4; cursor: default; }
-
-    /* reordered 提示條：簡報的視覺重點，要夠明顯 */
-    #reorder-banner {
-      margin: 16px 0; padding: 12px 14px; border-radius: 8px;
-      background: #fff3c4; border-left: 5px solid #f5b700; font-weight: 600;
-    }
-    #reorder-banner[hidden], #error[hidden], #empty[hidden], .hidden { display: none; }
-    #error { color: #c5221f; font-weight: 600; }
-
-    /* 方案卡片 */
-    .card {
-      background: #fff; border: 1px solid var(--line); border-radius: 10px;
-      padding: 12px 14px; margin-top: 12px;
-    }
-    .card header {
-      display: flex; align-items: center; gap: 10px; cursor: pointer;
-    }
-    .rank {
-      width: 24px; height: 24px; flex: none; border-radius: 50%;
-      background: #eef1f5; color: #445; font-size: 13px; font-weight: 700;
-      display: grid; place-items: center;
-    }
-    .total { font-size: 22px; font-weight: 700; }
-    .badge.live {
-      background: #0f9d58; color: #fff; font-size: 12px; font-weight: 700;
-      padding: 2px 8px; border-radius: 999px;
-    }
-    .sub, .countdown-row { color: var(--sub); font-size: 14px; margin: 6px 0 0; }
-    .countdown { font-variant-numeric: tabular-nums; font-weight: 700; color: #0f9d58; }
-    .countdown.passed { color: #c5221f; }
-
-    /* 步驟明細：預設收合，點 header 展開 */
-    .steps { display: none; list-style: none; margin: 12px 0 0; padding: 12px 0 0; border-top: 1px dashed var(--line); }
-    .card.open .steps { display: block; }
-    .step { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; padding: 6px 0; font-size: 14px; }
-    .step.walk { color: var(--sub); }
-    .stops { color: var(--sub); }
-    .dur { margin-left: auto; color: var(--sub); font-size: 13px; }
+    /* TODO(P3)：樣式自由發揮 */
   </style>
 </head>
 <body>
@@ -79,7 +29,7 @@
     <button id="submit" type="submit">查詢</button>
   </form>
 
-  <!-- reordered 提示條（步驟 3.6） -->
+  <!-- reordered 提示條（步驟 3.6）：reordered 為 true 才顯示 -->
   <div id="reorder-banner" hidden>依即時到站重新排序後，最快方案與原始建議不同</div>
 
   <!-- 錯誤與空結果（步驟 3.9） -->

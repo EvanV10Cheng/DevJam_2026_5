@@ -4,6 +4,17 @@
 
 核心邏輯只有一句話：Google 找候選 → TDX 補即時等待 → 依實際總時間重新排序。
 若 ranked[0] 不是 Google 的第一名，reordered 為 true——那就是本專案成立的證據。
+
+★ 本機啟動一定要帶 --env-file，否則金鑰讀不到：
+
+    uvicorn main:app --port 8080 --env-file .env
+
+  google_client.py 與 tdx_client.py 在 import 時就用 os.getenv() 讀金鑰，
+  沒有任何程式會自動載入 .env。少了 --env-file 的話兩邊的金鑰都是空字串，
+  症狀是 Google 回 403、TDX 回 401，很容易誤判成金鑰申請錯了。
+  （--env-file 是 uvicorn[standard] 內建功能，不需要額外裝套件。）
+
+  Cloud Run 上不需要這個參數：--set-secrets 會直接注入成真的環境變數。
 """
 
 import asyncio
