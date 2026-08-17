@@ -1,312 +1,685 @@
-# DevJam_2026_5
-# 大台北即時轉乘系統 — 開發規格與執行流程
+# 大台北即時轉乘系統 — 四人分工開發規格
 
-> **文件結構**
-> - **Phase 1（第 1～6 節）**：24 小時內必須交付的可運作系統。**現在只做這個。**
-> - **Phase 2（第 7～10 節）**：時間充裕時的完整架構。現在只當參考，不要動手。
+> **本文件可直接交給 AI agent 執行。** 指派方式：告訴 agent「你是 P1，請從第 5 節開始執行」。
 >
-> 每個工作項都附「產出物」與「驗收條件」，做完就能自我檢查，不需等人回覆。
+> 文件結構：
+> - 第 0–4 節：**全員共同**。開工前所有人都要讀完。
+> - 第 5–8 節：**各自負責**。只讀自己那一節，不要動別人的檔案。
+> - 第 9–12 節：合併、階段二、風險、驗收。
 
 ---
 
 ## 0. 給 AI Agent 的執行規則
 
-1. **只執行 Phase 1**。除非使用者明確說「進入 Phase 2」，否則不要建立第 7 節以後提到的任何檔案。
-2. **不要重構、不要加抽象層**。Phase 1 刻意用單檔架構（`main.py` + `main.dart`），這是為了 24 小時期限做的取捨，不是疏漏。
-3. **每步驟都要驗收**。驗收條件是可執行的指令或可觀察的現象，通過才進下一步。
-4. **卡超過 30 分鐘就走降級路徑**。每個高風險步驟都寫了降級方案，走降級不算失敗。
-5. **不確定時停下來問**，不要自行擴充範圍。
+1. **只修改你被指派的檔案。** 每一節開頭都寫明「你擁有的檔案」與「你禁止修改的檔案」。需要別人的功能時，直接 import 他的函式並相信簽章，不要去看或改他的實作。
+2. **契約已凍結。** 第 3 節的 JSON 欄位名稱、第 4 節的函式簽章，任何人都不得單方面修改。需要改動時停下來詢問使用者。
+3. **不要重構、不要加抽象層、不要引入額外套件。** 相依套件只有 `fastapi`、`uvicorn`、`httpx`。這是 24 小時期限下的刻意取捨。
+4. **每個步驟都有驗收條件**，是可執行的指令或可觀察的現象。通過才進下一步。
+5. **卡超過 30 分鐘就走降級路徑。** 每個高風險步驟都寫了降級方案，走降級不算失敗。
+6. **絕不讓整個請求失敗。** 任何外部 API 失敗都要有回傳預設值的路徑。
 
 ---
 
 ## 1. 專案目標與範圍
 
-### 系統要做什麼
-
-輸入起點與終點，輸出**依實際搭乘總時間排序**的轉乘方案，涵蓋大台北地區的**台鐵、高鐵、捷運、公車**。
-
-### 核心價值主張（也是簡報唯一要講的一句話）
+### 核心價值主張（簡報唯一要講的一句話）
 
 > Google Maps 用**靜態班表**算路線，不知道車現在在哪裡。我們用 Google 找候選、用 TDX 補**即時到站**，重新排序後最快的方案常常不是 Google 排第一的那個。
 
 ### 關鍵架構決策
 
-**多模式轉乘不自己算。** Google Routes API 的 `TRANSIT` 模式在大台北已經涵蓋台鐵、高鐵、捷運、公車，而且轉乘組合已經算好。自己建圖跑 Dijkstra 在 24 小時內做不完，而且做出來也不會比 Google 好。
+**多模式轉乘不自己算。** Google Routes API 的 `TRANSIT` 模式在大台北已涵蓋台鐵、高鐵、捷運、公車，轉乘組合也已算好。自建圖跑最短路徑在 24 小時內做不完，做出來也不會比 Google 好。
 
-**唯一要自己做的是疊上即時資料。** 這是 Google 沒有的資訊，也是本系統存在的理由。
+**唯一自己做的是疊上即時資料。** 這是 Google 沒有的資訊，也是本系統存在的理由。
+
+### 兩個階段
+
+| | 階段一（0–10h） | 階段二（10–22h） |
+|---|---|---|
+| 客戶端 | 網頁（HTML + 原生 JS） | Flutter Android App |
+| 後端 | FastAPI | **完全不變** |
+| 理由 | 省掉 Android SDK 設定、模擬器啟動、建置等待 | 同一個 API，等於照著網頁版再寫一次 UI |
 
 ### 範圍界定
 
-| Phase 1 包含 | Phase 1 不包含 |
+| 包含 | 不包含 |
 |---|---|
 | 大台北：台鐵、高鐵、捷運、公車 | 其他縣市 |
-| 第一段搭乘的即時到站疊加 | 全程每一段的即時資料 |
+| **第一段搭乘**的即時到站疊加 | 全程每一段的即時資料 |
 | 依實際總時間重新排序 | 自建圖與最短路徑演算法 |
-| Flutter App（方案列表） | 地圖繪製（時間充裕才加） |
-| Cloud Run 部署 | Firebase、Redis、使用者帳號 |
-
-### 已明確砍掉的項目
-
-自建 Dijkstra、Firebase 全套、Redis、mock server、契約測試、CI、`contracts.py` 的 Pydantic 契約層、四人分工的介面隔離。**這些都是為兩週專案設計的，24 小時內全是負擔。**
+| Cloud Run 部署 | Firebase、Redis、使用者帳號、地圖繪製 |
 
 ---
 
-## 2. Phase 1 系統架構
+## 2. 【共同】第 1 小時：唯一的同步時段
 
-```
-[Flutter App]  ← 輸入起訖點，顯示方案列表與即時徽章
-      │  HTTP GET /api/plans?origin=&destination=
-      ↓
-[FastAPI｜單檔 main.py]
-      ├─→ Google Routes API (TRANSIT, 多候選)  → 多模式轉乘骨架
-      └─→ TDX 公車即時到站 (第一段)             → 真實等待時間
-      ↓
-   重新排序：realSeconds = Google 行程時間 + 真實等待
-      ↓
-[Cloud Run]  ← 最後 2 小時才部署
-```
+這一小時全員一起做，做完之後各做各的，**中間不開會**，第 7 小時才再合併。
 
-### 檔案清單（全部就這五個）
+### 2.1 取得金鑰（0–30 分）★ 不可跳過、不可延後
+
+| # | 動作 | 負責 | 驗收條件 |
+|---|---|---|---|
+| A | 註冊 TDX（tdx.transportdata.tw）→ 會員專區 → 建立應用程式 | P2 | 手上有 client id 與 secret |
+| B | Google Cloud 建專案 → 啟用 **Routes API** → 建立 API key | P1 | Console 顯示 Routes API 已啟用 |
+| C | **設定 Routes API 每日用量上限 1000 次** | P1 | 配額頁面顯示上限 |
+| D | 把金鑰貼進共用的私訊或記事本，全員複製到各自的 `.env` | 全員 | 各自 `.env` 存在 |
+
+> 這半小時什麼程式都不要寫。金鑰申請是唯一無法靠寫程式解決的環節，必須最先排除。
+
+### 2.2 建立專案骨架（30–50 分）
+
+P4 執行，建立以下結構並 commit 到 main 分支：
 
 ```
 transit/
-├── main.py              # 後端全部：Google + TDX + 排序
-├── requirements.txt     # fastapi / uvicorn / httpx
-├── Dockerfile           # Cloud Run 用
-└── transit_app/
-    └── lib/main.dart    # Flutter 全部：輸入、列表、倒數
+├── main.py             # P4     組裝、排序、API 端點
+├── google_client.py    # P1     Google Routes 串接
+├── tdx_client.py       # P2     TDX 即時到站
+├── mock.json           # P4     假資料，解鎖 P3
+├── requirements.txt    # P4
+├── Dockerfile          # P4
+├── .env                # 全員（已在 .gitignore）
+├── .gitignore
+├── fixtures/           # P1     Google 原始回傳存檔
+└── web/                # P3
+    ├── index.html
+    └── app.js
 ```
 
-### 技術選型理由
+`google_client.py` 與 `tdx_client.py` 先只放函式簽章與 `return` 假值（見第 4 節），讓 `main.py` 一開始就能跑起來。
 
-| 元件 | 選擇 | 理由 |
-|---|---|---|
-| 後端 | FastAPI 單檔 | 自動產生 `/docs`，前端不用問欄位；單檔省掉所有 import 路徑問題 |
-| HTTP | httpx（async） | 多條候選路線要併發查 TDX，序列查會超過 10 秒 |
-| 快取 | 行程內 dict | 即時資料 TTL 只有 20 秒，不值得裝 Redis |
-| 前端 | Flutter 單檔 | 不引入狀態管理套件，`setState` 足夠 |
-| 部署 | Cloud Run | `gcloud run deploy --source .` 一行完成 |
+`.gitignore` 內容：
+```
+.env
+__pycache__/
+*.pyc
+```
 
----
+`requirements.txt` 內容：
+```
+fastapi
+uvicorn[standard]
+httpx
+```
 
-## 3. API 契約（Phase 1 簡化版）
+### 2.3 開分支（50–60 分）
 
-只有一個端點。不使用 Pydantic model，直接回傳 dict，前端用 `jsonDecode` 讀。
+```bash
+git checkout -b p1/google      # P1
+git checkout -b p2/tdx         # P2
+git checkout -b p3/web         # P3
+git checkout -b p4/assemble    # P4
+```
 
-### `GET /api/plans?origin={地址或地標}&destination={地址或地標}`
-
-起訖點**直接傳字串**給 Google Routes API 的 `address` 欄位，不需要 Places Autocomplete，省下一大塊工。
-
-**回傳**
-
-| 欄位 | 說明 |
-|---|---|
-| `queryTime` | 查詢時刻（epoch 秒） |
-| `plans` | 依 `realSeconds` 排序的方案陣列 |
-| `googleOrder` | Google 原始順序的秒數，用於對照 |
-| `reordered` | **布林值。true 代表我們的第一名與 Google 不同——這就是專案成功的證據** |
-
-**plan 物件**
-
-| 欄位 | 說明 |
-|---|---|
-| `totalSeconds` | Google 估的行程時間 |
-| `waitSeconds` | TDX 查到的真實等待秒數，查不到為 null |
-| `waitSource` | `"即時"` / `"班表推估"` / `"末班已過"` |
-| `realSeconds` | `totalSeconds + waitSeconds`，**排序依據** |
-| `isLive` | `waitSource == "即時"`，前端顯示徽章用 |
-| `transferCount` | 轉乘次數 |
-| `steps` | 步驟陣列，`type` 為 `WALK` 或 `RIDE` |
-
-**RIDE step 的 `mode`**：`BUS` / `METRO` / `TRAIN` / `HSR`，由 Google 的 `transitLine.vehicle.type` 映射而來，前端用它決定顯示哪個圖示。
+**每個人只改自己那一個檔案，所以合併時衝突機率極低。**
 
 ---
 
-## 4. Phase 1 執行步驟
+## 3. 【共同】API 契約（已凍結）
 
-### 階段 0：取得金鑰（0–1h）★ 不可跳過、不可延後
+只有一個端點。不使用 Pydantic model，直接回傳 dict。
 
-| # | 步驟 | 驗收條件 |
-|---|---|---|
-| 0.1 | 註冊 TDX（tdx.transportdata.tw）→ 會員專區 → 建立應用程式 → 取得 client id / secret | 手上有兩串字 |
-| 0.2 | Google Cloud 建專案 → 啟用 **Routes API** → 建立 API key | Console 顯示 Routes API 已啟用 |
-| 0.3 | **設定 API 每日用量上限 1000 次** | Console 的配額頁面顯示上限 |
-| 0.4 | 建立 `.env` 並加入 `.gitignore` | `git status` 看不到 `.env` |
+### `GET /api/plans?origin={字串}&destination={字串}`
 
-> 這一小時什麼程式都不要寫。金鑰申請是唯一可能卡住而且**無法靠寫程式解決**的環節，必須最先排除。
+起訖點**直接傳字串**給 Google Routes API 的 `address` 欄位，不需要 Places Autocomplete。
 
-### 階段 1：後端跑通（1–3h）
+### 回傳最外層
 
-| # | 步驟 | 產出物 | 驗收條件 | 卡住的降級方案 |
-|---|---|---|---|---|
-| 1.1 | 放入 `main.py`、`requirements.txt`，`pip install -r requirements.txt` | — | `uvicorn main:app --port 8080` 啟動無錯誤 | — |
-| 1.2 | `curl "localhost:8080/api/plans?origin=台北車站&destination=淡水捷運站"` | — | 回傳含 `plans` 的 JSON | 若回 400，讀錯誤訊息刪掉不合法的 FieldMask 欄位，**不要用猜的** |
-| 1.3 | 測試跨模式路線（例如「台北車站 → 新竹高鐵站」） | — | `steps` 中出現 `mode` 為 `HSR` 或 `TRAIN` 的項目 | — |
-| 1.4 | 確認 `/docs` 頁面可用 | — | 瀏覽器開得起來並可試打 | — |
-
-### 階段 2：Flutter 接上（3–6h）
-
-| # | 步驟 | 產出物 | 驗收條件 | 卡住的降級方案 |
-|---|---|---|---|---|
-| 2.1 | `flutter create transit_app`，`pubspec.yaml` 加 `http: ^1.2.0` | 專案骨架 | `flutter run` 看到預設畫面 | — |
-| 2.2 | 用 `main.dart` 覆蓋 `lib/main.dart` | — | 編譯通過 | — |
-| 2.3 | 設定 `apiBase`：**Android 模擬器必須用 `10.0.2.2:8080`**，iOS 模擬器用 `localhost:8080` | — | 按下查詢後列表出現方案 | 若連不上，先用瀏覽器確認後端正常，再檢查 IP |
-| 2.4 | 確認四種交通工具圖示都會出現 | — | 查一組含高鐵的路線，看到鐵路圖示 | — |
-| 2.5 | 確認等待秒數每秒跳動 | — | 觀察 60 秒，數字持續變化 | — |
-
-### 階段 3：即時資料疊加（6–8h）★ 這是專案的價值所在
-
-| # | 步驟 | 驗收條件 | 卡住的降級方案 |
+| 欄位 | 型別 | 產出者 | 說明 |
 |---|---|---|---|
-| 3.1 | 確認 TDX token 拿得到 | 後端 log 無 401 錯誤 | 檢查 client secret 有無多餘空白 |
-| 3.2 | 查一組**以公車起始**的路線 | 至少一個方案的 `isLive` 為 true，App 上出現「即時」徽章 | 見 3.3 |
-| 3.3 | 站名比對失敗時（Google 說「台北車站」，TDX 說「臺北車站」或「台北車站(忠孝)」） | — | **不要花時間修比對邏輯。** 接受顯示「班表推估」，改挑一條對得上的路線做 Demo |
-| 3.4 | 找出一組讓 `reordered` 為 true 的起訖點 | App 上出現黃色提示條 | 多試幾組尖峰時段、公車起始的路線 |
+| `queryTime` | int | P4 | 查詢時刻（epoch 秒） |
+| `plans` | list | P4 | 依 `realSeconds` 遞增排序 |
+| `googleOrder` | list[int] | P4 | Google 原始順序的 `realSeconds`，用於對照 |
+| `reordered` | bool | P4 | **true 代表我們的第一名與 Google 不同——這是專案成功的證據** |
 
-> **3.4 是整個專案最重要的一步。** `reordered` 為 true 就是「我們贏了 Google 一次」的證據，那組起訖點就是上台要 Demo 的那組。**把它記在便條紙上。**
+### plan 物件
 
-### 階段 4：部署（8–10h）
-
-| # | 步驟 | 驗收條件 | 卡住的降級方案 |
+| 欄位 | 型別 | 產出者 | 說明 |
 |---|---|---|---|
-| 4.1 | `gcloud run deploy transit-api --source . --region asia-east1 --allow-unauthenticated` | 回傳一個 `.run.app` 網址 | 卡住就跳過整個階段 4，改用區網 IP 現場 Demo |
-| 4.2 | 用 Secret Manager 設定金鑰，**不要把 `.env` 打進 image** | `curl https://xxx.run.app/healthz` 回 `{"ok":true}` | — |
-| 4.3 | Flutter 的 `apiBase` 改成雲端網址 | 手機實機可查詢 | — |
+| `totalSeconds` | int | **P1** | Google 估的行程時間（不含等待） |
+| `transferCount` | int | **P1** | 轉乘次數 |
+| `steps` | list | **P1** | 步驟陣列 |
+| `polyline` | str | **P1** | 整條路線的 encoded polyline（階段二地圖用，階段一不用） |
+| `waitSeconds` | int \| null | **P4** | 真實等待秒數，查不到為 `null` |
+| `waitSource` | str | **P4** | `"即時"` / `"班表推估"` / `"末班已過"` |
+| `realSeconds` | int | **P4** | `totalSeconds + (waitSeconds or 0)`，**排序依據** |
+| `isLive` | bool | **P4** | `waitSource == "即時"` |
 
-**Cloud Run 三個必知差異**：
-- Port 必須讀 `$PORT` 且 host 為 `0.0.0.0`，寫死 `127.0.0.1` 會啟動成功但連不進來
-- 冷啟動要 5～10 秒，**Demo 前先打一次 API 預熱**
-- Mac M 系列若自行 build，必須加 `--platform linux/amd64`
+### step 物件
 
-### 階段 5：簡報與備援（10–12h）
+`type` 為 `"WALK"` 時：
 
-| # | 步驟 | 驗收條件 |
+| 欄位 | 型別 | 說明 |
 |---|---|---|
-| 5.1 | **錄一段成功操作的影片**（含 `reordered` 為 true 的那組查詢） | 影片檔存在且能播放 |
-| 5.2 | 製作簡報，5 頁以內 | 見下方大綱 |
-| 5.3 | 記錄 3～5 組對照數據：我們的第一名 vs Google 的第一名 | 有一張數據表 |
+| `type` | str | `"WALK"` |
+| `seconds` | int | 步行秒數 |
+| `meters` | int | 步行公尺 |
 
-**簡報大綱（5 頁）**
-1. 問題：Google 用靜態班表，不知道車現在在哪（舉一個等 15 分鐘的例子）
-2. 做法：Google 找候選 → TDX 補即時 → 重新排序（放第 2 節的架構圖）
-3. 系統展示：Demo 或影片
-4. 成果：`reordered` 的對照數據表
-5. 限制與未來：目前只疊第一段、只有公車有即時資料、Phase 2 規劃
+`type` 為 `"RIDE"` 時：
 
-### 階段 6：睡覺（12–18h）★ 不可跳過
+| 欄位 | 型別 | 說明 |
+|---|---|---|
+| `type` | str | `"RIDE"` |
+| `mode` | str | `"BUS"` / `"METRO"` / `"TRAIN"` / `"HSR"` |
+| `routeName` | str | 路線名稱，例如 `"307"`、`"淡水信義線"` |
+| `fromStop` | str | 上車站名 |
+| `toStop` | str | 下車站名 |
+| `seconds` | int | 乘車秒數 |
+| `stopCount` | int | 經過站數 |
 
-隔天要上台。
+### ★ 契約的硬性規則
 
-### 階段 7：加分項（18–22h）
+**所有欄位一律存在，就算值是 null。** 不可以寫成「查得到才加這個 key」。
 
-依序加，做不完就停：
-1. 修 bug、多測幾組起訖點
-2. 彩排
-3. 加地圖（`google_maps_flutter`）——**這是最後才做的**，因為要設定 Android 與 iOS 兩邊的原生金鑰，順利也要一小時，卡住就是三小時
-
----
-
-## 5. Phase 1 風險與降級
-
-| 風險 | 降級方案 |
-|---|---|
-| TDX 完全接不上 | 後端已寫成自動退回純 Google 結果，App 照常運作，徽章顯示「班表推估」。**至少有一個能跑的多模式轉乘 App** |
-| 站名對不上 | 接受「班表推估」，Demo 挑對得上的路線 |
-| Cloud Run 部署失敗 | 用區網 IP 現場 Demo |
-| Demo 當天網路異常 | 播 5.1 錄的影片 |
-| Google API 額度用完 | 階段 0.3 已設上限，若真的用完換一組 API key |
+理由：JavaScript 對缺欄位寬容（`undefined` 不會爆），**但階段二的 Dart 不是**——`jsonDecode` 給 null，當成 `int` 用就直接拋 exception，App 當場閃退。現在守住這條規則，階段二才不用回頭改後端。
 
 ---
 
-## 6. Phase 1 完成定義
-
-- [ ] App 可輸入起訖點並取得至少 2 個轉乘方案
-- [ ] 方案涵蓋台鐵／高鐵／捷運／公車，各有對應圖示
-- [ ] 至少一組查詢的 `isLive` 為 true，顯示「即時」徽章
-- [ ] 找到並記下一組 `reordered` 為 true 的起訖點
-- [ ] TDX 失敗時系統仍可運作，不會整個崩潰
-- [ ] 已錄製成功操作的影片
-- [ ] 簡報完成
-
-**達成以上就可以上台。** 沒部署、沒地圖都不影響。
-
----
-
----
-
-# Phase 2：完整架構（時間充裕時才做）
-
-> 以下內容在 Phase 1 完成前**不要動手**。這裡保留完整設計是為了讓簡報的「未來規劃」有東西可講。
-
-## 7. 為什麼 Phase 2 要自己建圖
-
-Phase 1 直接用 Google 的候選路線，代表演算法只能在 3 條成品之間「挑一個」，沒有優化空間。
-
-Phase 2 的做法是把 Google 的路線**拆回零件**：每一段「從某站搭某條線到某站」變成圖上的一條邊，再向 TDX 查詢「同一段路還有哪些其他路線也能走」，補成一張小型子圖。這樣才能搜尋出 **Google 沒想到的組合**——例如「Google 建議搭 307，但同一段路的藍 7 下一班馬上到」。
+## 4. 【共同】main.py 架構與函式簽章
 
 ### 資料流
 
 ```
-[Google Routes] [TDX]
-        └───┬───┘
-            ↓
-   B 資料層：串接、ID 對齊、正規化、快取
-            ↓ ① CandidateNetwork（圖）
-   C 演算法：建子圖、時間相依 Dijkstra、評分
-            ↓ ② PlanResponse（圖上的路徑）
-   A 前端：Flutter
+GET /api/plans?origin=&destination=
+        ↓
+① plans = await google_client.get_routes(origin, destination)      ← P1
+        ↓  每個 plan 已有 totalSeconds / transferCount / steps / polyline
+        ↓
+② 對每個 plan，取出第一個 RIDE step
+   若 mode == "BUS"：
+       secs, src = await tdx_client.get_eta(routeName, fromStop)    ← P2
+   否則：
+       secs, src = None, "班表推估"
+   （用 asyncio.gather 併發處理所有 plan）
+        ↓
+③ plan["waitSeconds"] = secs
+   plan["waitSource"]  = src
+   plan["realSeconds"] = totalSeconds + (secs or 0)
+   plan["isLive"]      = (src == "即時")
+        ↓
+④ ranked = sorted(plans, key=realSeconds)
+   reordered = ranked[0] is not plans[0]
+        ↓
+⑤ 回傳 {queryTime, plans: ranked, googleOrder, reordered}
 ```
 
-### 契約設計要點
+### 三個凍結的函式簽章
 
-契約定義在 `contracts.py`（Pydantic），Python 內部 `snake_case`、JSON 輸出 `camelCase`，所有 model 設 `extra="forbid"`。
+```python
+# ---- google_client.py（P1 擁有）----
+async def get_routes(origin: str, destination: str) -> list[dict]:
+    """呼叫 Google Routes API 並正規化。
 
-**Leg 的 `upcomingDepartures` 必須是陣列，不能用單一 `etaSeconds`。** 等待時間會隨「你幾點抵達這一站」改變：第一段搭完到站是 14:20，第二段要等多久取決於 14:20 之後下一班幾點來。若只給純量，第二段以後的等待就無法計算，時間相依最短路會退化成假的。
+    回傳 list[plan]，每個 plan 含且僅含：
+        totalSeconds, transferCount, steps, polyline
+    等待相關欄位由 main.py 負責補上，這裡不要碰。
 
-**`reliability` 由 TDX 的 `StopStatus` 推導**：0＋有車輛回報 → 0.9；0＋僅班表 → 0.5；1 尚未發車 → 0.4；2 交管 → 0.3；3／4 末班已過或未營運 → **不要輸出這條 leg**。
+    失敗時回傳空 list []，不要拋例外。
+    """
 
-**Step 要做成依 `type` 的聯合型別**，WAIT 必須獨立於 RIDE：RIDE 是地圖上一條線，WAIT 是倒數計時器，而且只有 WAIT 需要輪詢更新。分開後前端元件與 step 型別一對一對應。
 
-## 8. 演算法：時間相依最短路徑
+# ---- tdx_client.py（P2 擁有）----
+async def get_eta(route_name: str, stop_name: str) -> tuple[int | None, str]:
+    """查某條公車在某站牌的即時到站。
 
-核心差異：**一般 Dijkstra 的邊成本是常數，這裡的等待成本是「抵達時刻」的函數。**
+    回傳 (等待秒數, 來源說明)：
+        查到即時資料      -> (整數秒數, "即時")
+        末班已過或未營運  -> (None, "末班已過")
+        其他任何情況      -> (None, "班表推估")
 
+    ★ 這個函式絕對不能拋例外。任何錯誤（網路、認證、解析）
+      都要 catch 起來並回傳 (None, "班表推估")。
+    """
 ```
-edge_cost(leg, arrive_at, is_transfer):
-    depart = 第一個 >= arrive_at 的 upcomingDepartures   # bisect 二分搜尋
-    若不存在或 reliability == 0 → 無限大
 
-    cost = (depart - arrive_at) + leg.rideSeconds
-    cost += (1 - reliability) * RELIABILITY_WEIGHT
-    cost += TRANSFER_PENALTY 若 is_transfer
-    回傳 (cost, depart + rideSeconds)
+> **`get_eta` 不拋例外是刻意設計。** TDX 是系統最不穩定的一環，若它會拋例外，P4 的組裝層就得寫一堆 try/except，兩人就得討論錯誤處理。改成「查不到回 None」，P4 完全不用管，兩人零溝通。
+
+### main.py 骨架（P4 在第 1 小時就要讓它能跑）
+
+```python
+import asyncio, time
+from fastapi import FastAPI, Query
+from fastapi.middleware.cors import CORSMiddleware
+import google_client, tdx_client
+
+app = FastAPI(title="大台北即時轉乘")
+app.add_middleware(CORSMiddleware, allow_origins=["*"],
+                   allow_methods=["*"], allow_headers=["*"])
+
+@app.get("/healthz")
+def healthz():
+    return {"ok": True}
+
+@app.get("/api/plans")
+async def plans(origin: str = Query(...), destination: str = Query(...)):
+    ...   # 見上方資料流五個步驟
 ```
 
-搜尋狀態必須是 `(累積成本, 實際時刻, 站點, 上一條路線, 路徑)`。**「上一條路線」必須進入狀態**，否則無法判斷下一步算不算轉乘。
+---
 
-三個必做的補充：**步行轉乘邊**（不同站點距離 < 400 公尺則建邊，時間 = 距離 ÷ 1.2 公尺/秒）、**方案去重**（路線序列相同者只留最佳一條，否則使用者看到三個一樣的方案）、**權重調校**（用真實案例試不同的 `TRANSFER_PENALTY`）。
+## 5. P1｜Google 路線層
 
-## 9. Firebase 的取捨
+**你擁有**：`google_client.py`、`fixtures/`
+**你禁止修改**：`main.py`、`tdx_client.py`、`web/`
+**你的依賴**：只有 Google API key。不依賴任何隊友。
 
-| 服務 | 判斷 |
+> 這是四條線中工作量最大的一條，因為 Google 的回傳結構很深，而且台鐵／高鐵／捷運的 `vehicle.type` 實際值必須實測才知道。
+
+### 技術規格
+
+**端點**：`POST https://routes.googleapis.com/directions/v2:computeRoutes`
+
+**必要 Headers**：
+```
+X-Goog-Api-Key: {你的 key}
+X-Goog-FieldMask: {見下}
+Content-Type: application/json
+```
+
+**FieldMask**（沒有這個會回 400，Routes API 強制要求）：
+```
+routes.duration,routes.distanceMeters,routes.polyline.encodedPolyline,
+routes.legs.steps.travelMode,routes.legs.steps.staticDuration,
+routes.legs.steps.distanceMeters,routes.legs.steps.transitDetails
+```
+
+**Request body**：
+```json
+{
+  "origin": {"address": "台北車站"},
+  "destination": {"address": "淡水捷運站"},
+  "travelMode": "TRANSIT",
+  "computeAlternativeRoutes": true,
+  "languageCode": "zh-TW",
+  "regionCode": "TW"
+}
+```
+
+**兩個必知的解析陷阱**：
+1. 時間欄位是字串格式 `"900s"`，不是數字。要寫一個 `_secs()` 把 `"900s"` 轉成 `900`，並處理 `"900.5s"` 與 `None`。
+2. 步驟藏在 `routes[].legs[].steps[]`，是**兩層巢狀**。要用雙層迴圈攤平。
+
+**vehicle type 映射表**（放在 `google_client.py` 頂端）：
+
+| Google 的 `transitLine.vehicle.type` | 我們的 `mode` |
 |---|---|
-| FCM 到站推播 | **值得做**。手機版才有的功能。**推播前要重新查一次 TDX**，否則跟鬧鐘沒兩樣 |
-| Remote Config 調演算法權重 | **值得做**。Demo 當場可調，不用重新部署 |
-| Auth 匿名登入、Firestore 收藏 | 可以，但講不出亮點 |
-| Firestore 當即時資料快取 | **不要**。TTL 只有 20 秒，寫進去馬上過期，還按讀寫計費 |
-| Cloud Functions 包後端 | **不要**。無狀態導致每次冷啟動都要重取 token、快取全空。Cloud Run 才對 |
+| `BUS` | `BUS` |
+| `SUBWAY`、`METRO_RAIL` | `METRO` |
+| `HEAVY_RAIL`、`RAIL`、`COMMUTER_TRAIN` | `TRAIN` |
+| `HIGH_SPEED_TRAIN`、`LONG_DISTANCE_TRAIN` | `HSR` |
+| 其他 | `BUS`（預設） |
 
-## 10. Phase 2 分工與時程
+**取值路徑**：
+- 路線名稱：`step.transitDetails.transitLine.nameShort` 優先，沒有則用 `.name`
+- 上車站名：`step.transitDetails.stopDetails.departureStop.name`
+- 下車站名：`step.transitDetails.stopDetails.arrivalStop.name`
+- 站數：`step.transitDetails.stopCount`
+- `transferCount` = RIDE 步驟數 − 1（最小值 0）
 
-四條線可平行，前提是 **Day 0 先凍結契約、並交付 mock server**——A 與 C 對 mock 開發，完全不必等 B。
+### 執行步驟
 
-| 線 | 負責 |
+| # | 步驟 | 產出物 | 驗收條件 | 卡住的降級方案 |
+|---|---|---|---|---|
+| 1.1 | 用 `curl` 或 Python 直接打一次 Routes API，把原始回傳存成 `fixtures/google_raw.json` | fixture 檔 | 檔案內有 `routes` 陣列 | 若回 400，讀錯誤訊息刪掉它指出的不合法 FieldMask 欄位，**不要用猜的** |
+| 1.2 | 實作 `_secs()` 轉換函式 | `google_client.py` | `_secs("900s") == 900`、`_secs(None) == 0` | — |
+| 1.3 | 實作 `parse_route(route: dict) -> dict`，把單一 route 攤平成 plan | 同上 | 對 fixture 執行後印出的 plan 含四個欄位 | — |
+| 1.4 | 實作 `get_routes()`，加上 `computeAlternativeRoutes` 並回傳 list | 同上 | 「台北車站 → 淡水捷運站」回傳 ≥ 2 個 plan | 若只回 1 條，換一組較遠的起訖點 |
+| 1.5 | **實測跨模式**：「台北車站 → 新竹高鐵站」 | `fixtures/hsr_raw.json` | `steps` 中出現 `mode` 為 `HSR` 或 `TRAIN` | 若映射不到，印出實際的 `vehicle.type` 值並補進映射表 |
+| 1.6 | **實測捷運**：「台北 101 → 士林夜市」 | — | 出現 `mode` 為 `METRO` 的步驟 | 同上 |
+| 1.7 | 加上 try/except，任何失敗回傳 `[]` | 同上 | 故意把 API key 改錯，函式回傳 `[]` 而不是拋例外 | — |
+| 1.8 | 加 20 秒的行程內快取（同一組起訖點不重複打） | 同上 | 連續呼叫兩次，第二次不產生外部請求 | 時間不夠可跳過 |
+
+### 完成定義
+
+- [ ] `get_routes("台北車站", "淡水捷運站")` 回傳 ≥ 2 個 plan
+- [ ] 四種 `mode` 值（BUS/METRO/TRAIN/HSR）各至少在一組實測中出現過
+- [ ] 所有欄位一律存在，即使值為 0 或空字串
+- [ ] API key 錯誤時回傳 `[]`，不拋例外
+- [ ] `fixtures/` 內至少有兩個原始回傳存檔（改程式時不用重打 API）
+
+### 完成後
+
+立刻去支援 P2 的站名比對問題——那是全案最可能卡住的地方。
+
+---
+
+## 6. P2｜TDX 即時層
+
+**你擁有**：`tdx_client.py`
+**你禁止修改**：`main.py`、`google_client.py`、`web/`
+**你的依賴**：只有 TDX 金鑰。不依賴任何隊友。
+
+> 這條線工作量最小但**風險最高**：站名對不上是必然會遇到的問題。
+
+### 技術規格
+
+**認證**（OAuth2 client_credentials）：
+```
+POST https://tdx.transportdata.tw/auth/realms/TDXConnect/protocol/openid-connect/token
+form data: grant_type=client_credentials, client_id=..., client_secret=...
+回傳: {"access_token": "...", "expires_in": 86400}
+```
+
+Token 有效期約 24 小時，**必須快取**，過期前 60 秒才重新申請。每次呼叫都重取會被限流。
+
+**即時到站**：
+```
+GET https://tdx.transportdata.tw/api/basic/v2/Bus/EstimatedTimeOfArrival/City/{City}/{RouteName}
+Header: authorization: Bearer {token}
+Query:  $format=JSON
+```
+
+大台北要查兩個 city 並合併結果：`Taipei` 與 `NewTaipei`。
+
+**回傳中要用的欄位**：
+
+| 欄位 | 說明 |
 |---|---|
-| A | Flutter：地圖、方案卡、倒數、FCM 接收 |
-| B | 資料層：TDX／Google 串接、**ID 對齊**、快取、Cloud Run 部署 |
-| C | 演算法：建子圖、時間相依 Dijkstra、去重與調參 |
-| D | Firebase 設定、mock server、契約測試、CI、對照實驗、簡報 |
+| `StopName.Zh_tw` | 站牌中文名，用來與 Google 的站名比對 |
+| `EstimateTime` | 預估到站秒數。**可能為 null**（無即時資料） |
+| `StopStatus` | 0 正常／1 尚未發車／2 交管不停靠／3 末班已過／4 今日未營運 |
 
-**B 的 ID 對齊是最容易低估的工作**：Google 回傳的是給人看的字串（`"307"`、`"藍7"`），TDX 用內部 UID，兩者不會自動對上。三層降級：名稱正規化完全比對 → 起訖站座標距離＋模糊比對 → 仍失敗則保留 Google 靜態估算並把 reliability 設 0.3。
+**`StopStatus` 對應回傳值**：
 
-**跨語言契約同步**：從 FastAPI 的 `/openapi.json` 自動生成 Dart 型別，寫進 CI。後端欄位一改，Flutter 編譯不過——這比人工同步兩份定義可靠得多。
+| StopStatus | 回傳 |
+|---|---|
+| 3 或 4 | `(None, "末班已過")` |
+| 0 且 `EstimateTime` 不為 null | `(EstimateTime, "即時")` |
+| 其他所有情況 | `(None, "班表推估")` |
+
+### ★ 站名比對是本條線的核心難題
+
+Google 說「台北車站」，TDX 可能是「臺北車站」（異體字）、「台北車站(忠孝)」（帶括號）、或「北車」。
+
+**比對策略（依序嘗試，成功即停）**：
+1. 完全相同
+2. 去掉「站」字後完全相同
+3. 雙向包含關係：`clean in tdx_name` 或 `tdx_name in google_name`
+4. 全形轉半形、去除所有括號內容後再比一次
+
+**★ 硬性上限：站名比對最多花 30 分鐘。** 超過就停手，接受回傳「班表推估」。這不是失敗——系統設計本來就允許降級，而 Demo 只需要找到一條對得上的路線即可。
+
+### 執行步驟
+
+| # | 步驟 | 產出物 | 驗收條件 | 卡住的降級方案 |
+|---|---|---|---|---|
+| 2.1 | 實作 token 取得與快取 | `tdx_client.py` | 連續呼叫兩次，第二次不產生 HTTP 請求 | 401 時檢查 secret 有無多餘空白 |
+| 2.2 | 查一條熟悉的台北公車（例如 `307`），把原始回傳印出來 | — | 看到含 `StopName` 的陣列 | 換一條路線試 |
+| 2.3 | **記錄 `EstimateTime` 為 null 的比例** | 寫在 commit message | 有一個百分比數字 | — |
+| 2.4 | 實作 `StopStatus` 判斷邏輯 | 同上 | 三種回傳值都能觸發 | — |
+| 2.5 | 實作站名比對（四層策略） | 同上 | 至少一組 Google 站名能對上 TDX | 見上方 30 分鐘上限 |
+| 2.6 | 加 20 秒快取，key 用 `route_name` | 同上 | 連續呼叫兩次，第二次不打 TDX | — |
+| 2.7 | **包上 try/except，確保永不拋例外** | 同上 | 故意把 secret 改錯，函式回傳 `(None, "班表推估")` | — |
+| 2.8 | 查兩個城市（Taipei + NewTaipei）並合併 | 同上 | 新北的路線也查得到 | 時間不夠只查 Taipei |
+
+### 完成定義
+
+- [ ] `get_eta("307", "台北車站")` 回傳一個 tuple
+- [ ] 三種來源說明（即時／班表推估／末班已過）都能產生
+- [ ] **任何錯誤情境下都不拋例外**（這是最重要的一項）
+- [ ] 已記錄無即時資料的路線比例（簡報要用）
+
+### 2.3 的數字很重要
+
+「大台北有 X% 的公車路線有即時資料」是簡報上誠實呈現系統覆蓋率的關鍵數據，也是評審會問的問題。
+
+---
+
+## 7. P3｜網頁前端
+
+**你擁有**：`web/index.html`、`web/app.js`
+**你禁止修改**：所有 `.py` 檔
+**你的依賴**：只有 `mock.json`（P4 在第 1 小時交付）。**全程不需要後端跑起來。**
+
+### 技術規格
+
+原生 HTML + JavaScript，**不使用任何框架或建置工具**。用 `python -m http.server 5500` 起靜態伺服器即可。
+
+**開發期資料來源切換**（寫在 `app.js` 最上方）：
+```javascript
+const USE_MOCK = true;                        // 整合時改成 false
+const API_BASE = 'http://localhost:8080';
+const url = USE_MOCK ? './mock.json'
+          : `${API_BASE}/api/plans?origin=${encodeURIComponent(from)}&destination=${encodeURIComponent(to)}`;
+```
+
+### 畫面規格
+
+**查詢區**：起點輸入框（預設「台北車站」）、終點輸入框（預設「淡水捷運站」）、查詢按鈕。
+
+**`reordered` 提示條**：`reordered` 為 true 時，在列表上方顯示黃底提示：「依即時到站重新排序後，最快方案與原始建議不同」。**這是簡報的視覺重點，樣式要明顯。**
+
+**方案卡片**（依 `plans` 順序）：
+- 排名數字（1、2、3）
+- 主標：`realSeconds / 60` 取整，顯示「N 分鐘」
+- **「即時」徽章**：`isLive` 為 true 時顯示綠色徽章
+- 副標：`轉乘 N 次 · 等待 N 分 · {waitSource}`
+- 展開後顯示 RIDE 步驟：圖示 + `routeName` + `fromStop → toStop` + 分鐘數
+
+**四種交通工具的圖示**（用 emoji 或 Unicode 即可，不要引入圖示套件）：
+
+| mode | 建議符號 |
+|---|---|
+| `BUS` | 🚌 |
+| `METRO` | 🚇 |
+| `TRAIN` | 🚆 |
+| `HSR` | 🚄 |
+
+**等待倒數**：`waitSeconds` 不為 null 時，用 `setInterval` 每秒遞減顯示。倒數到 0 以下顯示「已過站」。
+
+**三種狀態**：載入中（按鈕變「查詢中…」並停用）、錯誤（紅字顯示訊息）、無結果（顯示「找不到路線」）。
+
+### 執行步驟
+
+| # | 步驟 | 驗收條件 |
+|---|---|---|
+| 3.1 | 建立 `index.html` 骨架與查詢表單 | 瀏覽器看到兩個輸入框與按鈕 |
+| 3.2 | 讀取 `mock.json` 並在 console 印出 plans | Console 有陣列 |
+| 3.3 | 渲染方案卡片列表 | 卡片數量與 mock 資料筆數相同 |
+| 3.4 | 實作四種圖示映射 | 手動改 mock 的 mode 值，圖示跟著變 |
+| 3.5 | 實作「即時」徽章 | 手動改 `isLive`，徽章出現與消失 |
+| 3.6 | 實作 `reordered` 提示條 | 手動改 `reordered`，黃條出現與消失 |
+| 3.7 | 實作展開顯示步驟明細 | 點擊卡片展開 |
+| 3.8 | 實作等待倒數 | 觀察 60 秒，數字持續遞減 |
+| 3.9 | 實作載入中與錯誤狀態 | 把 URL 改成不存在的路徑，畫面顯示錯誤而非空白 |
+| 3.10 | 把 `USE_MOCK` 改成 `false` 測試真實後端 | **等第 7 小時合併後再做** |
+
+### 完成定義
+
+- [ ] 全程不啟動後端就能操作完整介面
+- [ ] 四種圖示、即時徽章、reordered 提示條、倒數、載入中、錯誤共七種狀態都有畫面
+- [ ] 切換到真實後端只需改 `USE_MOCK` 一個變數
+
+### 你是階段二的主力
+
+階段二把這份 UI 邏輯用 Dart 再寫一次。所以**現在把渲染邏輯寫得清楚一點**，階段二會省很多時間。
+
+---
+
+## 8. P4｜組裝、部署與交付
+
+**你擁有**：`main.py`、`mock.json`、`Dockerfile`、`requirements.txt`、簡報
+**你禁止修改**：`google_client.py`、`tdx_client.py`、`web/`
+
+> 你不寫難的邏輯，但你負責讓東西能交出去。在 24 小時的專案裡，「有人專職負責交付」比多一個人寫程式重要得多。
+
+### ★ 第 1 小時最優先：交出 mock.json
+
+**這是解鎖 P3 的關鍵，其他事都往後排。** 內容必須涵蓋所有邊界情況：
+
+- 至少 3 個 plan
+- 其中一個 `isLive` 為 true、一個為 false、一個 `waitSource` 為 `"末班已過"`
+- `reordered` 設為 `true`
+- 四種 `mode` 值至少各出現一次
+- 至少一個 plan 含 WALK 步驟
+- **每個 plan 的所有欄位都存在**，包括值為 null 的 `waitSeconds`
+
+### 執行步驟
+
+| # | 步驟 | 時間 | 驗收條件 | 卡住的降級方案 |
+|---|---|---|---|---|
+| 4.1 | **產出 `mock.json` 並交給 P3** | 第 1 小時 | P3 能載入並渲染 | — |
+| 4.2 | 建立 `main.py` 骨架、CORS、`/healthz` | 1–2h | `uvicorn main:app --port 8080` 啟動成功 | — |
+| 4.3 | 實作第 4 節的五步驟組裝邏輯 | 2–4h | 用 P1/P2 的假回傳跑通流程 | — |
+| 4.4 | 實作 `asyncio.gather` 併發查詢 | 4–5h | 3 個 plan 的 ETA 併發查，不是序列 | 時間不夠改序列 |
+| 4.5 | 寫 `Dockerfile` 並本機 build 成功 | 5–6h | `docker run` 起得來 | — |
+| 4.6 | 撰寫簡報骨架（見下方大綱） | 6–7h | 5 頁投影片有標題 | — |
+| 4.7 | **主持第 7 小時的合併** | 7–8h | 見第 9 節 | — |
+| 4.8 | Cloud Run 部署 | 8–10h | `curl https://xxx.run.app/healthz` 回 `{"ok":true}` | 卡住就跳過，改用區網 IP Demo |
+| 4.9 | **錄製成功操作影片** | 10–11h | 影片檔存在且能播放 | — |
+| 4.10 | 完成簡報與對照數據表 | 11–12h | 有 3–5 組數據 | — |
+
+### Dockerfile 三個必知重點
+
+```dockerfile
+FROM python:3.12-slim
+ENV PYTHONUNBUFFERED=1
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+CMD exec uvicorn main:app --host 0.0.0.0 --port ${PORT:-8080}
+```
+
+1. **host 必須是 `0.0.0.0`**。用 `127.0.0.1` 會讓容器啟動成功但 Cloud Run 完全連不進來，而且錯誤訊息很不直覺。
+2. **port 讀 `$PORT`**。Cloud Run 注入 8080 並期待你監聽它。
+3. **`exec`** 讓 uvicorn 成為 PID 1，才收得到 SIGTERM 能優雅關閉。
+
+### Cloud Run 部署
+
+```bash
+gcloud run deploy transit-api \
+  --source . \
+  --region asia-east1 \
+  --allow-unauthenticated \
+  --set-secrets TDX_CLIENT_ID=tdx-id:latest,TDX_CLIENT_SECRET=tdx-secret:latest,GOOGLE_MAPS_API_KEY=gmaps-key:latest
+```
+
+- 金鑰用 Secret Manager，**不要把 `.env` 打進 image**
+- 冷啟動要 5–10 秒，**Demo 前先打一次 API 預熱**
+- Mac M 系列若自行 build 而非用 `--source .`，必須加 `--platform linux/amd64`
+
+### 簡報大綱（5 頁）
+
+1. **問題**：Google 用靜態班表，不知道車現在在哪（舉一個等 15 分鐘的具體例子）
+2. **做法**：Google 找候選 → TDX 補即時 → 重新排序（放第 4 節的資料流圖）
+3. **系統展示**：Demo 或影片
+4. **成果**：`reordered` 的對照數據表 + P2 記錄的即時資料覆蓋率
+5. **限制與未來**：目前只疊第一段、只有公車有即時資料、未來可自建圖跑時間相依最短路徑
+
+---
+
+## 9. 第 7–8 小時：合併程序
+
+**這是全案唯一的高風險時刻。** 因為每人只改自己的檔案，Git 衝突機率極低，但**實際欄位可能與 mock.json 有落差**（例如某欄位是 null 而不是 0）。
+
+由 P4 主持，依序執行：
+
+| # | 動作 | 驗收 |
+|---|---|---|
+| 9.1 | P1、P2 先各自合併到 main | `git merge` 無衝突 |
+| 9.2 | P4 合併並移除假回傳，接上真實函式 | `uvicorn` 啟動成功 |
+| 9.3 | `curl "localhost:8080/api/plans?origin=台北車站&destination=淡水捷運站"` | 回傳含 `plans` 的 JSON |
+| 9.4 | **逐欄位比對真實回傳與 `mock.json`** | 欄位名稱與型別完全一致 |
+| 9.5 | P3 把 `USE_MOCK` 改成 `false` 測試 | 網頁顯示真實資料 |
+| 9.6 | 全員一起找出一組 `reordered` 為 true 的起訖點 | 網頁出現黃色提示條 |
+
+### ★ 9.6 是整個專案最重要的一步
+
+`reordered` 為 true 就是「我們贏了 Google 一次」的證據。**那組起訖點就是上台要 Demo 的那組，把它記在便條紙上。**
+
+尋找技巧：挑**尖峰時段、以公車起始**的路線，公車班距越長越容易出現差異。
+
+---
+
+## 10. 階段二：Flutter Android（10–22h）
+
+### ★ 後端完全不用改
+
+同一個 `/api/plans`，同一份 JSON。階段二等於「照著 `app.js` 用 Dart 再寫一次 UI」。
+
+| 項目 | 是否需改後端 | 說明 |
+|---|---|---|
+| CORS | **否** | Flutter 原生 App 不受 CORS 限制（那是瀏覽器機制） |
+| 中文參數編碼 | **否** | Dart 的 `Uri.replace(queryParameters:)` 自動處理 |
+| 回傳格式 | **否** | 同一份 JSON |
+| null 欄位 | **否，但要守紀律** | 第 3 節的硬性規則已保證，Dart 欄位宣告成 `int?` |
+| HTTPS | **部署層面** | Android 9+ 預設擋明文 HTTP。Cloud Run 自動有 HTTPS，所以**先部署再開始階段二** |
+
+### 分工
+
+| 人 | 階段二工作 |
+|---|---|
+| P3 | Flutter UI 主力（把 `app.js` 邏輯搬成 Dart） |
+| P1 | 協助 Flutter（此時 Google 層已完成） |
+| P2 | 支援站名比對、多測幾組路線 |
+| P4 | 簡報、錄影、彩排 |
+
+### 執行步驟
+
+| # | 步驟 | 驗收條件 |
+|---|---|---|
+| 10.1 | `flutter create transit_app`，`pubspec.yaml` 加 `http: ^1.2.0` | `flutter run` 看到預設畫面 |
+| 10.2 | `AndroidManifest.xml` 加 `<uses-permission android:name="android.permission.INTERNET"/>` | 編譯通過 |
+| 10.3 | 設定 `apiBase` 為 **Cloud Run 網址**（HTTPS） | — |
+| 10.4 | 實作查詢表單與 HTTP 請求 | 按下查詢後 console 印出 plans |
+| 10.5 | 實作方案卡片與四種圖示 | 列表正常顯示 |
+| 10.6 | 實作「即時」徽章與 `reordered` 提示條 | 兩者都會出現 |
+| 10.7 | 實作 `Timer.periodic` 每秒倒數 | 數字跳動 |
+| 10.8 | 實機或模擬器測試 | 完整操作一次 |
+
+### Android 三個地雷
+
+1. **模擬器連本機要用 `10.0.2.2`**，不是 `localhost`。（若已用 Cloud Run 網址則無此問題）
+2. **`INTERNET` 權限**忘了加會直接連線失敗。
+3. **明文 HTTP 被擋**：若後端還在 HTTP，要在 `AndroidManifest.xml` 的 `<application>` 加 `android:usesCleartextTraffic="true"`。**先部署 Cloud Run 就能完全避開這個坑。**
+
+---
+
+## 11. 風險與降級
+
+| 風險 | 影響 | 降級方案 |
+|---|---|---|
+| TDX 完全接不上 | 失去即時優勢 | `get_eta` 保證回 `(None, "班表推估")`，系統照常運作，**至少有一個能跑的多模式轉乘 App** |
+| 站名對不上 | 部分路線無即時 | 30 分鐘上限，接受「班表推估」，Demo 挑對得上的路線 |
+| Routes API 回 400 | 後端無法運作 | 讀錯誤訊息刪掉不合法的 FieldMask 欄位，不要用猜的 |
+| Cloud Run 部署失敗 | 無法遠端存取 | 用區網 IP 現場 Demo |
+| 找不到 `reordered` 為 true | 沒有成果證據 | 挑尖峰時段、公車起始、班距長的路線；最差情況用 P2 記錄的覆蓋率數據代替 |
+| Demo 當天網路異常 | 無法展示 | 播 4.9 錄的影片 |
+| 階段二做不完 | 沒有 App | **階段一的網頁版就是完整交付物**，階段二本來就是加分項 |
+
+---
+
+## 12. 完成定義
+
+### 階段一（必須達成）
+
+- [ ] 網頁可輸入起訖點並取得 ≥ 2 個轉乘方案
+- [ ] 方案涵蓋台鐵／高鐵／捷運／公車，各有對應圖示
+- [ ] 至少一組查詢的 `isLive` 為 true，顯示「即時」徽章
+- [ ] **找到並記下一組 `reordered` 為 true 的起訖點**
+- [ ] TDX 失敗時系統仍可運作，不會崩潰
+- [ ] 已錄製成功操作影片
+- [ ] 簡報完成
+
+**達成以上就可以上台。** 沒部署、沒 App 都不影響。
+
+### 階段二（加分）
+
+- [ ] Android App 可完成同樣的查詢流程
+- [ ] 「即時」徽章與 `reordered` 提示在 App 上正常顯示
+- [ ] 後端**零改動**（這件事本身就是簡報上可講的架構設計成果）
+
+---
+
+## 附錄：時程總表
+
+| 時段 | P1 | P2 | P3 | P4 |
+|---|---|---|---|---|
+| 0–1h | 全員：申請金鑰、建骨架、開分支 | | | |
+| 1–7h | Google 路線層 | TDX 即時層 | 網頁前端（對 mock） | mock.json → main.py → Dockerfile |
+| 7–8h | **全員合併** | | | |
+| 8–10h | 找 reordered 案例 | 修站名比對 | 接真實後端 | Cloud Run 部署 |
+| 10–12h | 支援 Flutter | 多測路線 | Flutter 起手 | 錄影 + 簡報 |
+| 12–18h | **全員睡覺**（隔天要上台） | | | |
+| 18–22h | Flutter 收尾、修 bug、彩排 | | | |
