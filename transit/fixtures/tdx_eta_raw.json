@@ -13,10 +13,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 794,
+    "EstimateTime": 252,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT202636",
@@ -32,10 +32,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 958,
+    "EstimateTime": 416,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT202633",
@@ -51,10 +51,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 167,
+    "EstimateTime": 767,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT202634",
@@ -70,10 +70,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 354,
+    "EstimateTime": 960,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT222972",
@@ -89,10 +89,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 3298,
+    "EstimateTime": 2677,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT222973",
@@ -108,10 +108,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 3334,
+    "EstimateTime": 2713,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT222970",
@@ -127,10 +127,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1415,
+    "EstimateTime": 933,
     "StopStatus": 1,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT222971",
@@ -146,10 +146,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1453,
+    "EstimateTime": 971,
     "StopStatus": 1,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT222974",
@@ -165,10 +165,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 3454,
+    "EstimateTime": 2833,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT222969",
@@ -184,10 +184,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1338,
+    "EstimateTime": 856,
     "StopStatus": 1,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT223609",
@@ -203,10 +203,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 509,
+    "EstimateTime": 111,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT223610",
@@ -222,10 +222,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 102,
+    "EstimateTime": 389,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT223611",
@@ -241,10 +241,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 106,
+    "EstimateTime": 1440,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT223612",
@@ -260,10 +260,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 1001,
+    "EstimateTime": 380,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT199761",
@@ -279,10 +279,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 386,
+    "EstimateTime": 211,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT199760",
@@ -298,10 +298,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 210,
+    "EstimateTime": 35,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT199759",
@@ -318,8 +318,8 @@
     },
     "Direction": 0,
     "StopStatus": 1,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT194191",
@@ -335,10 +335,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 799,
+    "EstimateTime": 330,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT194190",
@@ -354,10 +354,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 289,
+    "EstimateTime": 862,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT194192",
@@ -373,10 +373,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 2098,
+    "EstimateTime": 1477,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT194189",
@@ -392,10 +392,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 268,
+    "EstimateTime": 622,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170109",
@@ -411,10 +411,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 2013,
+    "EstimateTime": 1392,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170104",
@@ -430,10 +430,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 1692,
+    "EstimateTime": 1071,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170103",
@@ -449,10 +449,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 1605,
+    "EstimateTime": 984,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170102",
@@ -468,10 +468,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 1541,
+    "EstimateTime": 920,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170101",
@@ -487,10 +487,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 1366,
+    "EstimateTime": 745,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170108",
@@ -506,10 +506,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 1965,
+    "EstimateTime": 1344,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170107",
@@ -525,10 +525,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 1931,
+    "EstimateTime": 1310,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170106",
@@ -544,10 +544,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 1833,
+    "EstimateTime": 1212,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170105",
@@ -563,10 +563,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 1764,
+    "EstimateTime": 1143,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170100",
@@ -582,10 +582,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 1246,
+    "EstimateTime": 625,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170126",
@@ -601,10 +601,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 3102,
+    "EstimateTime": 2481,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170125",
@@ -620,10 +620,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 3056,
+    "EstimateTime": 2435,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170124",
@@ -639,10 +639,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 3007,
+    "EstimateTime": 2386,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170123",
@@ -658,10 +658,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 2822,
+    "EstimateTime": 2201,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170128",
@@ -677,10 +677,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 3198,
+    "EstimateTime": 2577,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170127",
@@ -696,10 +696,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 3174,
+    "EstimateTime": 2553,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170122",
@@ -715,10 +715,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 2750,
+    "EstimateTime": 2129,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170121",
@@ -734,10 +734,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 2717,
+    "EstimateTime": 2096,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170120",
@@ -753,10 +753,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 2686,
+    "EstimateTime": 2065,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170115",
@@ -772,10 +772,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 2386,
+    "EstimateTime": 1765,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170114",
@@ -791,10 +791,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 2341,
+    "EstimateTime": 1720,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170113",
@@ -810,10 +810,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 2232,
+    "EstimateTime": 1611,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170112",
@@ -829,10 +829,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 2173,
+    "EstimateTime": 1552,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170119",
@@ -848,10 +848,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 2631,
+    "EstimateTime": 2010,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170118",
@@ -867,10 +867,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 2554,
+    "EstimateTime": 1933,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170117",
@@ -886,10 +886,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 2512,
+    "EstimateTime": 1891,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170116",
@@ -905,10 +905,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 2446,
+    "EstimateTime": 1825,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170111",
@@ -924,10 +924,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 2128,
+    "EstimateTime": 1507,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170110",
@@ -943,10 +943,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 2073,
+    "EstimateTime": 1452,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170092",
@@ -962,10 +962,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 621,
+    "EstimateTime": 2471,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170091",
@@ -981,10 +981,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 441,
+    "EstimateTime": 2290,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170090",
@@ -1000,10 +1000,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 324,
+    "EstimateTime": 2171,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170085",
@@ -1019,10 +1019,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 2296,
+    "EstimateTime": 1754,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170084",
@@ -1038,10 +1038,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 2221,
+    "EstimateTime": 1679,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170083",
@@ -1057,10 +1057,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 2082,
+    "EstimateTime": 1540,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170082",
@@ -1076,10 +1076,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 1988,
+    "EstimateTime": 1446,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170089",
@@ -1095,10 +1095,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 283,
+    "EstimateTime": 2128,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170088",
@@ -1114,10 +1114,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 236,
+    "EstimateTime": 2085,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170087",
@@ -1133,10 +1133,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 130,
+    "EstimateTime": 1985,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170086",
@@ -1152,10 +1152,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 6,
+    "EstimateTime": 1858,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170081",
@@ -1171,10 +1171,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1836,
+    "EstimateTime": 1294,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170080",
@@ -1190,10 +1190,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1729,
+    "EstimateTime": 1187,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170079",
@@ -1209,10 +1209,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1632,
+    "EstimateTime": 1090,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170074",
@@ -1228,10 +1228,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1074,
+    "EstimateTime": 532,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170073",
@@ -1247,10 +1247,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1027,
+    "EstimateTime": 485,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170071",
@@ -1266,10 +1266,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 658,
+    "EstimateTime": 116,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170078",
@@ -1285,10 +1285,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1503,
+    "EstimateTime": 961,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170077",
@@ -1304,10 +1304,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1395,
+    "EstimateTime": 853,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170076",
@@ -1323,10 +1323,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1246,
+    "EstimateTime": 704,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170075",
@@ -1342,10 +1342,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1146,
+    "EstimateTime": 604,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170096",
@@ -1361,10 +1361,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 959,
+    "EstimateTime": 338,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170095",
@@ -1380,10 +1380,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 889,
+    "EstimateTime": 268,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170094",
@@ -1399,10 +1399,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 813,
+    "EstimateTime": 192,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170093",
@@ -1418,10 +1418,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 709,
+    "EstimateTime": 88,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170099",
@@ -1437,10 +1437,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 1180,
+    "EstimateTime": 559,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170098",
@@ -1456,10 +1456,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 1109,
+    "EstimateTime": 488,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170097",
@@ -1475,10 +1475,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 1064,
+    "EstimateTime": 443,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170049",
@@ -1494,10 +1494,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 665,
+    "EstimateTime": 196,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170048",
@@ -1513,10 +1513,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 546,
+    "EstimateTime": 77,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170047",
@@ -1532,10 +1532,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 469,
-    "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "EstimateTime": 1901,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170046",
@@ -1551,10 +1551,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 405,
-    "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "EstimateTime": 1832,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170041",
@@ -1570,10 +1570,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 142,
-    "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "EstimateTime": 1567,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170040",
@@ -1589,10 +1589,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 69,
-    "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "EstimateTime": 1496,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170045",
@@ -1608,10 +1608,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 356,
-    "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "EstimateTime": 1782,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170044",
@@ -1627,10 +1627,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 307,
-    "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "EstimateTime": 1728,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170043",
@@ -1646,10 +1646,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 227,
-    "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "EstimateTime": 1643,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170042",
@@ -1665,10 +1665,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 180,
-    "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "EstimateTime": 1598,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170038",
@@ -1684,10 +1684,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1709,
+    "EstimateTime": 1227,
     "StopStatus": 1,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170037",
@@ -1703,10 +1703,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1674,
+    "EstimateTime": 1192,
     "StopStatus": 1,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170036",
@@ -1722,10 +1722,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1627,
+    "EstimateTime": 1145,
     "StopStatus": 1,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170035",
@@ -1741,10 +1741,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1564,
+    "EstimateTime": 1082,
     "StopStatus": 1,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170039",
@@ -1760,10 +1760,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 0,
-    "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "EstimateTime": 1420,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170034",
@@ -1779,10 +1779,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1527,
+    "EstimateTime": 1045,
     "StopStatus": 1,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170070",
@@ -1798,10 +1798,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 542,
+    "EstimateTime": 1875,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170069",
@@ -1817,10 +1817,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 419,
+    "EstimateTime": 1752,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170068",
@@ -1836,10 +1836,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 307,
+    "EstimateTime": 1641,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170063",
@@ -1855,10 +1855,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1669,
+    "EstimateTime": 1200,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170062",
@@ -1874,10 +1874,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1594,
+    "EstimateTime": 1125,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170061",
@@ -1893,10 +1893,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1525,
+    "EstimateTime": 1056,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170060",
@@ -1912,10 +1912,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1396,
+    "EstimateTime": 927,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170067",
@@ -1931,10 +1931,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 236,
+    "EstimateTime": 1570,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170066",
@@ -1950,10 +1950,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 140,
+    "EstimateTime": 1474,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170065",
@@ -1969,10 +1969,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1804,
+    "EstimateTime": 1335,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170064",
@@ -1988,10 +1988,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1738,
+    "EstimateTime": 1269,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170059",
@@ -2007,10 +2007,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1326,
+    "EstimateTime": 857,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170058",
@@ -2026,10 +2026,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1222,
+    "EstimateTime": 753,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170057",
@@ -2045,10 +2045,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1156,
+    "EstimateTime": 687,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170052",
@@ -2064,10 +2064,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 842,
+    "EstimateTime": 373,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170051",
@@ -2083,10 +2083,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 761,
+    "EstimateTime": 292,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170050",
@@ -2102,10 +2102,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 716,
+    "EstimateTime": 247,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170056",
@@ -2121,10 +2121,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1082,
+    "EstimateTime": 613,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170055",
@@ -2140,10 +2140,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 962,
+    "EstimateTime": 493,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170054",
@@ -2159,10 +2159,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 922,
+    "EstimateTime": 453,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT170053",
@@ -2178,10 +2178,10 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 882,
+    "EstimateTime": 413,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169911",
@@ -2197,10 +2197,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 0,
+    "EstimateTime": 370,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169910",
@@ -2216,10 +2216,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 692,
+    "EstimateTime": 321,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169913",
@@ -2235,10 +2235,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 276,
+    "EstimateTime": 617,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169912",
@@ -2254,10 +2254,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 152,
+    "EstimateTime": 522,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169915",
@@ -2273,10 +2273,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 413,
+    "EstimateTime": 767,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169914",
@@ -2292,10 +2292,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 354,
+    "EstimateTime": 708,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169917",
@@ -2311,10 +2311,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 0,
+    "EstimateTime": 245,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169916",
@@ -2330,10 +2330,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 533,
+    "EstimateTime": 120,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169919",
@@ -2349,10 +2349,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 151,
+    "EstimateTime": 383,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169918",
@@ -2368,10 +2368,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 105,
+    "EstimateTime": 350,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169900",
@@ -2387,10 +2387,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 936,
+    "EstimateTime": 538,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169901",
@@ -2406,10 +2406,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 1026,
+    "EstimateTime": 628,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169904",
@@ -2425,10 +2425,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 48,
+    "EstimateTime": 1055,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169903",
@@ -2444,10 +2444,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 394,
+    "EstimateTime": 1027,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169906",
@@ -2463,10 +2463,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 212,
+    "EstimateTime": 1285,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169905",
@@ -2482,10 +2482,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 110,
+    "EstimateTime": 1182,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169908",
@@ -2501,10 +2501,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 507,
+    "EstimateTime": 144,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169907",
@@ -2520,10 +2520,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 363,
+    "EstimateTime": 0,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169909",
@@ -2539,10 +2539,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 593,
+    "EstimateTime": 230,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169931",
@@ -2558,10 +2558,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 498,
+    "EstimateTime": 44,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169930",
@@ -2577,10 +2577,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 370,
+    "EstimateTime": 681,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169933",
@@ -2596,10 +2596,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 759,
+    "EstimateTime": 305,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169932",
@@ -2615,10 +2615,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 675,
+    "EstimateTime": 221,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169935",
@@ -2634,10 +2634,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 934,
+    "EstimateTime": 480,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169934",
@@ -2653,10 +2653,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 851,
+    "EstimateTime": 397,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169937",
@@ -2672,10 +2672,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 100,
+    "EstimateTime": 691,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169936",
@@ -2691,10 +2691,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 1008,
+    "EstimateTime": 548,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169939",
@@ -2710,10 +2710,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 194,
+    "EstimateTime": 767,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169938",
@@ -2729,10 +2729,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 147,
+    "EstimateTime": 727,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169920",
@@ -2748,10 +2748,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 193,
+    "EstimateTime": 425,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169922",
@@ -2767,10 +2767,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 413,
+    "EstimateTime": 675,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169921",
@@ -2786,10 +2786,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 292,
+    "EstimateTime": 548,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169924",
@@ -2805,10 +2805,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 637,
+    "EstimateTime": 224,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169923",
@@ -2824,10 +2824,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 501,
+    "EstimateTime": 88,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169926",
@@ -2843,10 +2843,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 68,
+    "EstimateTime": 357,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169925",
@@ -2862,10 +2862,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 699,
+    "EstimateTime": 286,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169928",
@@ -2881,10 +2881,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 205,
+    "EstimateTime": 505,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169927",
@@ -2900,10 +2900,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 150,
+    "EstimateTime": 458,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169929",
@@ -2919,10 +2919,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 278,
+    "EstimateTime": 578,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169951",
@@ -2938,10 +2938,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 261,
+    "EstimateTime": 294,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169950",
@@ -2957,10 +2957,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 226,
+    "EstimateTime": 265,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169953",
@@ -2976,10 +2976,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 367,
+    "EstimateTime": 393,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169952",
@@ -2995,10 +2995,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 292,
+    "EstimateTime": 319,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169940",
@@ -3014,10 +3014,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 265,
+    "EstimateTime": 838,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169942",
@@ -3033,10 +3033,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 366,
+    "EstimateTime": 939,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169941",
@@ -3052,10 +3052,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 320,
+    "EstimateTime": 893,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169944",
@@ -3071,10 +3071,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 0,
+    "EstimateTime": 1061,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169943",
@@ -3090,10 +3090,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 427,
+    "EstimateTime": 1000,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169946",
@@ -3109,10 +3109,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 0,
+    "EstimateTime": 64,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169945",
@@ -3128,10 +3128,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 45,
+    "EstimateTime": 0,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169948",
@@ -3147,10 +3147,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 128,
+    "EstimateTime": 163,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169947",
@@ -3166,10 +3166,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 86,
+    "EstimateTime": 131,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169949",
@@ -3185,10 +3185,10 @@
       "En": "624"
     },
     "Direction": 1,
-    "EstimateTime": 169,
+    "EstimateTime": 207,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169896",
@@ -3204,10 +3204,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 555,
+    "EstimateTime": 157,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169895",
@@ -3223,10 +3223,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 398,
+    "EstimateTime": 841,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169898",
@@ -3242,10 +3242,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 719,
+    "EstimateTime": 321,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169897",
@@ -3261,10 +3261,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 650,
+    "EstimateTime": 252,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169899",
@@ -3280,10 +3280,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 787,
+    "EstimateTime": 389,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169890",
@@ -3299,10 +3299,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 64,
+    "EstimateTime": 485,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169892",
@@ -3318,10 +3318,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 191,
+    "EstimateTime": 611,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169891",
@@ -3337,10 +3337,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 143,
+    "EstimateTime": 564,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169894",
@@ -3356,10 +3356,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 332,
+    "EstimateTime": 800,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169893",
@@ -3375,10 +3375,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 265,
+    "EstimateTime": 699,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169885",
@@ -3394,10 +3394,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 474,
+    "EstimateTime": 795,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169884",
@@ -3413,10 +3413,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 409,
+    "EstimateTime": 756,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169887",
@@ -3432,10 +3432,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 714,
+    "EstimateTime": 240,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169886",
@@ -3451,10 +3451,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 667,
+    "EstimateTime": 193,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169889",
@@ -3470,10 +3470,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 874,
+    "EstimateTime": 400,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169888",
@@ -3489,10 +3489,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 773,
+    "EstimateTime": 299,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169881",
@@ -3508,10 +3508,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 255,
+    "EstimateTime": 583,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169880",
@@ -3527,10 +3527,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 233,
+    "EstimateTime": 560,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169883",
@@ -3546,10 +3546,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 365,
+    "EstimateTime": 712,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169882",
@@ -3565,10 +3565,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 330,
+    "EstimateTime": 663,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169874",
@@ -3584,9 +3584,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "StopStatus": 1,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "EstimateTime": 172,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169873",
@@ -3602,9 +3603,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "StopStatus": 1,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "EstimateTime": 62,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169876",
@@ -3620,9 +3622,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "StopStatus": 1,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "EstimateTime": 257,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169875",
@@ -3638,9 +3641,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "StopStatus": 1,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "EstimateTime": 214,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169878",
@@ -3656,10 +3660,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 76,
+    "EstimateTime": 403,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169877",
@@ -3675,9 +3679,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "StopStatus": 1,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "EstimateTime": 327,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169879",
@@ -3693,10 +3698,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "EstimateTime": 188,
+    "EstimateTime": 515,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169870",
@@ -3713,8 +3718,8 @@
     },
     "Direction": 0,
     "StopStatus": 1,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169872",
@@ -3730,9 +3735,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "StopStatus": 1,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "EstimateTime": 27,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169871",
@@ -3748,9 +3754,10 @@
       "En": "624"
     },
     "Direction": 0,
-    "StopStatus": 1,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "EstimateTime": 0,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT169869",
@@ -3767,8 +3774,8 @@
     },
     "Direction": 0,
     "StopStatus": 1,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT186819",
@@ -3784,10 +3791,10 @@
       "En": "624G"
     },
     "Direction": 1,
-    "EstimateTime": 3234,
+    "EstimateTime": 2613,
     "StopStatus": 0,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   },
   {
     "StopUID": "NWT186818",
@@ -3803,9 +3810,9 @@
       "En": "624G"
     },
     "Direction": 0,
-    "EstimateTime": 1507,
+    "EstimateTime": 1025,
     "StopStatus": 1,
-    "SrcUpdateTime": "2026-08-17T15:38:02+08:00",
-    "UpdateTime": "2026-08-17T15:38:07+08:00"
+    "SrcUpdateTime": "2026-08-17T15:46:22+08:00",
+    "UpdateTime": "2026-08-17T15:46:27+08:00"
   }
 ]
