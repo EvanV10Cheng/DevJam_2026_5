@@ -1,0 +1,4 @@
+# P1 擁有此目錄：Google Routes API 的原始回傳存檔
+#   google_raw.json  ← 步驟 1.1 台北車站 → 淡水捷運站
+#   hsr_raw.json     ← 步驟 1.5 台北車站 → 新竹高鐵站
+# 目的：改解析程式時不用重打 API，省配額也省時間。

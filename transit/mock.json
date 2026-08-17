@@ -1,0 +1,114 @@
+{
+  "_comment": "P4 交付給 P3 的假資料（README §8, 4.1）。已涵蓋所有邊界情況：4 個 plan、isLive 有 true 有 false、waitSource 三種都有、四種 mode 各出現、含 WALK 步驟、每個 plan 所有欄位都存在（waitSeconds 可為 null）。plans 已依 realSeconds 遞增排序。",
+  "queryTime": 1755403200,
+  "reordered": true,
+  "googleOrder": [2700, 2100, 2400, 3000],
+  "plans": [
+    {
+      "totalSeconds": 1980,
+      "transferCount": 1,
+      "polyline": "yzxwCstn`Vg@_AcBqCsAyBoAoB{@sAeAaB",
+      "waitSeconds": 120,
+      "waitSource": "即時",
+      "realSeconds": 2100,
+      "isLive": true,
+      "steps": [
+        { "type": "WALK", "seconds": 180, "meters": 210 },
+        {
+          "type": "RIDE",
+          "mode": "BUS",
+          "routeName": "307",
+          "fromStop": "台北車站",
+          "toStop": "西門",
+          "seconds": 600,
+          "stopCount": 5
+        },
+        { "type": "WALK", "seconds": 120, "meters": 140 },
+        {
+          "type": "RIDE",
+          "mode": "METRO",
+          "routeName": "淡水信義線",
+          "fromStop": "西門",
+          "toStop": "淡水",
+          "seconds": 960,
+          "stopCount": 14
+        },
+        { "type": "WALK", "seconds": 120, "meters": 150 }
+      ]
+    },
+    {
+      "totalSeconds": 2400,
+      "transferCount": 0,
+      "polyline": "wzxwCwtn`VqBaDuAwBiAgB}@sA",
+      "waitSeconds": null,
+      "waitSource": "末班已過",
+      "realSeconds": 2400,
+      "isLive": false,
+      "steps": [
+        { "type": "WALK", "seconds": 240, "meters": 300 },
+        {
+          "type": "RIDE",
+          "mode": "TRAIN",
+          "routeName": "區間車 2189",
+          "fromStop": "台北",
+          "toStop": "汐止",
+          "seconds": 1920,
+          "stopCount": 6
+        },
+        { "type": "WALK", "seconds": 240, "meters": 280 }
+      ]
+    },
+    {
+      "totalSeconds": 1800,
+      "transferCount": 0,
+      "polyline": "uzxwCqtn`VsBiDwAyBkAiB",
+      "waitSeconds": 900,
+      "waitSource": "班表推估",
+      "realSeconds": 2700,
+      "isLive": false,
+      "steps": [
+        { "type": "WALK", "seconds": 300, "meters": 380 },
+        {
+          "type": "RIDE",
+          "mode": "BUS",
+          "routeName": "紅 15",
+          "fromStop": "捷運劍潭站",
+          "toStop": "淡水捷運站",
+          "seconds": 1320,
+          "stopCount": 18
+        },
+        { "type": "WALK", "seconds": 180, "meters": 200 }
+      ]
+    },
+    {
+      "totalSeconds": 3000,
+      "transferCount": 1,
+      "polyline": "szxwCotn`VuBkDyA{BmAkB_AuA",
+      "waitSeconds": null,
+      "waitSource": "班表推估",
+      "realSeconds": 3000,
+      "isLive": false,
+      "steps": [
+        {
+          "type": "RIDE",
+          "mode": "METRO",
+          "routeName": "板南線",
+          "fromStop": "台北車站",
+          "toStop": "板橋",
+          "seconds": 720,
+          "stopCount": 5
+        },
+        { "type": "WALK", "seconds": 360, "meters": 420 },
+        {
+          "type": "RIDE",
+          "mode": "HSR",
+          "routeName": "高鐵 631",
+          "fromStop": "板橋",
+          "toStop": "新竹",
+          "seconds": 1920,
+          "stopCount": 2
+        }
+      ]
+    }
+  ]
+}
